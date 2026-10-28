@@ -1,0 +1,14 @@
+**/.lake/
+**/__pycache__/
+*.pyc
+*.olean
+*.ilean
+*.olean.private
+*.olean.server
+paper/*.aux
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.toc
+lean/verification.log

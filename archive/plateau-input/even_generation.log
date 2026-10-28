@@ -1,0 +1,34 @@
+mod x^24 + (-24)*x^22 + 252*x^20 + (-1520)*x^18 + 5814*x^16 + (-14688)*x^14 + 24752*x^12 + (-27456)*x^10 + 19305*x^8 + (-8008)*x^6 + 1716*x^4 + (-144)*x^2 + 1 matrixbuilt 0.03986382484436035
+pivot 0 seconds 0.04
+pivot 1 seconds 0.04
+pivot 2 seconds 0.05
+pivot 3 seconds 0.05
+pivot 4 seconds 0.05
+pivot 5 seconds 0.05
+pivot 6 seconds 0.05
+pivot 7 seconds 0.05
+pivot 8 seconds 0.05
+pivot 9 seconds 0.05
+pivot 10 seconds 0.05
+pivot 11 seconds 0.06
+pivot 12 seconds 0.06
+pivot 13 seconds 0.06
+pivot 14 seconds 0.06
+pivot 15 seconds 0.06
+pivot 16 seconds 0.06
+pivot 17 seconds 0.06
+pivot 18 seconds 0.07
+pivot 19 seconds 0.07
+pivot 20 seconds 0.08
+pivot 21 seconds 0.08
+pivot 22 seconds 0.08
+pivot 23 seconds 0.08
+pivot 24 seconds 0.08
+pivot 25 seconds 0.08
+pivot 26 seconds 0.08
+degree 1 zeros [3, 6, 8] minslack 0.1336387268084673 poly [-0.4306444452109413] lambda 0.5772017896193472
+degree 3 zeros [1, 3, 4, 6, 8, 10] minslack 0.09362018697825863 poly [0.18172799048485322, 0.0, 1.0] lambda 0.22364839902607347
+degree 5 zeros [0, 2, 4, 6, 7, 9, 11] minslack 0.09657205384101274 poly [-0.1263072103914644, -0.0305875991264081, 0.13102766674387067, 0.03799708168900168, -1.0] lambda -0.12958272309564373
+degree 7 zeros [3, 6, 8, 13, 19, 22, 27, 30, 32] minslack 0.023082695219499936 poly [0.029285305802047964, -0.026219942052322413, 0.4937985575650144, 0.010098644686279608, -0.6506095997514152, -0.029707579798603154, -0.4322200430721466] lambda 0.2769682410486158
+forcing [0.0, -0.01756178685326013, 0.28672525417137473, 0.01861314156435136, -0.8620272294749747, -0.013885677377744616, 0.0, 0.026299792766218473, -0.2533167099844617]
+ALL EXACT FIELD IDENTITIES AND RATIONAL INTERVAL SIGNS VERIFIED 0.6864066123962402

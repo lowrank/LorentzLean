@@ -1,0 +1,127 @@
+⚠ [7359/7387] Replayed Lorentz.AngularSeries
+warning: Lorentz/AngularSeries.lean:108:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/AngularSeries.lean:141:20: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/AngularSeries.lean:205:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [7364/7387] Replayed Lorentz.CertificateSigns
+warning: Lorentz/CertificateSigns.lean:36:47: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [7367/7387] Replayed Lorentz.CertificateGeometry
+warning: Lorentz/CertificateGeometry.lean:241:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:243:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:249:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:251:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:257:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:259:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:265:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:267:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:273:20: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:283:32: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [coarseSign, fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:286:32: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [coarseSign, fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/CertificateGeometry.lean:295:32: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  simp [coarseSign, fineSign, n̵o̵d̵e̵_̵f̵o̵u̵r̵_̵n̵e̵g̵_̵a̵,̵ ̵a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+✔ [7372/7387] Built Lorentz.Baseline (3.1s)
+✔ [7373/7387] Built Lorentz.CompactStability (2.5s)
+✔ [7374/7387] Built Lorentz.Composition (6.0s)
+✔ [7375/7387] Built Lorentz.Perturbation (7.0s)
+⚠ [7376/7387] Built Lorentz.BaselineLocal (6.9s)
+warning: Lorentz/BaselineLocal.lean:61:44: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/BaselineLocal.lean:61:70: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [7377/7387] Built Lorentz.AllDegrees (3.7s)
+✔ [7378/7387] Built Lorentz.CertificatePerturbation (40s)
+✔ [7379/7387] Built Lorentz.CertificateIdentities (112s)
+✔ [7380/7387] Built Lorentz.CertificateFinite (6.1s)
+✔ [7381/7387] Built Lorentz.CertificateAlternation (4.0s)
+⚠ [7382/7387] Built Lorentz.ContactGeometry (4.7s)
+warning: Lorentz/ContactGeometry.lean:202:23: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Lorentz/ContactGeometry.lean:219:23: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+✔ [7383/7387] Built Lorentz.PerturbationContacts (4.3s)
+✔ [7384/7387] Built Lorentz.BaseCertificates (4.2s)
+✔ [7385/7387] Built Lorentz.Counterexample (5.6s)
+✔ [7386/7387] Built Lorentz (5.0s)
+Build completed successfully (7387 jobs).

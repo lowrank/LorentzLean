@@ -1,0 +1,278 @@
+[
+  {
+    "path": "verify.py",
+    "sha256": "15fa732fcbe9dfc55265ef799e89b16bf08923a6f91e3c76bd119cabe0ac796f"
+  },
+  {
+    "path": "lorentz_self_similar_optimized.pdf",
+    "sha256": "8e531b1c37f387b84e49c1ffecaba5e469f041c996b3de0460360335aa35a526"
+  },
+  {
+    "path": "README.md",
+    "sha256": "24f30388c949e128cbd7e31a215e8b2551591b2c85e713ab2c8d4ae588d059a3"
+  },
+  {
+    "path": "PROOF_MANIFEST.json",
+    "sha256": "2d871d8954df989cc4b152fe33d8e968c6f175353995bc818f59ee67276ec109"
+  },
+  {
+    "path": "lorentz_self_similar_optimized.tex",
+    "sha256": "e84d71a2e3e9fe7bc2dab1bc8ba52e826280e34578f8740c4836e7d1b7372011"
+  },
+  {
+    "path": "lorentz_self_similar.pdf",
+    "sha256": "f3c8e63401176e53b72a557ee2ae83a75c2da71bd5fe1e2539956c9bd1990d5c"
+  },
+  {
+    "path": "lean-toolchain",
+    "sha256": "42779d67b81608af8a12aa4328d2ab47ca201925b3b2bd68369587b5340bb434"
+  },
+  {
+    "path": "Audit.lean",
+    "sha256": "46342a909924906cdade2269cbd8292d3c87b62d25ddeea48c0b3c0a0c247b0d"
+  },
+  {
+    "path": "lakefile.toml",
+    "sha256": "10bd120f1aef198bb618a5d1a23b826bf993d05116196c766fd485b9d76a1aef"
+  },
+  {
+    "path": "lake-manifest.json",
+    "sha256": "ab8da08e6c70b77e168cc67d205a4f8866799103c365ddacd80b358a8255a4dd"
+  },
+  {
+    "path": "audit.log",
+    "sha256": "7de1a6a6b3bc698bd2d32ef5f0ff977a18fd68d30bed67c1c04ec187dc9f5bf3"
+  },
+  {
+    "path": "Lorentz.lean",
+    "sha256": "8a19b17f2bf076c98ad378ec79089f91247fc06a9557ceb9dd22eaf993b6203f"
+  },
+  {
+    "path": "lorentz_plateau_counterexamples.pdf",
+    "sha256": "661a6a76f5005c9f59f1673ee11d2bf1fadcee04ae7b37d9dea1bf1fbb8aa978"
+  },
+  {
+    "path": "lorentz_plateau_constructions/audit_odd.py",
+    "sha256": "ebc2b4b34c454a06824784c9d620c86a91bbcc69bbbc253fa2833f9361097f21"
+  },
+  {
+    "path": "lorentz_plateau_constructions/README.txt",
+    "sha256": "76bb077df87eae9ad16b8a77aa1d10320f3b979ad302d83d0795b39dab4f14ff"
+  },
+  {
+    "path": "lorentz_plateau_constructions/even_certificate.json",
+    "sha256": "0052ea60554379a2dcc2502204a47a12867406a4eecdeec817cb481f8b892869"
+  },
+  {
+    "path": "lorentz_plateau_constructions/verify_odd.py",
+    "sha256": "9c77046b54af1417f37c949b19eef149b43fb70b68dde24d4fac27bcf5ebedfd"
+  },
+  {
+    "path": "lorentz_plateau_constructions/lorentz_plateau_counterexamples.tex",
+    "sha256": "462a71c0a73c227e72fa6c1f627aa419956f21cdda5f6d3c5defe44e1aa7e983"
+  },
+  {
+    "path": "lorentz_plateau_constructions/verification.txt",
+    "sha256": "a71d978d13974ac6199bc6f991341a5e612d0ad1a3c25f155b8fa1fdf5a65113"
+  },
+  {
+    "path": "lorentz_plateau_constructions/even_generation.log",
+    "sha256": "8435da6ad7a8520f5bdfd4080a3935b597a579a9f91750d54e30231589217828"
+  },
+  {
+    "path": "lorentz_plateau_constructions/odd_certificate.json",
+    "sha256": "16af9febb2c4c5c752c1e80df29b4f3fb8de437055663717e0d5efa5080bc024"
+  },
+  {
+    "path": "lorentz_plateau_constructions/SHA256SUMS.txt",
+    "sha256": "7554569bba1f5fcb5a1026e4378a06046374dd7f5decbdd8f0093e2166248321"
+  },
+  {
+    "path": "lorentz_plateau_constructions/lorentz_plateau_counterexamples.pdf",
+    "sha256": "661a6a76f5005c9f59f1673ee11d2bf1fadcee04ae7b37d9dea1bf1fbb8aa978"
+  },
+  {
+    "path": "lorentz_plateau_constructions/generate_even.py",
+    "sha256": "1a649156db71d66ffb9782b1b14ad0ab87d1cba786c78d72585dd95e2a4f0e1e"
+  },
+  {
+    "path": "lorentz_plateau_constructions/audit_even.py",
+    "sha256": "4e91d13437913b7e299fc26cb8ed1c012946a357e9b542f329d7a0f6b29a3b2b"
+  },
+  {
+    "path": "scripts/check_certificate.py",
+    "sha256": "e6b2a8494a904b76134a4c9066a35dc5e4af7db2f6cfe6e9ba1f93f85f01b3ab"
+  },
+  {
+    "path": "Lorentz/LocalComposition.lean",
+    "sha256": "78a9634866f4bab669d6b6ae2c5fde4bfa59ed08b7cf856f04db7b1fea1b2e57"
+  },
+  {
+    "path": "Lorentz/CertificateBounds.lean",
+    "sha256": "812b77cf92da7e3319f2d5b6638483f9e6ae25805f7296b91d6332d1278d42ac"
+  },
+  {
+    "path": "Lorentz/Stability.lean",
+    "sha256": "5295c108ed71b5b331ef76d1ead1181ffa8dff0922767d98dc7b14a2128fd0fa"
+  },
+  {
+    "path": "Lorentz/Baseline.lean",
+    "sha256": "66f1b2d256a231ed7fc1ed69e2e7f5ea7cba090c4231ae24bc4bf710dfd04fc3"
+  },
+  {
+    "path": "Lorentz/CertificatePerturbation.lean",
+    "sha256": "ce48a18122f44c330d7c1537e6ddf2449be75542cba6fca764e57de7d4bf653e"
+  },
+  {
+    "path": "Lorentz/CompactStability.lean",
+    "sha256": "c72380f71fa494c06b0eda22bf8c90a711eb23cbfdc9c605f9b6a792a79669b2"
+  },
+  {
+    "path": "Lorentz/Trigonometry.lean",
+    "sha256": "169366e0aca7b6ea60c53c371527bae5f5f992c44dc5d68607ba7e9710e7233a"
+  },
+  {
+    "path": "Lorentz/PolynomialCertificate.lean",
+    "sha256": "839fd0d41947a1f8ea8d36b80e859b5a4fac104b6ad4e971d480cef5f2bf2e35"
+  },
+  {
+    "path": "Lorentz/ContactGeometry.lean",
+    "sha256": "a8d9a3000debb7df089d40f698231c4a6a0269986ee45135d1615152019ef09d"
+  },
+  {
+    "path": "Lorentz/Composition.lean",
+    "sha256": "e6032ad5ff3658d1971639cbced5374be811df308c7c86be1c675cd947dd05f5"
+  },
+  {
+    "path": "Lorentz/CertificateRoot.lean",
+    "sha256": "b6fdb14f3fcea140d8a3f9dabbffae583e81bd276bf83d74cff2f38cd5ae9f0c"
+  },
+  {
+    "path": "Lorentz/CertificateIdentities.lean",
+    "sha256": "cad8dcee7a4a0137b6a0bbd562b3c9c9a107beec082b2fd4b1428819d5a24fd9"
+  },
+  {
+    "path": "Lorentz/AngularSeries.lean",
+    "sha256": "92a6c63c6c2e0f8a569933792cbf431da7cc4a0b12345ec6a8f7d76fc28433c1"
+  },
+  {
+    "path": "Lorentz/CertificateNorms.lean",
+    "sha256": "658236d124d2a92039a7f19950bcd262c08bf3bff8a8af798b24f514980b2530"
+  },
+  {
+    "path": "Lorentz/Counterexample.lean",
+    "sha256": "b829f9d11074f934d640a303930b1e9b1b7809674bcd935c9918d9a67d301b8a"
+  },
+  {
+    "path": "Lorentz/BaselineLocal.lean",
+    "sha256": "526c2a9f640239955c92f2b2ae73d4ec330bfe47ffbe4e6958ad2d82eb30074e"
+  },
+  {
+    "path": "Lorentz/ForcingPolynomials.lean",
+    "sha256": "c93f1e70bd0e552253162a8a5bc285c10ead7535813d3079a3f3e9280a08f059"
+  },
+  {
+    "path": "Lorentz/CertificateSigns.lean",
+    "sha256": "38b1783cf62270cd80942ec98983a360a08477b690e1058166e4a1547deb69bb"
+  },
+  {
+    "path": "Lorentz/CertificateOrder.lean",
+    "sha256": "234585b5e9bf51c4ca6256f19fb87fdfdceaae62b999e4ab0196c84aab8cbb33"
+  },
+  {
+    "path": "Lorentz/CertificateGrid.lean",
+    "sha256": "316b36738c6042b4280585bfe9884a622afa957a0f3e4a42bf1b7f949f399c7f"
+  },
+  {
+    "path": "Lorentz/PerturbationContacts.lean",
+    "sha256": "8e3a02e02973f3e1433a5018e12e16e918350c9f2b01b5e2a80d60f438bf49aa"
+  },
+  {
+    "path": "Lorentz/BaseCertificates.lean",
+    "sha256": "5f3f38c637903b7015b8a97d1aa41aa3e63dea526abc1ed47f9e6ab231a5f3f1"
+  },
+  {
+    "path": "Lorentz/Series.lean",
+    "sha256": "381109ceac9a45a45d5af5d3a8c45c8a86cadaeecf8397be790711a3ff52a52f"
+  },
+  {
+    "path": "Lorentz/CertificateGeometry.lean",
+    "sha256": "7ce7ea1c0fc59d0006b1a9a598cf5101ed79578e1397eaa412630ab2195c69b5"
+  },
+  {
+    "path": "Lorentz/CertificateFinite.lean",
+    "sha256": "3dd15c017522ff8c8edb62eb2fd34c9ce44c2cfb492b194abeb9943a1dcab256"
+  },
+  {
+    "path": "Lorentz/CertificateData.lean",
+    "sha256": "df2c4123754fa3f79d4b6d3365a5e8f7d1f395418c336e4ee4549da740eada5e"
+  },
+  {
+    "path": "Lorentz/CertificatePolynomials.lean",
+    "sha256": "9cdba167c0a27c4d0a3dd49e4cb7a4dfd51a7c55c1c67d2752383ec954bff99d"
+  },
+  {
+    "path": "Lorentz/CertificateAlternation.lean",
+    "sha256": "953d3676ec4c070e8b8f7f559eaa85b85b14fa41e2ede1de63b812e61c3ddab7"
+  },
+  {
+    "path": "Lorentz/CertificateCompleteness.lean",
+    "sha256": "96ff725ccffb160c980150686e44ff25b3a82cfd5be3309d4062524eb6790e40"
+  },
+  {
+    "path": "Lorentz/PolynomialBounds.lean",
+    "sha256": "0d56e378955b25ebbeb20bcba1ab0f2a5844c9c458a8e33e73ded62a4c3c6734"
+  },
+  {
+    "path": "Lorentz/Perturbation.lean",
+    "sha256": "70076295b288083de8731232a608c4f826c94a7240445000ccec911312157291"
+  },
+  {
+    "path": "Lorentz/SeriesEstimates.lean",
+    "sha256": "1dd4926aa4f7eaca710ef0128ec2c98752c9742aa2c54e73d3244967976c3c5d"
+  },
+  {
+    "path": "Lorentz/AllDegrees.lean",
+    "sha256": "499a1faa28004649299935f609ff425fd572c7348c810cd3326f4ca1d027226c"
+  },
+  {
+    "path": "Lorentz/Minimax.lean",
+    "sha256": "bb33833bad9fb9660d494b2f8aed2c35e59c9501c7bcfe2a7874378f42e53211"
+  },
+  {
+    "path": "Lorentz/QuarterSeries.lean",
+    "sha256": "4ef425f370aef8ee7ed824319898e0d8d0f1a62afaab95b95341ef0b1489f190"
+  },
+  {
+    "path": "verification/optimized-build.log",
+    "sha256": "8806a34649474ec8b57a8d2aa128fea0eeff53785b2e2a63e772b123ceebc073"
+  },
+  {
+    "path": "verification/original-build.log",
+    "sha256": "53b75934785309dc350ea630a491dc95ed25f3a01b1a0f1b5c2a8cca8290e35d"
+  },
+  {
+    "path": "verification/original-sources.tar.gz",
+    "sha256": "c0f3311e7e5f94dacc0f2d11a2fbbc333035d6d0d25904f28da5caeea11c87b0"
+  },
+  {
+    "path": "verification/performance.json",
+    "sha256": "782e557188f9039f10efa5856dd72ab7921c01b498dbcac648ceefba03f49230"
+  },
+  {
+    "path": "verification/plateau/even-certificate-audit.log",
+    "sha256": "882af9e6646763b936c83a80c1f359f0dcfd8aa0528a98093967d78c0f0da053"
+  },
+  {
+    "path": "verification/plateau/odd-certificate-audit.log",
+    "sha256": "7e7feaadd899e54ebcc5cfc85222850e4b865953abebb6c86c113bd4ae18f167"
+  },
+  {
+    "path": "Lorentz/Plateau/SeriesTools.lean",
+    "sha256": "494052c16b8c23639a521ab8071a3f168000c863beef887c692a4411c0e0d799"
+  },
+  {
+    "path": "Lorentz/Plateau/Reduction.lean",
+    "sha256": "5e7b93d0a9691cbf83aa74ee5b6176919a9406634d36749de37788ba0688ccb6"
+  }
+]

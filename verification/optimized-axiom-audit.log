@@ -1,0 +1,12 @@
+Lorentz.Construction.lorentz_counterexample :
+  ∃ f,
+    ContinuousOn f Lorentz.interval ∧
+      f 0 = 0 ∧
+        (∃ x ∈ Lorentz.interval, f (-x) ≠ -f x) ∧
+          ∀ (n : ℕ), (∃ p, Lorentz.IsBest f n p) ∧ ∀ (p : Polynomial ℝ), Lorentz.IsBest f n p → Polynomial.eval 0 p = 0
+'Lorentz.Construction.lorentz_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.all_degrees_of_selfsimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Alternates.isBest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Certificate.gridPerturbation_eq_actualH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Certificate.PolynomialCertificate.checked_slack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Stability.signed_contact_persistence_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

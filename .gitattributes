@@ -1,0 +1,2 @@
+# Retain compiler output byte for byte, including its whitespace.
+verification/*.log -whitespace

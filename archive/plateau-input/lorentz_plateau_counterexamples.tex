@@ -1,0 +1,734 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\norm}[1]{\left\|#1\right\|_\infty}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dist}{\operatorname{dist}}
+\title{Self-similar counterexamples to the consecutive-degree\newline conjectures of Lorentz}
+\author{}
+\date{October 28, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We construct two continuous functions on $[-1,1]$. The first vanishes at
+zero, is not odd, and has identical best uniform polynomial approximants
+at every consecutive pair of degrees $(2k+1,2k+2)$. The second is not even
+and has identical best approximants at every pair $(2k,2k+1)$. These give
+counterexamples to Conjectures $3'$ and $4$ in the formulation of Saff and
+Varga. Both functions are uniformly convergent self-similar series with
+contraction $-3/5$ and explicit algebraic polynomial forcing. Three and four
+finite alternation certificates, respectively, propagate to every degree.
+A quantitative stability argument proves the certificates on the entire
+interval with the explicit perturbation parameter $10^{-10}$. The finite
+algebraic identities and inequalities are verified by independent programs
+using exact rational arithmetic. The new constructions are not asserted
+here to have been formalized in Lean.
+\end{abstract}
+
+\section{The statements and the proof strategy}
+
+For $f\in C[-1,1]$, write $P_n f$ for its unique best uniform approximant
+among real polynomials of degree at most $n$, and let
+$E_n(f)=\norm{f-P_n f}$. Throughout, $T_k$ is the Chebyshev polynomial
+defined by $T_k(\cos\theta)=\cos(k\theta)$.
+
+The two assertions considered here are the normalized oddness conjecture
+and the evenness conjecture from \cite{SaffVarga}:
+\begin{align*}
+ f(0)=0,\quad P_{2k+1}f=P_{2k+2}f\ (k\ge0)
+ &\quad\Longrightarrow\quad f\text{ is odd},\\
+ P_{2k}f=P_{2k+1}f\ (k\ge0)
+ &\quad\Longrightarrow\quad f\text{ is even}.
+\end{align*}
+
+\begin{theorem}\label{thm:main}
+There exist $f_{\mathrm{o}},f_{\mathrm{e}}\in C[-1,1]$ such that
+\begin{align*}
+ f_{\mathrm{o}}(0)&=0,&
+ P_{2k+1}f_{\mathrm{o}}&=P_{2k+2}f_{\mathrm{o}}\quad(k\ge0),&
+ f_{\mathrm{o}}(1)+f_{\mathrm{o}}(-1)&\ne0,\\
+ &&P_{2k}f_{\mathrm{e}}&=P_{2k+1}f_{\mathrm{e}}\quad(k\ge0),&
+ f_{\mathrm{e}}(1)-f_{\mathrm{e}}(-1)&\ne0.
+\end{align*}
+Both functions are specified below by algebraic polynomial forcing and the
+fixed parameter $\eps=10^{-10}$.
+\end{theorem}
+
+The proof has three dependencies. First, Chebyshev composition reduces all
+degree conditions to finitely many initial ones. Second, an explicit
+baseline has known extremal points and sufficiently strong local gaps to
+preserve finite contact inequalities under perturbation. Third, exact
+algebraic certificates supply the required initial approximants. We prove
+these ingredients in that order and then assemble the two constructions.
+
+\section{Self-similarity and the finite degree reduction}
+
+Set
+\[
+ a=\frac35,\qquad u=\frac{\sqrt2}{2},\qquad
+ \mathcal S h(x)=\sum_{j=0}^{\infty}(-a)^j h(T_{3^j}(x)),
+ \qquad G=\mathcal S T_1.
+\]
+For continuous $h$, the series converges uniformly on $[-1,1]$, since
+$\norm{h\circ T_{3^j}}=\norm h$ and $\sum a^j<\infty$. In particular,
+$\mathcal S h$ is continuous and
+\begin{equation}\label{eq:self}
+ \mathcal S h=h-a(\mathcal S h)\circ T_3.
+\end{equation}
+Commutation of Chebyshev polynomials gives
+$\mathcal S T_d=G\circ T_d$.
+
+\begin{lemma}[Chebyshev composition]\label{lem:composition}
+For $F\in C[-1,1]$, $m\ge1$, and $n\ge0$,
+\[
+ P_n(F\circ T_m)=(P_{\lfloor n/m\rfloor}F)\circ T_m.
+\]
+\end{lemma}
+\begin{proof}
+Write $x=\cos\theta$. Average any polynomial competitor $p(\cos\theta)$
+over the shifts $\theta\mapsto\theta+2\pi j/m$, $0\le j<m$. The target
+$F(\cos m\theta)$ is invariant under these shifts, so this averaging
+cannot increase the uniform error. Only cosine frequencies divisible by
+$m$ survive. The average is therefore $r(\cos m\theta)$ for a polynomial
+$r$ of degree at most $\lfloor n/m\rfloor$. Since $T_m$ maps $[-1,1]$
+onto itself, its error equals $\norm{F-r}$. This gives equality of the two
+best errors, and uniqueness gives the claimed identity.
+\end{proof}
+
+\begin{lemma}[Recurrence for best approximants]\label{lem:recurrence}
+If $q$ is a polynomial and $f=\mathcal S q$, then
+\begin{equation}\label{eq:bestrec}
+ P_n f=q-a(P_{\lfloor n/3\rfloor}f)\circ T_3,
+ \qquad n\ge\deg q.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $n\ge\deg q$, translation by $q$ preserves the space of degree-at-most
+$n$ polynomials. Apply this translation, homogeneity of best approximation,
+\eqref{eq:self}, and Lemma~\ref{lem:composition}.
+\end{proof}
+
+\begin{proposition}[Finite conditions for the two parity patterns]
+\label{prop:finite}
+Let $f=\mathcal S q$.
+\begin{enumerate}
+\item If $\deg q\le7$ and
+$P_1f=P_2f$, $P_3f=P_4f$, and $P_5f=P_6f$, then
+$P_{2k+1}f=P_{2k+2}f$ for every $k\ge0$.
+\item If $\deg q\le8$ and
+$P_0f=P_1f$, $P_2f=P_3f$, $P_4f=P_5f$, and $P_6f=P_7f$, then
+$P_{2k}f=P_{2k+1}f$ for every $k\ge0$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+For the first claim, use strong induction on odd $n$. The cases $n=1,3,5$
+are assumptions. For odd $n\ge7$, the two floor indices in
+\eqref{eq:bestrec} for $n,n+1$ agree unless $n=6r+5$. In that case they
+are $2r+1,2r+2$, a smaller odd/even pair covered by induction.
+
+For the second claim, use strong induction on even $n$. The cases
+$n=0,2,4,6$ are assumptions. For even $n\ge8$, the floor indices agree
+unless $n=6r+2$, in which case they are the smaller even/odd pair
+$2r,2r+1$. The same recurrence completes the proof.
+\end{proof}
+
+\section{The baseline and its exact extrema}
+
+For $0<c<1$, define
+\[
+ G_c(x)=\sum_{j\ge0}(-c)^j T_{3^j}(x).
+\]
+Thus $G=G_a$. Every $G_c$ is odd. We first establish the extremal geometry
+for $b=1/3$ and then transfer it to $a=3/5$.
+
+\begin{lemma}\label{lem:baseline}
+The function $G$ has unique maximum at $u$, unique minimum at $-u$, and
+\begin{equation}\label{eq:B}
+ B:=G(u)=\norm G=\frac{u}{1-a}=\frac{5u}{2}.
+\end{equation}
+Moreover, for every $y\in[-1,1]$,
+\begin{equation}\label{eq:globalgap}
+ B-|G(y)|\ge\frac12\dist(y,\{-u,u\})^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Pair adjacent terms in $G_b$:
+\[
+ G_b=\sum_{j\ge0}9^{-j}g\circ T_{9^j},
+ \qquad g(x)=x-\frac13T_3(x)=2x-\frac43x^3.
+\]
+The identity
+\[
+ g(u)-g(y)=\frac43(y-u)^2(y+2u)
+\]
+shows that $g$ has its unique maximum at $u$ and its unique minimum at
+$-u$ on the interval. Since $T_9(u)=u$, every term in the paired series
+has its maximum at $u$. Consequently $B_b:=\norm{G_b}=3u/2$ and
+\begin{equation}\label{eq:bquad}
+ B_b-G_b(y)\ge\frac43(y-u)^2(y+2u)\ge\frac12(y-u)^2.
+\end{equation}
+The last inequality uses $\frac43(\sqrt2-1)>1/2$. Oddness gives the
+corresponding lower bound for $B_b+G_b(y)$.
+
+The uniformly convergent series satisfy the identity
+\begin{equation}\label{eq:resolvent}
+ G_a(x)=G_b(x)+(a-b)\sum_{j=1}^{\infty}
+ a^{j-1}(-1)^jG_b(T_{3^j}(x)).
+\end{equation}
+Indeed, after expansion, the coefficient of $T_{3^k}$ on the right is
+\[
+ (-1)^k\left[b^k+(a-b)\sum_{j=1}^k a^{j-1}b^{k-j}\right]=(-a)^k.
+\]
+Rearrangement is justified by absolute uniform convergence.
+
+Every coefficient multiplying a function on the right of
+\eqref{eq:resolvent} is positive. Each such function has norm $B_b$ and
+value $B_b$ at $u$, because $T_3(u)=-u$ and $G_b$ is odd. Thus
+\[
+ G_a(u)=B_b\left(1+\frac{a-b}{1-a}\right)=\frac{u}{1-a}.
+\]
+All deficits from this maximum are nonnegative. Keeping the first deficit
+and using \eqref{eq:bquad} proves
+$B-G_a(y)\ge(y-u)^2/2$. Oddness proves
+$B+G_a(y)\ge(y+u)^2/2$. Their minimum is
+\eqref{eq:globalgap}, and also proves uniqueness of the two extrema.
+\end{proof}
+
+For later use, $P_0G=0$ by oddness. Lemma~\ref{lem:recurrence} applied to
+$G=\mathcal S T_1$ therefore gives
+\begin{equation}\label{eq:Gsmall}
+ P_1G=P_2G=T_1.
+\end{equation}
+It follows that $G\circ T_d$ has initial best approximant zero for
+$0\le n<d$, and best approximant $T_d$ for $d\le n<3d$. The residuals
+in these two ranges are $G\circ T_d$ and $-aG\circ T_{3d}$.
+
+\section{From finite contact inequalities to the whole interval}
+
+The point of the larger contraction is that the baseline gap and an
+arbitrary polynomial-forcing perturbation can be compared at the same
+scale. No stationarity conditions on the perturbation are needed.
+
+\begin{lemma}[A gap at the exit scale]\label{lem:exit}
+Let $0<|s|\le\delta:=1/16$, and choose $J\ge0$ minimal with
+$3^J|s|\ge\delta$. Then
+\begin{equation}\label{eq:exitgap}
+ B-G(\cos(\pi/4+s))\ge\frac{a^J}{4608}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Minimality gives $\delta\le3^J|s|\le3\delta$. The exact phase relation,
+using $3^J\equiv1$ or $3\pmod8$ according to the parity of $J$, is
+\[
+ (-1)^JG_b(\cos(3^J(\pi/4+s)))
+ =G_b(\cos(\pi/4+(-1)^J3^Js)).
+\]
+On $[\pi/4-3\delta,\pi/4+3\delta]$, sine is at least $1/2$.
+Thus the argument of the final $G_b$ is at distance at least
+$\delta/2$ from $u$, and its deficit is at least
+$\delta^2/8=1/2048$ by \eqref{eq:bquad}.
+For $J\ge1$ the coefficient of this term in \eqref{eq:resolvent} is
+$(a-b)a^{J-1}=(4/9)a^J$. For $J=0$ the coefficient is $1\ge4/9$.
+Discarding all other nonnegative deficits proves \eqref{eq:exitgap}.
+\end{proof}
+
+For a polynomial $w=\sum w_kT_k$, the bounds
+\[
+ \norm w\le\sum|w_k|,\qquad
+ \sup_\theta\left|\frac{d}{d\theta}w(\cos\theta)\right|
+ \le\sum k|w_k|
+\]
+follow directly from the cosine representation. The second bound is in
+the angular variable, not the spatial variable.
+
+\begin{lemma}[Perturbation oscillation]\label{lem:oscillation}
+Let $H=\mathcal S h$ and $D=H-v$, where $h,v$ are polynomials. Suppose
+\[
+ \norm h\le M,\quad
+ \sup_\theta|(h(\cos\theta))'|\le L,\quad
+ \norm v\le V,\quad
+ \sup_\theta|(v(\cos\theta))'|\le L_v.
+\]
+Let $d\ge1$ and let $J$ be a nonnegative integer with
+$\delta\le3^Jd|t|\le3\delta$. Then
+\begin{equation}\label{eq:oscillation}
+ |D(\cos(\theta+t))-D(\cos\theta)|\le C_d a^J,
+ \qquad
+ C_d=5M+\frac{15L}{64d}+\frac{3L_v}{16d}.
+\end{equation}
+Also $\norm D\le K:=\frac52M+V$.
+\end{lemma}
+\begin{proof}
+The $j$th forcing difference is at most
+$\min\{L3^j|t|,2M\}$. Splitting the series before $J$ gives
+\begin{align*}
+ |H(\cos(\theta+t))-H(\cos\theta)|
+ &\le L|t|\sum_{j<J}(3a)^j+2M\sum_{j\ge J}a^j\\
+ &\le\left(\frac{15L}{64d}+5M\right)a^J.
+\end{align*}
+Here $3a-1=4/5$ and $3^J|t|\le3/(16d)$.
+Moreover $3^{-J}\le a^J$, so
+$L_v|t|\le3L_va^J/(16d)$. This proves \eqref{eq:oscillation}.
+The norm bound follows from $\norm H\le M/(1-a)=5M/2$.
+\end{proof}
+
+\begin{proposition}[Quantitative finite-contact stability]\label{prop:stability}
+Let
+\[
+ R(x)=sA G(T_d(x)),\qquad A>0,\quad s\in\{-1,1\},\quad d\ge1.
+\]
+Its extremal points are the $2d$ zeros of $T_{2d}$, namely
+$x_i=\cos((2i+1)\pi/(4d))$, $0\le i<2d$. Put
+$\sigma_i=R(x_i)/(AB)$. For $D=\mathcal S h-v$, suppose
+\begin{equation}\label{eq:finiteineq}
+ \sigma_iD(x_i)\le\lambda\qquad(0\le i<2d).
+\end{equation}
+With the constants of Lemma~\ref{lem:oscillation}, set
+\[
+ \eta_0=\frac1{1296},\qquad
+ \gamma=\frac1{8\cdot1296^2}.
+\]
+If $\eps>0$ satisfies
+\begin{equation}\label{eq:epsconditions}
+ \eps C_d\le\frac{A}{4608},\qquad
+ \eps(K+|\lambda|)\le A\gamma,
+\end{equation}
+then
+\begin{equation}\label{eq:globalcertificate}
+ |R(x)+\eps D(x)|\le AB+\eps\lambda\qquad(x\in[-1,1]).
+\end{equation}
+Every equality in \eqref{eq:finiteineq} is an equality in
+\eqref{eq:globalcertificate} with sign $\sigma_i$.
+\end{proposition}
+\begin{proof}
+Use $x=\cos\theta$. Around every extremal angle $\theta_i$ take the
+neighborhood $|\theta-\theta_i|\le\eta_0/d$. By periodicity, reflection,
+and oddness, the signed baseline value reduces to
+$AG(\cos(\pi/4+s'))$, with $|s'|=d|\theta-\theta_i|$.
+For $s'\ne0$ choose its exit scale $J$. Lemmas~\ref{lem:exit} and
+\ref{lem:oscillation} give
+\[
+ \sigma_i(R(x)+\eps D(x))
+ \le AB-\frac{A a^J}{4608}+\eps\lambda+\eps C_d a^J
+ \le AB+\eps\lambda.
+\]
+At the contact itself this follows from \eqref{eq:finiteineq}.
+
+We must also control the opposite sign. The neighborhood radius ensures
+$J\ge4$. Apply the forcing estimate in Lemma~\ref{lem:oscillation} to
+$G=\mathcal S T_1$, taking $d=1$, $M=L=1$, and omitting $v$. Then
+\[
+ |G(\cos(\pi/4+s'))-B|
+ \le\frac{335}{64}a^J
+ \le\frac{335}{64}\left(\frac35\right)^4
+ <\frac{679}{1000}<\frac B2.
+\]
+Thus $\sigma_iR(x)>AB/2$. The second inequality in
+\eqref{eq:epsconditions} gives $\eps\norm D\le A\gamma<AB/2$.
+The perturbed residual retains this sign, proving the absolute bound
+throughout the neighborhoods. At $s'=0$, sign retention follows directly
+from $AB-\eps K>0$.
+
+Outside these neighborhoods, the angular distance of $d\theta$ from
+every preimage of $\pm u$ is at least $\eta_0$. Monotonicity of cosine
+between its extrema, and the sine bound $1/2$ in a short interval adjacent
+to each preimage, give
+$\dist(\cos(d\theta),\{-u,u\})\ge\eta_0/2$.
+By \eqref{eq:globalgap}, $|R(x)|\le AB-A\gamma$. Therefore
+\[
+ |R(x)+\eps D(x)|\le AB-A\gamma+\eps K\le AB+\eps\lambda.
+\]
+Finally, $AB+\eps\lambda>0$ because
+$\eps|\lambda|\le A\gamma<AB$. At an active contact the signed value
+is exactly $AB+\eps\lambda$, as claimed.
+\end{proof}
+
+In both constructions below the exact certificates give
+\begin{equation}\label{eq:universalbounds}
+ M<32,\quad L<128,\quad V<32,\quad L_v<128,\quad|\lambda|<32.
+\end{equation}
+All residuals have $A\ge3/5$ and $d\ge3$. Thus $C_d<178$ and
+$K+|\lambda|<144$. The single explicit choice
+\begin{equation}\label{eq:epsilon}
+ \eps=10^{-10}
+\end{equation}
+satisfies \eqref{eq:epsconditions}, since
+\[
+ \frac{178}{10^{10}}<\frac{3}{5\cdot4608},\qquad
+ \frac{144}{10^{10}}<\frac{3}{5\cdot8\cdot1296^2}.
+\]
+Consequently, any of the finite certificates below with the stated bounds
+is automatically a certificate on the whole interval.
+
+\section{The normalized oddness counterexample}
+
+Define
+\begin{align}
+ h_{\mathrm{o}}={}&(\eta-\sqrt3-1)T_0-\sqrt3\,T_2+T_4-3T_5
+                  +\eta T_6+\beta T_7,\label{eq:oddh}\\
+ \eta={}&\frac{16\cos(\pi/18)-26\cos(\pi/6)-26\cos(5\pi/18)}{15}.
+ \label{eq:eta}
+\end{align}
+To specify $\beta$ exactly, put $c_j=\cos(j\pi/36)$ and set
+\begin{align}
+ 7132971\beta={}&-21647763+7264892c_1-16364700c_2+2333622c_3
+ -20710080c_4\notag\\
+ &+7960924c_5-8377290c_6+6354480c_7-6380100c_8\notag\\
+ &+8032814c_9-667710c_{10}+24678c_{11}.
+ \label{eq:beta}
+\end{align}
+Numerically $\eta\approx-1.564814286803340$ and
+$\beta\approx-5.914876184323304$. These decimals are descriptive only;
+\eqref{eq:eta}--\eqref{eq:beta} define the coefficients.
+
+Set
+\begin{equation}\label{eq:fo}
+ f_{\mathrm{o}}=G\circ T_3+\eps\mathcal S h_{\mathrm{o}}
+ =\mathcal S(T_3+\eps h_{\mathrm{o}}).
+\end{equation}
+We next give the three finite certificates needed for this function.
+
+\subsection{Exact definition of the correction polynomials}
+
+Let
+\[
+ x_j=-\cos\frac{(2j+1)\pi}{36},\quad0\le j<18,\qquad
+ \sigma_j=(1,-1,-1,1)_{j\bmod4}.
+\]
+The coarse grid is $y_i=x_{3i+1}$, $0\le i<6$, with signs
+$\tau=(-1,1,1,-1,-1,1)$. These are respectively the extrema of
+$-aG\circ T_9$ and $G\circ T_3$.
+
+Define the explicit grid functions
+\[
+ W_k(x_j)=T_k(x_j)-aT_{3k}(x_j)
+        +\frac{a^2}{1+(-1)^ka}T_{9k}(x_j).
+\]
+They equal $(\mathcal S T_k)(x_j)$: after two iterates the finite orbit
+is on the two-cycle $\{\pm u\}$, and the remaining series is geometric.
+Equivalently, the exact identities
+$W_k(x_j)+aW_k(T_3x_j)=T_k(x_j)$ determine these values uniquely.
+Write $H_j=\sum_{k=0}^7(h_{\mathrm{o}})_k W_k(x_j)$.
+
+The correction polynomials $v_1,v_3,v_5$ and scalars
+$\lambda_2,\lambda_4,\lambda_6$ are specified by the contact equations
+\begin{align*}
+ v_1(y_i)+\tau_i\lambda_2&=H_{3i+1},
+       &&i\in I_2:=\{0,1,4,5\},\\
+ v_3(x_j)+\sigma_j\lambda_4&=H_j,
+       &&j\in I_4:=\{0,2,4,13,15,17\},\\
+ v_5(x_j)+\sigma_j\lambda_6&=H_j,
+       &&j\in I_6:=\{0,2,4,6,11,13,16,17\},
+\end{align*}
+with degrees at most $1,3,5$, respectively. The systems are consistent
+for the exact values \eqref{eq:eta}--\eqref{eq:beta}. Each has full column
+rank, so the correction and scalar are unique. Their exact rational
+coordinates in the field described below are included in
+\texttt{odd\_certificate.json}.
+
+For orientation, their Chebyshev coefficients are:
+\begin{center}\small
+\begin{tabular}{c r r r}
+\toprule
+coefficient & $v_1$ & $v_3$ & $v_5$\\\midrule
+$T_0$&$-3.310540684$&$-3.310540684$&$-3.380936697$\\
+$T_1$&$-0.781038720$&$ 0.805215314$&$-1.373864474$\\
+$T_2$&$0$&$-1.138509891$&$-0.999856812$\\
+$T_3$&$0$&$-2.959735280$&$ 1.640309342$\\
+$T_4$&$0$&$0$&$-0.070396013$\\
+$T_5$&$0$&$0$&$-4.379580520$\\\bottomrule
+\end{tabular}
+\end{center}
+The corresponding scalars are approximately
+$4.600544015619$, $7.815043886301$, and $6.118310129767$.
+
+\begin{lemma}[Odd-pattern finite certificate]\label{lem:oddcertificate}
+The above corrections satisfy the bounds \eqref{eq:universalbounds}.
+At every coarse or fine node, as appropriate,
+\[
+ \tau_i(H_{3i+1}-v_1(y_i))\le\lambda_2,
+ \qquad
+ \sigma_j(H_j-v_{n-1}(x_j))\le\lambda_n\quad(n=4,6).
+\]
+Equality holds exactly on $I_2,I_4,I_6$, respectively. Each active set has
+alternating signs. Every inactive slack is greater than $3/50$.
+\end{lemma}
+\begin{proof}[Exact arithmetic verification]
+Put $z=2\cos(\pi/36)$. All entries lie in
+\[
+ \Q[z],\qquad
+ M(z)=z^{12}-12z^{10}+54z^8-112z^6+105z^4-36z^2+1=0.
+\]
+The relevant root is isolated in $(1.98,2)$. To see uniqueness there, write
+$M=S_6^2-3$, where $S_6=z^6-6z^4+9z^2-2$; on that interval
+$S_6>0$ and $S_6'=6z(z^2-1)(z^2-3)>0$.
+
+The program \texttt{verify\_odd.py} constructs every coefficient by exact
+field arithmetic, checks the contact equations, and checks the displayed
+closed expressions for $\eta,\beta$. It encloses the root by 250 rational
+bisections and evaluates every nonzero slack by rational interval
+arithmetic. The lower bounds exceed $3/50$; the least positive slacks for
+the three certificates exceed $1.5265$, $1.6678$, and $0.0619$,
+respectively. Exact interval bounds also establish
+\eqref{eq:universalbounds}, $\eta<0$, and positivity of the three scalars.
+
+The independently implemented \texttt{audit\_odd.py} starts from the
+serialized rational coefficients. It checks the root isolation, ordered
+nodes, cubic node map, finite functional equation for the actual $H$,
+all slack identities, their signs, and the alternating active sets. It
+also checks \eqref{eq:epsconditions} directly for $\eps=10^{-10}$.
+These programs use rational arithmetic for every acceptance condition;
+floating-point conversion is used only in printed summaries.
+\end{proof}
+
+\subsection{Completion of the first construction}
+
+For degrees $1,2$, the baseline approximant is zero, so the residual for
+the candidate $\eps v_1$ is
+$G\circ T_3+\eps(\mathcal S h_{\mathrm{o}}-v_1)$.
+For degrees $3,4$ and $5,6$, the baseline approximant is $T_3$, and the
+residual is $-aG\circ T_9+\eps(\mathcal S h_{\mathrm{o}}-v)$.
+Apply Proposition~\ref{prop:stability} with
+$(A,s,d)=(1,1,3)$ or $(a,-1,9)$.
+The finite certificate provides respectively four, six, and eight
+alternating contacts, while the candidates have degrees at most $1,3,5$.
+Chebyshev alternation therefore gives
+\[
+\begin{array}{c|c|c}
+ n&P_n f_{\mathrm{o}}&E_n(f_{\mathrm{o}})\\\hline
+ 1,2&\eps v_1&B+\eps\lambda_2\\
+ 3,4&T_3+\eps v_3&aB+\eps\lambda_4\\
+ 5,6&T_3+\eps v_5&aB+\eps\lambda_6.
+\end{array}
+\]
+Proposition~\ref{prop:finite} now proves every odd/even plateau.
+
+The identity $h_{\mathrm{o}}(0)=0$ follows directly from
+$T_{2j}(0)=(-1)^j$. Thus \eqref{eq:self} at zero gives
+$f_{\mathrm{o}}(0)=0$. At the endpoints,
+\[
+ h_{\mathrm{o}}(1)+h_{\mathrm{o}}(-1)=4(\eta-\sqrt3).
+\]
+Since $T_3(\pm1)=\pm1$ and $G\circ T_3$ is odd,
+\begin{equation}\label{eq:oddwitness}
+ f_{\mathrm{o}}(1)+f_{\mathrm{o}}(-1)
+ =\frac{4\eps(\eta-\sqrt3)}{1+a}
+ =\frac52\eps(\eta-\sqrt3)\ne0.
+\end{equation}
+This proves the first assertion of Theorem~\ref{thm:main}.
+
+\section{The evenness counterexample}
+
+This construction uses the baseline $G\circ T_6$ and a degree-eight
+forcing perturbation. We specify its coefficients by a small, explicit
+linear system, avoiding long rational coordinate lists in the text.
+
+\subsection{Exact algebraic definition}
+
+The unknown forcing is
+\[
+ h_{\mathrm{e}}=c_1T_1+c_2T_2+c_3T_3+c_4T_4+c_5T_5+c_7T_7+c_8T_8.
+\]
+Thus $c_0=c_6=0$. Introduce correction polynomials
+$w_0,w_2,w_4,w_6$ of degrees at most $0,2,4,6$, and scalars
+$\mu_1,\mu_3,\mu_5,\mu_7$.
+
+For $m=12,36$, define the increasing nodes
+\[
+ x_j^{(m)}=-\cos\frac{(2j+1)\pi}{2m},\qquad0\le j<m.
+\]
+Use $m_n=12$ for $n=1,3,5$ and $m_7=36$. Let
+\[
+ \sigma_{n,j}=\begin{cases}
+ (1,-1,-1,1)_{j\bmod4},&n=1,3,5,\\
+ (-1,1,1,-1)_{j\bmod4},&n=7.
+ \end{cases}
+\]
+For a grid angle $\theta$ set $J=1$ when $m=12$ and $J=2$ when $m=36$,
+and define
+\begin{equation}\label{eq:evenW}
+ W_k^{(m)}(\cos\theta)=
+ \sum_{i=0}^{J-1}(-a)^i\cos(k3^i\theta)
+ +\frac{\sum_{i=J}^{J+3}(-a)^i\cos(k3^i\theta)}{1-a^4}.
+\end{equation}
+After $J$ iterates these node orbits have period dividing four. Therefore
+\eqref{eq:evenW} is the exact value of $\mathcal S T_k$ at the node.
+
+Write $\mathcal H_j^{(m)}=\sum_k c_k W_k^{(m)}(x_j^{(m)})$.
+The defining equations are
+\begin{equation}\label{eq:evenlinear}
+ w_{n-1}(x_j^{(m_n)})+\sigma_{n,j}\mu_n
+ =\mathcal H_j^{(m_n)},\qquad j\in J_n,
+\end{equation}
+where
+\begin{align*}
+ J_1&=\{3,6,8\},\\
+ J_3&=\{1,3,4,6,8,10\},\\
+ J_5&=\{0,2,4,6,7,9,11\},\\
+ J_7&=\{3,6,8,13,19,22,27,30,32\}.
+\end{align*}
+Add the two normalizations
+\begin{equation}\label{eq:evennormalize}
+ [T_2]w_2=1,\qquad [T_4]w_4=-1.
+\end{equation}
+Here $[T_k]w$ denotes the coefficient in the Chebyshev basis.
+There are $27$ equations for the $7+1+3+5+7+4=27$ unknowns.
+Exact elimination shows that this system is nonsingular. Equations
+\eqref{eq:evenW}--\eqref{eq:evennormalize} therefore define the forcing
+and corrections unambiguously by real algebraic numbers.
+
+Their approximate forcing coefficients are
+\[
+\begin{array}{c|r}
+ k&c_k\\\hline
+ 1&-0.017561786853260\cr
+ 2& 0.286725254171375\cr
+ 3& 0.018613141564351\cr
+ 4&-0.862027229474975\cr
+ 5&-0.013885677377745\cr
+ 7& 0.026299792766218\cr
+ 8&-0.253316709984462.
+\end{array}
+\]
+The exact rational coordinate lists are in \texttt{even\_certificate.json}.
+Define
+\begin{equation}\label{eq:fe}
+ f_{\mathrm{e}}=G\circ T_6+\eps\mathcal S h_{\mathrm{e}}
+ =\mathcal S(T_6+\eps h_{\mathrm{e}}).
+\end{equation}
+
+\begin{lemma}[Even-pattern finite certificate]\label{lem:evencertificate}
+For each $n=1,3,5,7$ and every point of the corresponding grid,
+\[
+ \sigma_{n,j}\bigl(\mathcal H_j^{(m_n)}-w_{n-1}(x_j^{(m_n)})\bigr)
+ \le\mu_n.
+\]
+The equality sets are exactly $J_n$. Alternating subsets of cardinality
+$n+2$ are $J_1,J_5,J_7$, and
+$\{1,3,6,8,10\}\subset J_3$. All nonzero slacks exceed $1/50$.
+The coefficient bounds \eqref{eq:universalbounds} hold, and
+\begin{equation}\label{eq:oddcoeffsum}
+ c_1+c_3+c_5+c_7>\frac1{100}.
+\end{equation}
+\end{lemma}
+\begin{proof}[Exact arithmetic verification]
+All coefficients belong to the real algebraic field generated by
+$z=2\cos(\pi/72)$, whose defining polynomial is
+\begin{align*}
+ M_{24}(z)={}&z^{24}-24z^{22}+252z^{20}-1520z^{18}+5814z^{16}
+ -14688z^{14}\\
+ &+24752z^{12}-27456z^{10}+19305z^8-8008z^6
+ +1716z^4-144z^2+1.
+\end{align*}
+It satisfies $M_{24}(z)=M(z^2-2)$, where $M$ is the polynomial used in
+the odd certificate. The relevant root is isolated in $(1.998,2)$;
+the same monotonicity argument, applied to $z^2-2$, proves uniqueness.
+
+The generator \texttt{generate\_even.py} solves the $27$-by-$27$ system
+by exact arithmetic, with a nonzero pivot at every step. It checks every
+functional identity, equality, and slack and encloses the root by $400$
+rational bisections. The minimum positive slacks for $n=1,3,5,7$ exceed
+$0.1336$, $0.0936$, $0.0965$, and $0.0230$, respectively. Exact coefficient
+bounds give $M<2$, $L<34$, $V<2$, $L_v<72$, and $|\mu_n|<1$,
+which imply \eqref{eq:universalbounds}; it also verifies
+\eqref{eq:oddcoeffsum}.
+
+The independent standard-library program \texttt{audit\_even.py} uses a
+separate implementation of rational polynomial arithmetic. From the
+serialized coefficients it reconstructs all $36$ fine nodes, verifies
+their ordering and cubic map, detects the finite orbit cycles, and
+evaluates the exact orbit sums. It then verifies every slack, equality,
+alternating set, coefficient bound, and \eqref{eq:epsconditions}. No
+floating-point tolerance is used to accept any identity or inequality.
+\end{proof}
+
+For reference, the scalar error corrections are approximately
+\begin{align*}
+ \mu_1&=0.577201789619347,&\quad \mu_3&=0.223648399026073,\\
+ \mu_5&=-0.129582723095644,&\quad \mu_7&=0.276968241048616.
+\end{align*}
+The negative value of $\mu_5$ causes no difficulty: the stability
+proposition uses $|\mu_5|$ in its smallness condition, and the total error
+remains positive.
+
+\subsection{Completion of the second construction}
+
+By \eqref{eq:Gsmall} and Chebyshev composition, the baseline
+$G\circ T_6$ has best approximant zero for degrees $0$ through $5$ and
+best approximant $T_6$ for degrees $6,7$. Its residuals are consequently
+$G\circ T_6$ and $-aG\circ T_{18}$.
+
+Apply Proposition~\ref{prop:stability} with
+$(A,s,d)=(1,1,6)$ for the first three certificates and
+$(a,-1,18)$ for the fourth. Alternation gives
+\[
+\begin{array}{c|c|c}
+ n&P_n f_{\mathrm{e}}&E_n(f_{\mathrm{e}})\\\hline
+ 0,1&\eps w_0&B+\eps\mu_1\\
+ 2,3&\eps w_2&B+\eps\mu_3\\
+ 4,5&\eps w_4&B+\eps\mu_5\\
+ 6,7&T_6+\eps w_6&aB+\eps\mu_7.
+\end{array}
+\]
+Since $\deg(T_6+\eps h_{\mathrm{e}})\le8$,
+Proposition~\ref{prop:finite} extends these equalities to every even/odd
+pair.
+
+Finally, $G\circ T_6$ is even, while the endpoint difference of the
+perturbation is
+\begin{equation}\label{eq:evenwitness}
+ f_{\mathrm{e}}(1)-f_{\mathrm{e}}(-1)
+ =\frac{2\eps}{1+a}(c_1+c_3+c_5+c_7)
+ >\frac{\eps}{80}>0.
+\end{equation}
+This proves the second assertion of Theorem~\ref{thm:main}.
+
+\section{Verification, scope, and reproducibility}
+
+The proof consists of the analytic estimates above and finite exact
+algebraic certificates. The latter are not numerical Remez calculations:
+all accepted identities are polynomial identities modulo a defining
+polynomial, and all accepted strict inequalities are certified by rational
+intervals at a uniquely isolated real root. The independently implemented
+audits also check that the finite orbit values are the values of the
+actual infinite series and that the explicit perturbation size satisfies
+the whole-interval estimates.
+
+From the accompanying directory, run
+\begin{verbatim}
+python3 audit_odd.py
+python3 audit_even.py
+\end{verbatim}
+Both audits use only the Python standard library and the supplied JSON
+certificates. To regenerate the odd certificate, run
+\texttt{python3 verify\_odd.py}. The optional even generator uses
+\texttt{python-flint}, installed by
+\texttt{python3 -m pip install python-flint}, and is run with
+\texttt{python3 generate\_even.py}. Its output is independently audited
+without that dependency.
+
+These constructions are distinct from the earlier counterexample to the
+common-origin-zero conjecture. Their best approximants are required to
+have the indicated degree plateaus; they are not required to vanish at
+zero. The first function itself is normalized at zero. The preceding
+Lean formalization of the common-origin-zero example is not a Lean
+formalization of the two new results here. The new proof status is a full
+analytic argument with two independently checked exact arithmetic
+certificates.
+
+\begin{thebibliography}{1}
+\bibitem{SaffVarga}
+E. B. Saff and R. S. Varga,
+\emph{Remarks on some conjectures of G. G. Lorentz},
+Journal of Approximation Theory \textbf{30} (1980), 29--36.
+\url{https://www.math.kent.edu/~varga/pub/paper_126.pdf}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,1054 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,array,microtype}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert_\infty}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dist}{\operatorname{dist}}
+\title{Self-similar counterexamples to three conjectures of Lorentz}
+\author{}
+\date{October 28, 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+We give constructions for three related symmetry conjectures in uniform
+polynomial approximation. One continuous nonodd function has every best
+approximating polynomial vanish at the origin. A second continuous nonodd
+function, normalized to vanish at zero, has equal best approximants at every
+pair of degrees $(2k+1,2k+2)$. A third continuous function is not even but has
+equal best approximants at every pair $(2k,2k+1)$. Each construction is a
+uniformly convergent Chebyshev series with polynomial forcing. Exact finite
+algebraic certificates, analytic persistence estimates, and cubic
+self-similarity prove the assertions at all degrees. The finite computations
+use rational arithmetic, and the manuscript records the separate status of
+the Lean formalizations.
+\end{abstract}
+\tableofcontents
+
+\section{Common notation and the composition principle}
+Let $I=[-1,1]$, let $P_n f$ denote the unique best uniform approximant to
+$f\in C(I)$ among real polynomials of degree at most $n$, and let
+$T_k(\cos\theta)=\cos(k\theta)$. We consider the conjectures in the
+formulation of Saff and Varga~\cite{SaffVarga}.
+The conclusions concern, respectively,
+\[
+ (P_n f)(0)=0\ (n\ge0),\qquad
+ P_{2k+1}f=P_{2k+2}f\ (k\ge0),\qquad
+ P_{2k}f=P_{2k+1}f\ (k\ge0).
+\]
+The two parts below use different contraction parameters and different
+forcing polynomials. Their scalar notation is local to each part; the
+operator $P_n$ and the polynomials $T_k$ retain the above meaning throughout.
+
+\begin{lemma}[Chebyshev composition]\label{lem:composition}
+For $F\in C(I)$, integers $m\ge1$ and $n\ge0$,
+\[
+ P_n(F\circ T_m)=(P_{\lfloor n/m\rfloor}F)\circ T_m.
+\]
+\end{lemma}
+\begin{proof}
+Average any competitor $p(\cos\theta)$ over
+$\theta+2\pi j/m$, $0\le j<m$. The target $F(\cos m\theta)$ is unchanged,
+so this average has no larger uniform error. Only cosine frequencies
+multiple of $m$ remain, giving $r(\cos m\theta)$ with
+$\deg r\le\lfloor n/m\rfloor$. Surjectivity of $T_m:I\to I$ gives equality
+of the two best errors. Uniqueness of best approximation gives the identity.
+\end{proof}
+
+\part{Every best approximant vanishes at the origin}
+\section{Construction and reduction to seven degrees}
+Write $I=[-1,1]$, let $T_k(\cos\theta)=\cos(k\theta)$, and let $P_n f$ denote
+the unique best uniform approximant to $f\in C(I)$ among polynomials of degree
+at most $n$. We address the origin interpolation implication discussed
+in~\cite{SaffVarga}. Set $z=2\cos(\pi/36)$ and
+\begin{align*}
+107\beta={}&-60+82z+1086z^2+1576z^3-2932z^4-3433z^5\\
+ &+2002z^6+2243z^7-510z^8-587z^9+44z^{10}+54z^{11}.
+\end{align*}
+In particular $419/1000<\beta<420/1000$. Define
+\[
+ h=T_4-1-2T_5+\beta T_7,\qquad q_\varepsilon=T_3+\varepsilon h,
+ \qquad f_\varepsilon=\sum_{j\ge0}(-1/3)^j q_\varepsilon\circ T_{3^j}.
+\]
+The series converges uniformly on $I$, so $f_\varepsilon$ is continuous.
+
+\begin{theorem}\label{origin:thm:main}
+For every $0<\varepsilon\le 1/25000000$, the above function satisfies
+\[
+ (P_n f_\varepsilon)(0)=0\quad(n\ge0),\qquad
+ f_\varepsilon(1/\sqrt2)+f_\varepsilon(-1/\sqrt2)=-3\varepsilon.
+\]
+Thus it is not odd.
+\end{theorem}
+
+By Lemma~\ref{lem:composition}, the construction reduces to seven degrees.
+
+The functional equation and its consequence for $n\ge7$ are
+\begin{equation}\label{origin:eq:induction}
+ f_\varepsilon=q_\varepsilon-\tfrac13 f_\varepsilon\circ T_3,
+ \qquad
+ P_n f_\varepsilon=q_\varepsilon-\tfrac13
+ (P_{\lfloor n/3\rfloor}f_\varepsilon)\circ T_3.
+\end{equation}
+Here we used polynomial translation, scalar homogeneity, and
+$\deg q_\varepsilon\le7$. Since $q_\varepsilon(0)=T_3(0)=0$, induction reduces
+the origin condition to $0\le n\le6$.
+
+\section{Baseline residuals and the finite certificate}
+Put
+\[
+ a=1/\sqrt2,\quad
+ G=\sum_{j\ge0}(-1/3)^j T_{3^j},\quad F=G\circ T_3,\quad
+ H=\sum_{j\ge0}(-1/3)^j h\circ T_{3^j}.
+\]
+Then $f_\varepsilon=F+\varepsilon H$. Pairing consecutive terms gives
+\[
+ G=\sum_{j\ge0}9^{-j}g\circ T_{9^j},\qquad
+ g(x)=2x-\tfrac43x^3.
+\]
+The unique maximum of $g$ on $I$ is at $a$, its unique minimum is at $-a$,
+and $T_9(\pm a)=\pm a$. Hence $G$ has the same unique extrema and
+\[
+ E:=\norm G=\frac{g(a)}{1-1/9}=\frac{3a}{2}.
+\]
+Oddness gives $P_0G=0$. From $G=x-G\circ T_3/3$ and
+Lemma~\ref{lem:composition}, $P_1G=P_2G=x$. Thus for the seven base degrees,
+\begin{equation}\label{origin:eq:baseline}
+ p_n^0=P_nF=\begin{cases}0&n\le2,\\ T_3&3\le n\le6,\end{cases}
+ \qquad b_n:=F-p_n^0=
+ \begin{cases}G\circ T_3&n\le2,\\-G\circ T_9/3&3\le n\le6.\end{cases}
+\end{equation}
+Their norms $E_n$ are respectively $E$ and $E/3$. Their contact sets $S_n$
+are respectively the zeros of $T_6$ and $T_{18}$.
+
+Here are exact definitions of the finite certificate. Use the increasing nodes
+\[
+ X_j=-\cos\frac{(2j-1)\pi}{36}\quad(1\le j\le18),\qquad
+ (C_1,\ldots,C_6)=(X_2,X_5,X_8,X_{11},X_{14},X_{17}).
+\]
+The residual signs on the fine grid repeat $(+,-,-,+)$; call them $\sigma_j$.
+On the coarse grid they repeat $(-,+,+,-)$; call them $\tau_j$.
+The two-cycle $T_3(a)=-a$, $T_3(-a)=a$ gives
+\[
+ H(\pm a)=-\tfrac32\pm\tfrac32(2+\beta)a.
+\]
+Iterating $H=h-H\circ T_3/3$ twice, and using $T_{21}=-T_{15}$ at the
+zeros of $T_{18}$, yields $H(X_j)=R_\beta(X_j)$, where
+\begin{equation}\label{origin:eq:gridvalue}
+ R_\beta=T_4-\tfrac13T_{12}-\tfrac56-2T_5+\beta T_7
+                +\tfrac{2+\beta}{3}T_{15}+\tfrac{2+\beta}{6}T_9.
+\end{equation}
+
+Define corrections $v_n$ and slopes $\lambda_n$ as follows:
+\begin{align*}
+ v_0&=0,&\lambda_0&=\tfrac{\sqrt6}{4}(2+\beta),\\
+ v_1=v_2&=-(2+\beta)x,&\lambda_1=\lambda_2&=\tfrac{2+\beta}{2\sqrt2},\\
+ v_3&=A_1x+A_2x^2+A_3x^3,\\
+ v_4&=T_4-1+B_1T_1+B_3T_3,\\
+ v_5=v_6&=T_4-1+D_1T_1+D_3T_3+D_5T_5,&\lambda_6&=\lambda_5.
+\end{align*}
+The remaining coefficients and slopes are the solutions of
+\begin{equation}\label{origin:eq:systems}
+ v_n(X_j)+\sigma_j\lambda_n=R_\beta(X_j),\qquad
+ \begin{array}{c|l}
+ n&j\\\hline
+ 3&1,3,8,10\\
+ 4&10,16,18\\
+ 5&10,13,15,16.
+ \end{array}
+\end{equation}
+The three defining matrices are nonsingular, as certified below.
+In particular $\deg v_n\le n$ and $v_n(0)=0$.
+
+For a contact $\xi\in S_n$, write $s(\xi)=\operatorname{sgn} b_n(\xi)$.
+The exact finite calculation establishes
+\begin{equation}\label{origin:eq:finite}
+ s(\xi)\bigl(H(\xi)-v_n(\xi)\bigr)\le\lambda_n,
+ \qquad 0<\lambda_n<2,
+\end{equation}
+with the following complete zero-slack sets. Indices refer to the indicated grid.
+\begin{center}
+\begin{tabular}{cclc}
+\toprule
+$n$&grid&zero-slack indices&other slacks exceed\\\midrule
+0&$C$&$3,4$&$127/50$\\
+1,2&$C$&$1,3,4,6$&$363/100$\\
+3&$X$&$1,3,8,10,16$&$9/100$\\
+4&$X$&$1,3,8,9,10,16,18$&$7/10$\\
+5,6&$X$&$3,4,6,9,10,13,15,16$&$1/5$\\\bottomrule
+\end{tabular}
+\end{center}
+For $n=0,2,3,6$, use the whole listed set. For $n=1,4,5$ use respectively
+$\{1,3,4\}$, $\{1,3,9,10,16,18\}$, and $\{3,4,6,9,10,13,15\}$.
+Each selected set contains $n+2$ increasing nodes with alternating signs.
+
+The sums of the absolute Chebyshev coefficients of $v_n$ are respectively
+\[
+ 0,\quad <5/2,\quad <5/2,\quad <9/4,\quad <13/4,\quad <11/2,\quad <11/2.
+\]
+Consequently $\norm{v_n}<6$ and $\norm{v_n'}<216$, since
+$\norm{T_k'}=k^2$ and $\deg v_n\le6$.
+
+\subsection*{Exact verification of the finite assertions}
+All the numbers above lie in $\mathbb Q[z]$, with arithmetic reduced modulo
+\[
+ m(z)=z^{12}-12z^{10}+54z^8-112z^6+105z^4-36z^2+1
+      =(z^6-6z^4+9z^2-2)^2-3.
+\]
+The last identity and $z=2\cos(\pi/36)$ give $m(z)=0$. There is a unique root
+in $(1.98,2)$: the inner polynomial is positive there and has derivative
+$6z(z^2-1)(z^2-3)>0$. Rational endpoint evaluations place the root in
+\[
+ [199238939/10^8,\;199238940/10^8].
+\]
+The accompanying \texttt{scripts/check\_certificate.py} reads exact rational
+coefficient lists from \texttt{CertificateData.lean} and
+\texttt{CertificateGrid.lean}. It reconstructs the nodes by the Chebyshev
+recurrence, verifies \eqref{origin:eq:gridvalue}, the functional equation on the grid,
+every slack identity, every equality set, alternation, coefficient norms, and
+the nonzero determinants in \eqref{origin:eq:systems}. Equality is tested as equality
+of reduced rational polynomials. One hundred rational bisections, followed by
+rational interval Horner evaluation, certify the strict inequalities. No
+floating-point tolerance is used. This also verifies that the stored
+coefficients are the uniquely defined solutions of \eqref{origin:eq:systems}.
+
+\section{Signed cusps and a global bound relative to contacts}
+The two estimates needed to turn \eqref{origin:eq:finite} into uniform approximation
+are proved here with explicit constants.
+
+\begin{lemma}\label{origin:lem:gap}
+For $s\in\{-1,1\}$ set $S_{n,s}=\{\xi\in I:b_n(\xi)=sE_n\}$.
+For $0\le n\le6$ and $x\in I$,
+\[
+ E_n-sb_n(x)\ge\frac1{250}\dist(x,S_{n,s}).
+\]
+\end{lemma}
+\begin{proof}
+First we prove $E-sG(y)\ge c_G|y-sa|$ on $I$, where
+$c_G=\pi(\sqrt2-1)/324$. The factorization
+\[
+ g(a)-g(y)=\tfrac43(y-a)^2(y+\sqrt2)
+       \ge C_0(y-a)^2,\qquad C_0=\tfrac43(\sqrt2-1),
+\]
+makes every term of $E-G(y)=\sum_{j\ge0}9^{-j}(g(a)-g(T_{9^j}(y)))$
+nonnegative. Put $\delta=\pi/12$ and write $y=\cos(\pi/4+u)$.
+For $0<|u|\le\delta$, choose the largest $j\ge0$ with
+$9^j|u|\le\delta$, so $\delta/9<9^j|u|\le\delta$.
+Since $9^j\equiv1\pmod8$ and $\sin t\ge1/2$ for
+$t\in[\pi/6,\pi/3]$, this single summand gives
+\[
+ E-G(y)\ge \frac{C_0}{4}9^{-j}(9^ju)^2
+     >\frac{C_0\delta}{36}|u|\ge c_G|y-a|.
+\]
+For $|u|>\delta$, we have $|y-a|\ge r_0=(\sqrt3-\sqrt2)/2$.
+The first summand then gives the result because $C_0r_0>c_G$.
+At $u=0$ it is immediate. Oddness of $G$ proves the negative-sign case.
+
+For every integer $L\ge1$ and $s=\pm1$ we also have the signed pullback bound
+\begin{equation}\label{origin:eq:pullback}
+ |T_L(x)-sa|\ge\kappa L\dist(x,\{\xi:T_L(\xi)=sa\}),
+ \qquad\kappa=4(1-a)/\pi.
+\end{equation}
+To see this, on $[0,\pi]$ the inequality
+$|\cos t-a|\ge\kappa|t-\pi/4|$ follows from the concavity chord on
+$[0,\pi/4]$ and $\sin t\ge a>\kappa$ on $[\pi/4,\pi/2]$.
+On $[\pi/2,\pi]$, convexity gives $\cos t\le1-2t/\pi$, and
+\[
+ a-\cos t\ge 2t/\pi-(1-a)
+               \ge 4(1-a)(t-\pi/4)/\pi,
+\]
+because $a\ge1/2$. Reflection gives the analogous assertion for $-a$.
+Apply these inequalities on the half-period of $L\theta$ containing the
+given angle, where $x=\cos\theta$. The unique preimage of the prescribed
+target in that half-period lies in $[0,\pi]$ after division by $L$.
+The inequality $|\cos\theta-\cos\phi|\le|\theta-\phi|$ proves
+\eqref{origin:eq:pullback}.
+
+For $n\le2$ use $L=3$ and target $sa$; for $n\ge3$ use $L=9$ and
+target $-sa$, with the factor $1/3$ in \eqref{origin:eq:baseline}. Both give
+\[
+ E_n-sb_n(x)\ge 3c_G\kappa\dist(x,S_{n,s}),\qquad
+ 3c_G\kappa=\frac{3-2\sqrt2}{27\sqrt2}>\frac1{250}.
+\]
+The final strict inequality is equivalent to $750>527\sqrt2$, verified by
+squaring positive quantities.
+\end{proof}
+
+\begin{lemma}\label{origin:lem:lip}
+For $r_n=H-v_n$, every $0\le n\le6$, every contact $\xi\in S_n$, and
+every $x\in I$,
+\[
+ |r_n(x)-r_n(\xi)|\le 10^5|x-\xi|.
+\]
+This is a bound relative to each fixed contact; it asserts no global
+Lipschitz regularity of $H$.
+\end{lemma}
+\begin{proof}
+Pair the perturbation series:
+\[
+ H=\sum_{j\ge0}9^{-j}Q\circ T_{9^j},\qquad Q=h-h\circ T_3/3.
+\]
+Since $T_3'(\pm a)=3$ and $h_{\rm even}=T_4-1$, we have
+$Q'(\pm a)=0$. For $x=\cos(\pi/4+u)$, $0<|u|\le\delta=\pi/12$,
+choose the last scale $j$ as in Lemma~\ref{origin:lem:gap}. Taylor's theorem and a
+geometric tail bound give
+\begin{align*}
+ |H(x)-H(a)|
+ &\le \tfrac12\norm{Q''}u^2\sum_{k=0}^{j}9^k
+                  +2\norm Q\sum_{k=j+1}^\infty9^{-k}\\
+ &\le \left(\tfrac{9\delta}{16}\norm{Q''}
+                  +\tfrac9{4\delta}\norm Q\right)|u|.
+\end{align*}
+Here $|x-a|\ge|u|/2$. The same proof around $3\pi/4$ applies to $-a$.
+Thus, whenever $|x\mp a|\le r_0$, a valid constant is
+\[
+ L_H=\tfrac{3\pi}{32}\norm{Q''}+\tfrac{54}{\pi}\norm Q<7000.
+\]
+For the numerical bound, $\beta<0.420$ and the Chebyshev derivative formulas
+$\norm{T_k'}=k^2$, $\norm{T_k''}=k^2(k^2-1)/3$ give
+\[
+ \norm h<4.42,\qquad\norm{h'}<87,\qquad\norm{h''}<810,
+\]
+and hence $\norm Q<5.894$ and
+$\norm{Q''}\le28\norm{h''}+8\norm{h'}<23376$.
+Using $3<\pi<22/7$ yields the displayed bound for $L_H$.
+
+If $L=3^k$ and $T_L(\xi)=\pm a$, iterate the functional equation $k$ times.
+The derivative bound for its finite prefix is
+$\norm{h'}\sum_{i=0}^{k-1}3^i=(L-1)\norm{h'}/2$.
+Since $\norm{T_L'}=L^2$, this gives
+\[
+ |H(x)-H(\xi)|\le\left(\tfrac{L-1}{2}\norm{h'}+LL_H\right)|x-\xi|
+ \quad\text{if } |x-\xi|\le r_0/L^2.
+\]
+For our two grids $L=3,9$, and $r_0/81>10^{-3}$.
+Adding the derivative bound on $v_n$ gives a constant less than
+$4\cdot87+9\cdot7000+216<10^5$ when $|x-\xi|\le10^{-3}$.
+The inequality is non-strict, including $x=\xi$.
+
+Finally $\norm H\le\tfrac32\norm h<6.63$, so $\norm{r_n}<20$.
+For $|x-\xi|>10^{-3}$,
+$|r_n(x)-r_n(\xi)|<40<10^5|x-\xi|$, which extends the estimate to all $I$.
+\end{proof}
+
+\section{One persistence inequality and completion}
+Fix a base degree $n$ and a sign $s\in\{-1,1\}$. Choose a nearest contact
+$\xi\in S_{n,s}$ and put $d=|x-\xi|$. Lemmas~\ref{origin:lem:gap} and
+\ref{origin:lem:lip}, together with \eqref{origin:eq:finite}, give
+\begin{align*}
+ s\bigl(b_n(x)+\varepsilon r_n(x)\bigr)
+ &\le E_n-d/250+\varepsilon\bigl(\lambda_n+10^5d\bigr)\\
+ &=E_n+\varepsilon\lambda_n-(1/250-10^5\varepsilon)d\\
+ &\le E_n+\varepsilon\lambda_n
+ \qquad\left(0\le\varepsilon\le\frac1{25000000}\right).
+\end{align*}
+Apply both signs. This proves
+\[
+ \norm{f_\varepsilon-(p_n^0+\varepsilon v_n)}\le E_n+\varepsilon\lambda_n.
+\]
+At the $n+2$ alternating equality nodes the residual is exactly
+$s(\xi)(E_n+\varepsilon\lambda_n)$. Its magnitude is positive, since
+$E_n>0$ and $\lambda_n>0$. The alternation theorem identifies
+$P_n f_\varepsilon=p_n^0+\varepsilon v_n$. All these polynomials vanish at
+zero, and \eqref{origin:eq:induction} proves the assertion for every degree.
+
+For nonoddness, $F$ is odd and $T_3$ interchanges $a$ and $-a$.
+At both points $T_4-1=-2$, so
+\[
+ H(a)+H(-a)=\sum_{j\ge0}(-1/3)^j(-4)=-3.
+\]
+It follows that $f_\varepsilon(a)+f_\varepsilon(-a)=-3\varepsilon\ne0$,
+completing Theorem~\ref{origin:thm:main}.
+
+
+\part{Consecutive-degree plateaus without the predicted symmetry}
+\section{The statements and the proof strategy}
+
+For $f\in C[-1,1]$, write $P_n f$ for its unique best uniform approximant
+among real polynomials of degree at most $n$, and let
+$E_n(f)=\norm{f-P_n f}$. Throughout, $T_k$ is the Chebyshev polynomial
+defined by $T_k(\cos\theta)=\cos(k\theta)$.
+
+The two assertions considered here are the normalized oddness conjecture
+and the evenness conjecture from \cite{SaffVarga}:
+\begin{align*}
+ f(0)=0,\quad P_{2k+1}f=P_{2k+2}f\ (k\ge0)
+ &\quad\Longrightarrow\quad f\text{ is odd},\\
+ P_{2k}f=P_{2k+1}f\ (k\ge0)
+ &\quad\Longrightarrow\quad f\text{ is even}.
+\end{align*}
+
+\begin{theorem}\label{plateau:thm:main}
+There exist $f_{\mathrm{o}},f_{\mathrm{e}}\in C[-1,1]$ such that
+\begin{align*}
+ f_{\mathrm{o}}(0)&=0,&
+ P_{2k+1}f_{\mathrm{o}}&=P_{2k+2}f_{\mathrm{o}}\quad(k\ge0),&
+ f_{\mathrm{o}}(1)+f_{\mathrm{o}}(-1)&\ne0,\\
+ &&P_{2k}f_{\mathrm{e}}&=P_{2k+1}f_{\mathrm{e}}\quad(k\ge0),&
+ f_{\mathrm{e}}(1)-f_{\mathrm{e}}(-1)&\ne0.
+\end{align*}
+Both functions are specified below by algebraic polynomial forcing and the
+fixed parameter $\eps=10^{-10}$.
+\end{theorem}
+
+The proof has three dependencies. First, Chebyshev composition reduces all
+degree conditions to finitely many initial ones. Second, an explicit
+baseline has known extremal points and sufficiently strong local gaps to
+preserve finite contact inequalities under perturbation. Third, exact
+algebraic certificates supply the required initial approximants. We prove
+these ingredients in that order and then assemble the two constructions.
+
+\section{Self-similarity and the finite degree reduction}
+
+Set
+\[
+ a=\frac35,\qquad u=\frac{\sqrt2}{2},\qquad
+ \mathcal S h(x)=\sum_{j=0}^{\infty}(-a)^j h(T_{3^j}(x)),
+ \qquad G=\mathcal S T_1.
+\]
+For continuous $h$, the series converges uniformly on $[-1,1]$, since
+$\norm{h\circ T_{3^j}}=\norm h$ and $\sum a^j<\infty$. In particular,
+$\mathcal S h$ is continuous and
+\begin{equation}\label{plateau:eq:self}
+ \mathcal S h=h-a(\mathcal S h)\circ T_3.
+\end{equation}
+Commutation of Chebyshev polynomials gives
+$\mathcal S T_d=G\circ T_d$.
+
+
+
+\begin{lemma}[Recurrence for best approximants]\label{plateau:lem:recurrence}
+If $q$ is a polynomial and $f=\mathcal S q$, then
+\begin{equation}\label{plateau:eq:bestrec}
+ P_n f=q-a(P_{\lfloor n/3\rfloor}f)\circ T_3,
+ \qquad n\ge\deg q.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $n\ge\deg q$, translation by $q$ preserves the space of degree-at-most
+$n$ polynomials. Apply this translation, homogeneity of best approximation,
+\eqref{plateau:eq:self}, and Lemma~\ref{lem:composition}.
+\end{proof}
+
+\begin{proposition}[Finite conditions for the two parity patterns]
+\label{plateau:prop:finite}
+Let $f=\mathcal S q$.
+\begin{enumerate}
+\item If $\deg q\le7$ and
+$P_1f=P_2f$, $P_3f=P_4f$, and $P_5f=P_6f$, then
+$P_{2k+1}f=P_{2k+2}f$ for every $k\ge0$.
+\item If $\deg q\le8$ and
+$P_0f=P_1f$, $P_2f=P_3f$, $P_4f=P_5f$, and $P_6f=P_7f$, then
+$P_{2k}f=P_{2k+1}f$ for every $k\ge0$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+For the first claim, use strong induction on odd $n$. The cases $n=1,3,5$
+are assumptions. For odd $n\ge7$, the two floor indices in
+\eqref{plateau:eq:bestrec} for $n,n+1$ agree unless $n=6r+5$. In that case they
+are $2r+1,2r+2$, a smaller odd/even pair covered by induction.
+
+For the second claim, use strong induction on even $n$. The cases
+$n=0,2,4,6$ are assumptions. For even $n\ge8$, the floor indices agree
+unless $n=6r+2$, in which case they are the smaller even/odd pair
+$2r,2r+1$. The same recurrence completes the proof.
+\end{proof}
+
+\section{The baseline and its exact extrema}
+
+For $0<c<1$, define
+\[
+ G_c(x)=\sum_{j\ge0}(-c)^j T_{3^j}(x).
+\]
+Thus $G=G_a$. Every $G_c$ is odd. We first establish the extremal geometry
+for $b=1/3$ and then transfer it to $a=3/5$.
+
+\begin{lemma}\label{plateau:lem:baseline}
+The function $G$ has unique maximum at $u$, unique minimum at $-u$, and
+\begin{equation}\label{plateau:eq:B}
+ B:=G(u)=\norm G=\frac{u}{1-a}=\frac{5u}{2}.
+\end{equation}
+Moreover, for every $y\in[-1,1]$,
+\begin{equation}\label{plateau:eq:globalgap}
+ B-|G(y)|\ge\frac12\dist(y,\{-u,u\})^2.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Pair adjacent terms in $G_b$:
+\[
+ G_b=\sum_{j\ge0}9^{-j}g\circ T_{9^j},
+ \qquad g(x)=x-\frac13T_3(x)=2x-\frac43x^3.
+\]
+The identity
+\[
+ g(u)-g(y)=\frac43(y-u)^2(y+2u)
+\]
+shows that $g$ has its unique maximum at $u$ and its unique minimum at
+$-u$ on the interval. Since $T_9(u)=u$, every term in the paired series
+has its maximum at $u$. Consequently $B_b:=\norm{G_b}=3u/2$ and
+\begin{equation}\label{plateau:eq:bquad}
+ B_b-G_b(y)\ge\frac43(y-u)^2(y+2u)\ge\frac12(y-u)^2.
+\end{equation}
+The last inequality uses $\frac43(\sqrt2-1)>1/2$. Oddness gives the
+corresponding lower bound for $B_b+G_b(y)$.
+
+The uniformly convergent series satisfy the identity
+\begin{equation}\label{plateau:eq:resolvent}
+ G_a(x)=G_b(x)+(a-b)\sum_{j=1}^{\infty}
+ a^{j-1}(-1)^jG_b(T_{3^j}(x)).
+\end{equation}
+Indeed, after expansion, the coefficient of $T_{3^k}$ on the right is
+\[
+ (-1)^k\left[b^k+(a-b)\sum_{j=1}^k a^{j-1}b^{k-j}\right]=(-a)^k.
+\]
+Rearrangement is justified by absolute uniform convergence.
+
+Every coefficient multiplying a function on the right of
+\eqref{plateau:eq:resolvent} is positive. Each such function has norm $B_b$ and
+value $B_b$ at $u$, because $T_3(u)=-u$ and $G_b$ is odd. Thus
+\[
+ G_a(u)=B_b\left(1+\frac{a-b}{1-a}\right)=\frac{u}{1-a}.
+\]
+All deficits from this maximum are nonnegative. Keeping the first deficit
+and using \eqref{plateau:eq:bquad} proves
+$B-G_a(y)\ge(y-u)^2/2$. Oddness proves
+$B+G_a(y)\ge(y+u)^2/2$. Their minimum is
+\eqref{plateau:eq:globalgap}, and also proves uniqueness of the two extrema.
+\end{proof}
+
+For later use, $P_0G=0$ by oddness. Lemma~\ref{plateau:lem:recurrence} applied to
+$G=\mathcal S T_1$ therefore gives
+\begin{equation}\label{plateau:eq:Gsmall}
+ P_1G=P_2G=T_1.
+\end{equation}
+It follows that $G\circ T_d$ has initial best approximant zero for
+$0\le n<d$, and best approximant $T_d$ for $d\le n<3d$. The residuals
+in these two ranges are $G\circ T_d$ and $-aG\circ T_{3d}$.
+
+\section{From finite contact inequalities to the whole interval}
+
+The point of the larger contraction is that the baseline gap and an
+arbitrary polynomial-forcing perturbation can be compared at the same
+scale. No stationarity conditions on the perturbation are needed.
+
+\begin{lemma}[A gap at the exit scale]\label{plateau:lem:exit}
+Let $0<|s|\le\delta:=1/16$, and choose $J\ge0$ minimal with
+$3^J|s|\ge\delta$. Then
+\begin{equation}\label{plateau:eq:exitgap}
+ B-G(\cos(\pi/4+s))\ge\frac{a^J}{4608}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Minimality gives $\delta\le3^J|s|\le3\delta$. The exact phase relation,
+using $3^J\equiv1$ or $3\pmod8$ according to the parity of $J$, is
+\[
+ (-1)^JG_b(\cos(3^J(\pi/4+s)))
+ =G_b(\cos(\pi/4+(-1)^J3^Js)).
+\]
+On $[\pi/4-3\delta,\pi/4+3\delta]$, sine is at least $1/2$.
+Thus the argument of the final $G_b$ is at distance at least
+$\delta/2$ from $u$, and its deficit is at least
+$\delta^2/8=1/2048$ by \eqref{plateau:eq:bquad}.
+For $J\ge1$ the coefficient of this term in \eqref{plateau:eq:resolvent} is
+$(a-b)a^{J-1}=(4/9)a^J$. For $J=0$ the coefficient is $1\ge4/9$.
+Discarding all other nonnegative deficits proves \eqref{plateau:eq:exitgap}.
+\end{proof}
+
+For a polynomial $w=\sum w_kT_k$, the bounds
+\[
+ \norm w\le\sum|w_k|,\qquad
+ \sup_\theta\left|\frac{d}{d\theta}w(\cos\theta)\right|
+ \le\sum k|w_k|
+\]
+follow directly from the cosine representation. The second bound is in
+the angular variable, not the spatial variable.
+
+\begin{lemma}[Perturbation oscillation]\label{plateau:lem:oscillation}
+Let $H=\mathcal S h$ and $D=H-v$, where $h,v$ are polynomials. Suppose
+\[
+ \norm h\le M,\quad
+ \sup_\theta|(h(\cos\theta))'|\le L,\quad
+ \norm v\le V,\quad
+ \sup_\theta|(v(\cos\theta))'|\le L_v.
+\]
+Let $d\ge1$ and let $J$ be a nonnegative integer with
+$\delta\le3^Jd|t|\le3\delta$. Then
+\begin{equation}\label{plateau:eq:oscillation}
+ |D(\cos(\theta+t))-D(\cos\theta)|\le C_d a^J,
+ \qquad
+ C_d=5M+\frac{15L}{64d}+\frac{3L_v}{16d}.
+\end{equation}
+Also $\norm D\le K:=\frac52M+V$.
+\end{lemma}
+\begin{proof}
+The $j$th forcing difference is at most
+$\min\{L3^j|t|,2M\}$. Splitting the series before $J$ gives
+\begin{align*}
+ |H(\cos(\theta+t))-H(\cos\theta)|
+ &\le L|t|\sum_{j<J}(3a)^j+2M\sum_{j\ge J}a^j\\
+ &\le\left(\frac{15L}{64d}+5M\right)a^J.
+\end{align*}
+Here $3a-1=4/5$ and $3^J|t|\le3/(16d)$.
+Moreover $3^{-J}\le a^J$, so
+$L_v|t|\le3L_va^J/(16d)$. This proves \eqref{plateau:eq:oscillation}.
+The norm bound follows from $\norm H\le M/(1-a)=5M/2$.
+\end{proof}
+
+\begin{proposition}[Quantitative finite-contact stability]\label{plateau:prop:stability}
+Let
+\[
+ R(x)=sA G(T_d(x)),\qquad A>0,\quad s\in\{-1,1\},\quad d\ge1.
+\]
+Its extremal points are the $2d$ zeros of $T_{2d}$, namely
+$x_i=\cos((2i+1)\pi/(4d))$, $0\le i<2d$. Put
+$\sigma_i=R(x_i)/(AB)$. For $D=\mathcal S h-v$, suppose
+\begin{equation}\label{plateau:eq:finiteineq}
+ \sigma_iD(x_i)\le\lambda\qquad(0\le i<2d).
+\end{equation}
+With the constants of Lemma~\ref{plateau:lem:oscillation}, set
+\[
+ \eta_0=\frac1{1296},\qquad
+ \gamma=\frac1{8\cdot1296^2}.
+\]
+If $\eps>0$ satisfies
+\begin{equation}\label{plateau:eq:epsconditions}
+ \eps C_d\le\frac{A}{4608},\qquad
+ \eps(K+|\lambda|)\le A\gamma,
+\end{equation}
+then
+\begin{equation}\label{plateau:eq:globalcertificate}
+ |R(x)+\eps D(x)|\le AB+\eps\lambda\qquad(x\in[-1,1]).
+\end{equation}
+Every equality in \eqref{plateau:eq:finiteineq} is an equality in
+\eqref{plateau:eq:globalcertificate} with sign $\sigma_i$.
+\end{proposition}
+\begin{proof}
+Use $x=\cos\theta$. Around every extremal angle $\theta_i$ take the
+neighborhood $|\theta-\theta_i|\le\eta_0/d$. By periodicity, reflection,
+and oddness, the signed baseline value reduces to
+$AG(\cos(\pi/4+s'))$, with $|s'|=d|\theta-\theta_i|$.
+For $s'\ne0$ choose its exit scale $J$. Lemmas~\ref{plateau:lem:exit} and
+\ref{plateau:lem:oscillation} give
+\[
+ \sigma_i(R(x)+\eps D(x))
+ \le AB-\frac{A a^J}{4608}+\eps\lambda+\eps C_d a^J
+ \le AB+\eps\lambda.
+\]
+At the contact itself this follows from \eqref{plateau:eq:finiteineq}.
+
+We must also control the opposite sign. The neighborhood radius ensures
+$J\ge4$. Apply the forcing estimate in Lemma~\ref{plateau:lem:oscillation} to
+$G=\mathcal S T_1$, taking $d=1$, $M=L=1$, and omitting $v$. Then
+\[
+ |G(\cos(\pi/4+s'))-B|
+ \le\frac{335}{64}a^J
+ \le\frac{335}{64}\left(\frac35\right)^4
+ <\frac{679}{1000}<\frac B2.
+\]
+Thus $\sigma_iR(x)>AB/2$. The second inequality in
+\eqref{plateau:eq:epsconditions} gives $\eps\norm D\le A\gamma<AB/2$.
+The perturbed residual retains this sign, proving the absolute bound
+throughout the neighborhoods. At $s'=0$, sign retention follows directly
+from $AB-\eps K>0$.
+
+Outside these neighborhoods, the angular distance of $d\theta$ from
+every preimage of $\pm u$ is at least $\eta_0$. Monotonicity of cosine
+between its extrema, and the sine bound $1/2$ in a short interval adjacent
+to each preimage, give
+$\dist(\cos(d\theta),\{-u,u\})\ge\eta_0/2$.
+By \eqref{plateau:eq:globalgap}, $|R(x)|\le AB-A\gamma$. Therefore
+\[
+ |R(x)+\eps D(x)|\le AB-A\gamma+\eps K\le AB+\eps\lambda.
+\]
+Finally, $AB+\eps\lambda>0$ because
+$\eps|\lambda|\le A\gamma<AB$. At an active contact the signed value
+is exactly $AB+\eps\lambda$, as claimed.
+\end{proof}
+
+In both constructions below the exact certificates give
+\begin{equation}\label{plateau:eq:universalbounds}
+ M<32,\quad L<128,\quad V<32,\quad L_v<128,\quad|\lambda|<32.
+\end{equation}
+All residuals have $A\ge3/5$ and $d\ge3$. Thus $C_d<178$ and
+$K+|\lambda|<144$. The single explicit choice
+\begin{equation}\label{plateau:eq:epsilon}
+ \eps=10^{-10}
+\end{equation}
+satisfies \eqref{plateau:eq:epsconditions}, since
+\[
+ \frac{178}{10^{10}}<\frac{3}{5\cdot4608},\qquad
+ \frac{144}{10^{10}}<\frac{3}{5\cdot8\cdot1296^2}.
+\]
+Consequently, any of the finite certificates below with the stated bounds
+is automatically a certificate on the whole interval.
+
+\section{The normalized oddness counterexample}
+
+Define
+\begin{align}
+ h_{\mathrm{o}}={}&(\eta-\sqrt3-1)T_0-\sqrt3\,T_2+T_4-3T_5
+                  +\eta T_6+\beta T_7,\label{plateau:eq:oddh}\\
+ \eta={}&\frac{16\cos(\pi/18)-26\cos(\pi/6)-26\cos(5\pi/18)}{15}.
+ \label{plateau:eq:eta}
+\end{align}
+To specify $\beta$ exactly, put $c_j=\cos(j\pi/36)$ and set
+\begin{align}
+ 7132971\beta={}&-21647763+7264892c_1-16364700c_2+2333622c_3
+ -20710080c_4\notag\\
+ &+7960924c_5-8377290c_6+6354480c_7-6380100c_8\notag\\
+ &+8032814c_9-667710c_{10}+24678c_{11}.
+ \label{plateau:eq:beta}
+\end{align}
+Numerically $\eta\approx-1.564814286803340$ and
+$\beta\approx-5.914876184323304$. These decimals are descriptive only;
+\eqref{plateau:eq:eta}--\eqref{plateau:eq:beta} define the coefficients.
+
+Set
+\begin{equation}\label{plateau:eq:fo}
+ f_{\mathrm{o}}=G\circ T_3+\eps\mathcal S h_{\mathrm{o}}
+ =\mathcal S(T_3+\eps h_{\mathrm{o}}).
+\end{equation}
+We next give the three finite certificates needed for this function.
+
+\subsection{Exact definition of the correction polynomials}
+
+Let
+\[
+ x_j=-\cos\frac{(2j+1)\pi}{36},\quad0\le j<18,\qquad
+ \sigma_j=(1,-1,-1,1)_{j\bmod4}.
+\]
+The coarse grid is $y_i=x_{3i+1}$, $0\le i<6$, with signs
+$\tau=(-1,1,1,-1,-1,1)$. These are respectively the extrema of
+$-aG\circ T_9$ and $G\circ T_3$.
+
+Define the explicit grid functions
+\[
+ W_k(x_j)=T_k(x_j)-aT_{3k}(x_j)
+        +\frac{a^2}{1+(-1)^ka}T_{9k}(x_j).
+\]
+They equal $(\mathcal S T_k)(x_j)$: after two iterates the finite orbit
+is on the two-cycle $\{\pm u\}$, and the remaining series is geometric.
+Equivalently, the exact identities
+$W_k(x_j)+aW_k(T_3x_j)=T_k(x_j)$ determine these values uniquely.
+Write $H_j=\sum_{k=0}^7(h_{\mathrm{o}})_k W_k(x_j)$.
+
+The correction polynomials $v_1,v_3,v_5$ and scalars
+$\lambda_2,\lambda_4,\lambda_6$ are specified by the contact equations
+\begin{align*}
+ v_1(y_i)+\tau_i\lambda_2&=H_{3i+1},
+       &&i\in I_2:=\{0,1,4,5\},\\
+ v_3(x_j)+\sigma_j\lambda_4&=H_j,
+       &&j\in I_4:=\{0,2,4,13,15,17\},\\
+ v_5(x_j)+\sigma_j\lambda_6&=H_j,
+       &&j\in I_6:=\{0,2,4,6,11,13,16,17\},
+\end{align*}
+with degrees at most $1,3,5$, respectively. The systems are consistent
+for the exact values \eqref{plateau:eq:eta}--\eqref{plateau:eq:beta}. Each has full column
+rank, so the correction and scalar are unique. Their exact rational
+coordinates in the field described below are included in
+\texttt{odd\_certificate.json}.
+
+For orientation, their Chebyshev coefficients are:
+\begin{center}\small
+\begin{tabular}{c r r r}
+\toprule
+coefficient & $v_1$ & $v_3$ & $v_5$\\\midrule
+$T_0$&$-3.310540684$&$-3.310540684$&$-3.380936697$\\
+$T_1$&$-0.781038720$&$ 0.805215314$&$-1.373864474$\\
+$T_2$&$0$&$-1.138509891$&$-0.999856812$\\
+$T_3$&$0$&$-2.959735280$&$ 1.640309342$\\
+$T_4$&$0$&$0$&$-0.070396013$\\
+$T_5$&$0$&$0$&$-4.379580520$\\\bottomrule
+\end{tabular}
+\end{center}
+The corresponding scalars are approximately
+$4.600544015619$, $7.815043886301$, and $6.118310129767$.
+
+\begin{lemma}[Odd-pattern finite certificate]\label{plateau:lem:oddcertificate}
+The above corrections satisfy the bounds \eqref{plateau:eq:universalbounds}.
+At every coarse or fine node, as appropriate,
+\[
+ \tau_i(H_{3i+1}-v_1(y_i))\le\lambda_2,
+ \qquad
+ \sigma_j(H_j-v_{n-1}(x_j))\le\lambda_n\quad(n=4,6).
+\]
+Equality holds exactly on $I_2,I_4,I_6$, respectively. Each active set has
+alternating signs. Every inactive slack is greater than $3/50$.
+\end{lemma}
+\begin{proof}[Exact arithmetic verification]
+Put $z=2\cos(\pi/36)$. All entries lie in
+\[
+ \Q[z],\qquad
+ M(z)=z^{12}-12z^{10}+54z^8-112z^6+105z^4-36z^2+1=0.
+\]
+The relevant root is isolated in $(1.98,2)$. To see uniqueness there, write
+$M=S_6^2-3$, where $S_6=z^6-6z^4+9z^2-2$; on that interval
+$S_6>0$ and $S_6'=6z(z^2-1)(z^2-3)>0$.
+
+The program \texttt{verify\_odd.py} constructs every coefficient by exact
+field arithmetic, checks the contact equations, and checks the displayed
+closed expressions for $\eta,\beta$. It encloses the root by 250 rational
+bisections and evaluates every nonzero slack by rational interval
+arithmetic. The lower bounds exceed $3/50$; the least positive slacks for
+the three certificates exceed $1.5265$, $1.6678$, and $0.0619$,
+respectively. Exact interval bounds also establish
+\eqref{plateau:eq:universalbounds}, $\eta<0$, and positivity of the three scalars.
+
+The independently implemented \texttt{audit\_odd.py} starts from the
+serialized rational coefficients. It checks the root isolation, ordered
+nodes, cubic node map, finite functional equation for the actual $H$,
+all slack identities, their signs, and the alternating active sets. It
+also checks \eqref{plateau:eq:epsconditions} directly for $\eps=10^{-10}$.
+These programs use rational arithmetic for every acceptance condition;
+floating-point conversion is used only in printed summaries.
+\end{proof}
+
+\subsection{Completion of the first construction}
+
+For degrees $1,2$, the baseline approximant is zero, so the residual for
+the candidate $\eps v_1$ is
+$G\circ T_3+\eps(\mathcal S h_{\mathrm{o}}-v_1)$.
+For degrees $3,4$ and $5,6$, the baseline approximant is $T_3$, and the
+residual is $-aG\circ T_9+\eps(\mathcal S h_{\mathrm{o}}-v)$.
+Apply Proposition~\ref{plateau:prop:stability} with
+$(A,s,d)=(1,1,3)$ or $(a,-1,9)$.
+The finite certificate provides respectively four, six, and eight
+alternating contacts, while the candidates have degrees at most $1,3,5$.
+Chebyshev alternation therefore gives
+\[
+\begin{array}{c|c|c}
+ n&P_n f_{\mathrm{o}}&E_n(f_{\mathrm{o}})\\\hline
+ 1,2&\eps v_1&B+\eps\lambda_2\\
+ 3,4&T_3+\eps v_3&aB+\eps\lambda_4\\
+ 5,6&T_3+\eps v_5&aB+\eps\lambda_6.
+\end{array}
+\]
+Proposition~\ref{plateau:prop:finite} now proves every odd/even plateau.
+
+The identity $h_{\mathrm{o}}(0)=0$ follows directly from
+$T_{2j}(0)=(-1)^j$. Thus \eqref{plateau:eq:self} at zero gives
+$f_{\mathrm{o}}(0)=0$. At the endpoints,
+\[
+ h_{\mathrm{o}}(1)+h_{\mathrm{o}}(-1)=4(\eta-\sqrt3).
+\]
+Since $T_3(\pm1)=\pm1$ and $G\circ T_3$ is odd,
+\begin{equation}\label{plateau:eq:oddwitness}
+ f_{\mathrm{o}}(1)+f_{\mathrm{o}}(-1)
+ =\frac{4\eps(\eta-\sqrt3)}{1+a}
+ =\frac52\eps(\eta-\sqrt3)\ne0.
+\end{equation}
+This proves the first assertion of Theorem~\ref{plateau:thm:main}.
+
+\section{The evenness counterexample}
+
+This construction uses the baseline $G\circ T_6$ and a degree-eight
+forcing perturbation. We specify its coefficients by a small, explicit
+linear system, avoiding long rational coordinate lists in the text.
+
+\subsection{Exact algebraic definition}
+
+The unknown forcing is
+\[
+ h_{\mathrm{e}}=c_1T_1+c_2T_2+c_3T_3+c_4T_4+c_5T_5+c_7T_7+c_8T_8.
+\]
+Thus $c_0=c_6=0$. Introduce correction polynomials
+$w_0,w_2,w_4,w_6$ of degrees at most $0,2,4,6$, and scalars
+$\mu_1,\mu_3,\mu_5,\mu_7$.
+
+For $m=12,36$, define the increasing nodes
+\[
+ x_j^{(m)}=-\cos\frac{(2j+1)\pi}{2m},\qquad0\le j<m.
+\]
+Use $m_n=12$ for $n=1,3,5$ and $m_7=36$. Let
+\[
+ \sigma_{n,j}=\begin{cases}
+ (1,-1,-1,1)_{j\bmod4},&n=1,3,5,\\
+ (-1,1,1,-1)_{j\bmod4},&n=7.
+ \end{cases}
+\]
+For a grid angle $\theta$ set $J=1$ when $m=12$ and $J=2$ when $m=36$,
+and define
+\begin{equation}\label{plateau:eq:evenW}
+ W_k^{(m)}(\cos\theta)=
+ \sum_{i=0}^{J-1}(-a)^i\cos(k3^i\theta)
+ +\frac{\sum_{i=J}^{J+3}(-a)^i\cos(k3^i\theta)}{1-a^4}.
+\end{equation}
+After $J$ iterates these node orbits have period dividing four. Therefore
+\eqref{plateau:eq:evenW} is the exact value of $\mathcal S T_k$ at the node.
+
+Write $\mathcal H_j^{(m)}=\sum_k c_k W_k^{(m)}(x_j^{(m)})$.
+The defining equations are
+\begin{equation}\label{plateau:eq:evenlinear}
+ w_{n-1}(x_j^{(m_n)})+\sigma_{n,j}\mu_n
+ =\mathcal H_j^{(m_n)},\qquad j\in J_n,
+\end{equation}
+where
+\begin{align*}
+ J_1&=\{3,6,8\},\\
+ J_3&=\{1,3,4,6,8,10\},\\
+ J_5&=\{0,2,4,6,7,9,11\},\\
+ J_7&=\{3,6,8,13,19,22,27,30,32\}.
+\end{align*}
+Add the two normalizations
+\begin{equation}\label{plateau:eq:evennormalize}
+ [T_2]w_2=1,\qquad [T_4]w_4=-1.
+\end{equation}
+Here $[T_k]w$ denotes the coefficient in the Chebyshev basis.
+There are $27$ equations for the $7+1+3+5+7+4=27$ unknowns.
+Exact elimination shows that this system is nonsingular. Equations
+\eqref{plateau:eq:evenW}--\eqref{plateau:eq:evennormalize} therefore define the forcing
+and corrections unambiguously by real algebraic numbers.
+
+Their approximate forcing coefficients are
+\[
+\begin{array}{c|r}
+ k&c_k\\\hline
+ 1&-0.017561786853260\cr
+ 2& 0.286725254171375\cr
+ 3& 0.018613141564351\cr
+ 4&-0.862027229474975\cr
+ 5&-0.013885677377745\cr
+ 7& 0.026299792766218\cr
+ 8&-0.253316709984462.
+\end{array}
+\]
+The exact rational coordinate lists are in \texttt{even\_certificate.json}.
+Define
+\begin{equation}\label{plateau:eq:fe}
+ f_{\mathrm{e}}=G\circ T_6+\eps\mathcal S h_{\mathrm{e}}
+ =\mathcal S(T_6+\eps h_{\mathrm{e}}).
+\end{equation}
+
+\begin{lemma}[Even-pattern finite certificate]\label{plateau:lem:evencertificate}
+For each $n=1,3,5,7$ and every point of the corresponding grid,
+\[
+ \sigma_{n,j}\bigl(\mathcal H_j^{(m_n)}-w_{n-1}(x_j^{(m_n)})\bigr)
+ \le\mu_n.
+\]
+The equality sets are exactly $J_n$. Alternating subsets of cardinality
+$n+2$ are $J_1,J_5,J_7$, and
+$\{1,3,6,8,10\}\subset J_3$. All nonzero slacks exceed $1/50$.
+The coefficient bounds \eqref{plateau:eq:universalbounds} hold, and
+\begin{equation}\label{plateau:eq:oddcoeffsum}
+ c_1+c_3+c_5+c_7>\frac1{100}.
+\end{equation}
+\end{lemma}
+\begin{proof}[Exact arithmetic verification]
+All coefficients belong to the real algebraic field generated by
+$z=2\cos(\pi/72)$, whose defining polynomial is
+\begin{align*}
+ M_{24}(z)={}&z^{24}-24z^{22}+252z^{20}-1520z^{18}+5814z^{16}
+ -14688z^{14}\\
+ &+24752z^{12}-27456z^{10}+19305z^8-8008z^6
+ +1716z^4-144z^2+1.
+\end{align*}
+It satisfies $M_{24}(z)=M(z^2-2)$, where $M$ is the polynomial used in
+the odd certificate. The relevant root is isolated in $(1.998,2)$;
+the same monotonicity argument, applied to $z^2-2$, proves uniqueness.
+
+The generator \texttt{generate\_even.py} solves the $27$-by-$27$ system
+by exact arithmetic, with a nonzero pivot at every step. It checks every
+functional identity, equality, and slack and encloses the root by $400$
+rational bisections. The minimum positive slacks for $n=1,3,5,7$ exceed
+$0.1336$, $0.0936$, $0.0965$, and $0.0230$, respectively. Exact coefficient
+bounds give $M<2$, $L<34$, $V<2$, $L_v<72$, and $|\mu_n|<1$,
+which imply \eqref{plateau:eq:universalbounds}; it also verifies
+\eqref{plateau:eq:oddcoeffsum}.
+
+The independent standard-library program \texttt{audit\_even.py} uses a
+separate implementation of rational polynomial arithmetic. From the
+serialized coefficients it reconstructs all $36$ fine nodes, verifies
+their ordering and cubic map, detects the finite orbit cycles, and
+evaluates the exact orbit sums. It then verifies every slack, equality,
+alternating set, coefficient bound, and \eqref{plateau:eq:epsconditions}. No
+floating-point tolerance is used to accept any identity or inequality.
+\end{proof}
+
+For reference, the scalar error corrections are approximately
+\begin{align*}
+ \mu_1&=0.577201789619347,&\quad \mu_3&=0.223648399026073,\\
+ \mu_5&=-0.129582723095644,&\quad \mu_7&=0.276968241048616.
+\end{align*}
+The negative value of $\mu_5$ causes no difficulty: the stability
+proposition uses $|\mu_5|$ in its smallness condition, and the total error
+remains positive.
+
+\subsection{Completion of the second construction}
+
+By \eqref{plateau:eq:Gsmall} and Chebyshev composition, the baseline
+$G\circ T_6$ has best approximant zero for degrees $0$ through $5$ and
+best approximant $T_6$ for degrees $6,7$. Its residuals are consequently
+$G\circ T_6$ and $-aG\circ T_{18}$.
+
+Apply Proposition~\ref{plateau:prop:stability} with
+$(A,s,d)=(1,1,6)$ for the first three certificates and
+$(a,-1,18)$ for the fourth. Alternation gives
+\[
+\begin{array}{c|c|c}
+ n&P_n f_{\mathrm{e}}&E_n(f_{\mathrm{e}})\\\hline
+ 0,1&\eps w_0&B+\eps\mu_1\\
+ 2,3&\eps w_2&B+\eps\mu_3\\
+ 4,5&\eps w_4&B+\eps\mu_5\\
+ 6,7&T_6+\eps w_6&aB+\eps\mu_7.
+\end{array}
+\]
+Since $\deg(T_6+\eps h_{\mathrm{e}})\le8$,
+Proposition~\ref{plateau:prop:finite} extends these equalities to every even/odd
+pair.
+
+Finally, $G\circ T_6$ is even, while the endpoint difference of the
+perturbation is
+\begin{equation}\label{plateau:eq:evenwitness}
+ f_{\mathrm{e}}(1)-f_{\mathrm{e}}(-1)
+ =\frac{2\eps}{1+a}(c_1+c_3+c_5+c_7)
+ >\frac{\eps}{80}>0.
+\end{equation}
+This proves the second assertion of Theorem~\ref{plateau:thm:main}.
+
+
+\section{Reproducibility and formal proof status}
+The source and compiled version of this complete manuscript are
+\path{paper/lorentz_counterexamples.tex} and
+\path{paper/lorentz_counterexamples.pdf}.
+From the repository root, the independent exact checks are
+\begin{verbatim}
+python3 scripts/check_certificate.py
+python3 certificates/plateau/audit_odd.py
+python3 certificates/plateau/audit_even.py
+\end{verbatim}
+The Lean project is in \texttt{lean/}. The original common-origin theorem
+has been checked with only Lean's standard axioms. The two plateau
+formalizations are under development; their finite-to-infinite reduction,
+contraction uniqueness, and the new baseline's resolvent identity and exact
+extrema are proved, but their complete endpoint theorems are not yet certified.
+The project builds with Lean and Mathlib \texttt{v4.35.0-rc2}, the
+Palomar-supported toolchain used for this preparation.
+These status distinctions do not replace any hypothesis in the mathematical
+proofs above.
+
+The common-origin proof in Part~I corrects the strict Lipschitz inequality
+at coincident points in the earlier standalone PDF: the valid inequality is
+non-strict. Its explicit perturbation range is proved in the manuscript;
+the existing Lean endpoint is existential in the positive perturbation size.
+The plateau arguments in Part~II justify the fixed value $10^{-10}$ by their
+stated analytic estimates and exact coefficient checks.
+
+The original supplied manuscripts and certificate package are retained
+under \texttt{archive/}. The current standalone certificate scripts live
+under \texttt{certificates/plateau/}; references to those script basenames
+in Part~II refer to that directory.
+
+\begin{thebibliography}{1}
+\bibitem{SaffVarga} E. B. Saff and R. S. Varga,
+\emph{Remarks on some conjectures of G. G. Lorentz},
+Journal of Approximation Theory \textbf{30} (1980), 29--36.
+\url{https://www.math.kent.edu/~varga/pub/paper_126.pdf}.
+\end{thebibliography}
+\end{document}

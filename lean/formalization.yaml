@@ -1,0 +1,83 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
+version: "v0.4"
+project:
+  name: "A self-similar counterexample to the common-origin conjecture of Lorentz"
+  description: >-
+    A continuous nonodd function on [-1,1], normalized at zero, whose best
+    uniform polynomial approximants exist at every degree and all vanish at
+    zero. The proof combines exact algebraic certificates, analytic contact
+    estimates, compactness, and cubic self-similarity.
+  authors: ["TEMPLATE: author names to be supplied by the owner"]
+  license: "TEMPLATE: license to be selected by the owner"
+  responsible_maintainers: ["TEMPLATE: maintainer names to be supplied by the owner"]
+classification:
+  arxiv: ["math.CA"]
+  msc2020: ["41A10", "41A50", "68V15"]
+sources:
+  - title: "Self-similar counterexamples to three conjectures of Lorentz"
+    type: "manuscript"
+    location: "paper/lorentz_counterexamples.tex, Part I, in this repository snapshot"
+    relationship: "formalizes"
+    note: >-
+      Combined and revised from the supplied construction manuscripts, whose
+      original files are preserved under archive/. Bibliographic authorship
+      of the supplied manuscripts remains to be confirmed by the owner.
+    license: "unknown"
+related_formalizations: []
+status:
+  scope: >-
+    The common-origin existence theorem is fully proved for a sufficiently
+    small positive perturbation. The explicit numerical perturbation range
+    in the manuscript is not a Lean endpoint. The two additional plateau
+    constructions have exact external audits and proved general Lean
+    reduction tools, but their endpoint theorems are not part of this claim.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms: ["propext", "Classical.choice", "Quot.sound"]
+automation:
+  methods:
+    - method: "agent"
+      models: ["GPT-6"]
+      framework: "OpenAI Codex"
+      tool_setup: >-
+        Local Lean and Lake, Mathlib proof-producing tactics, kernel-reduced
+        rational coefficient checks, and independent Python Fraction audits.
+      cost:
+        wall_time: "not tracked"
+        spend_usd: "not tracked"
+        hardware: "local Linux workstation"
+      prompting_notes: >-
+        The owner requested proof audits, proof optimization, formalization
+        of companion constructions, repository organization, and preparation
+        for Palomar submission.
+  spend_usd: "not tracked"
+  notes: >-
+    The owner supplied the mathematical construction PDFs, Lean project,
+    and companion certificate package. The agent audited, revised, optimized,
+    ported, and packaged the development. The provenance of the incoming
+    artifacts is retained; their earlier automation history was not supplied.
+fidelity:
+  divergences: >-
+    The Lean endpoint proves existence of a sufficiently small positive
+    perturbation rather than the manuscript's explicit perturbation range.
+    The original PDF's strict Lipschitz inequality at coincident points was
+    corrected to a non-strict inequality. The two plateau endpoint claims
+    in Part II are excluded from the advertised formal theorem.
+review:
+  status: "agent-audited; human mathematical review not recorded"
+  reviewers: []
+  notes: >-
+    The source and theorem statement were inspected, exact rational audits
+    were run, and the complete original Lean theorem was kernel checked.
+    The current verification records distinguish historical checks from the
+    migrated toolchain and Comparator checks. No independent human review
+    or endorsement is asserted.
+alignment:
+  namespace: "LorentzSubmission"
+  statements:
+    - source: "Combined manuscript, Part I, main common-origin theorem"
+      lean: "LorentzSubmission.common_origin_counterexample"
+      module: "Solution"
+      status: "proved"
+      note: "Existential positive perturbation; genuine minimax condition at every degree."
+acknowledgements: "Lean, Mathlib, and the Lean 4 skills tooling."

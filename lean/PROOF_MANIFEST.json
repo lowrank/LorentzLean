@@ -1,0 +1,95 @@
+{
+  "verified_at_utc": "2026-10-28T22:08:11.591025+00:00",
+  "path_base": "repository root",
+  "theorem": "Lorentz.Construction.lorentz_counterexample",
+  "submission_theorem": "LorentzSubmission.common_origin_counterexample",
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
+  "logical_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "local_lean_modules": 42,
+  "intentional_challenge_holes": 1,
+  "proof_development_holes": 0,
+  "scope": "Complete existential common-origin theorem. Explicit numerical perturbation range and the two plateau endpoints are not formalized.",
+  "checks": {
+    "lake_build": {
+      "passed": true,
+      "log": "verification/palomar-build.log"
+    },
+    "axiom_audit": {
+      "passed": true,
+      "log": "verification/axiom-audit.log"
+    },
+    "comparator_local": {
+      "passed": true,
+      "sandbox": false,
+      "kernels": [
+        "Lean default",
+        "nanoda",
+        "con-ron"
+      ],
+      "log": "verification/comparator-local.log"
+    },
+    "comparator_sandbox_local": {
+      "passed": false,
+      "reason": "Host denies Bubblewrap user namespace uid mapping",
+      "log": "verification/comparator-sandbox.log"
+    },
+    "ci": {
+      "status": "pending",
+      "repository": "https://github.com/lowrank/LorentzLean",
+      "visibility": "private"
+    }
+  },
+  "source_sha256": {
+    "lean/Audit.lean": "7cdc8b3216a83e322d2ade6879ada7315a5ad7cb451ae0b015695767072f3915",
+    "lean/Challenge.lean": "9555e209220ba94e07ff8a144ff59bd1136a4c9589db83ff174cee270e1aaf6c",
+    "lean/Lorentz.lean": "787f312dc2d70ffbd52e7ab67a28fb9bca2361dabeb72914dd57f26639729b7f",
+    "lean/Solution.lean": "3ec59893f18c1e49afd2df2eb18ecf75714477c07cd589a2e4ae22b1b8dd0703",
+    "lean/Lorentz/AllDegrees.lean": "85c464b42dff451092da72bf499fde102fbf6d6bf9fe75789b5758f06cb3d698",
+    "lean/Lorentz/AngularSeries.lean": "2bddca6ed70340ad34f9703f9d55856c0bcde98ff54e595e5dfae90cdc3de157",
+    "lean/Lorentz/BaseCertificates.lean": "f2b54741da09ed556027edab56bf0738af42e2ee033907a39f10a3696a567387",
+    "lean/Lorentz/Baseline.lean": "85600288bafab07e5d924bcaa2d6c0192efc872ddc8c55841374257fc471fed2",
+    "lean/Lorentz/BaselineLocal.lean": "8571caf475f85ebd27a53a22f0a1c797c0af523a9cb2044590a538b62def4d2e",
+    "lean/Lorentz/CertificateAlternation.lean": "cfa4c299024013439a4648efb711e3d86fded875d28be2a8517af51b9ee9cbfd",
+    "lean/Lorentz/CertificateBounds.lean": "321ceebd0e537ef21baffb0d6bc77155093332b2f329b0c5f52b10022b90bf83",
+    "lean/Lorentz/CertificateCompleteness.lean": "aaab0618de00ee0070f80f7a85a56e30aa4fa1757e9d437143b9a5638caa6373",
+    "lean/Lorentz/CertificateData.lean": "b74d1b159374469f16be0511696b826d6b820db9ca35034a4c84dbf17fa22c40",
+    "lean/Lorentz/CertificateFinite.lean": "e23a40a901f3dbc512af6493f43c9f931b5f12cd33d9a4821cb0b64fa725ab38",
+    "lean/Lorentz/CertificateGeometry.lean": "9b9c4710f3366290462462bc2bea277e1a62352255f3daeb02cb3a48474f8c61",
+    "lean/Lorentz/CertificateGrid.lean": "2b67beb0d0b0eac4719cea841e8c051675bb0cc9eee90c01a2b7ace14d80595f",
+    "lean/Lorentz/CertificateIdentities.lean": "719d711bc4877ab1d0df62d35276acf6532f11231c664d49593e5b952944115f",
+    "lean/Lorentz/CertificateNorms.lean": "3ad94aae3d81873093ae875fcabf5514e88aab3dc650249d54a3b4fbd6320555",
+    "lean/Lorentz/CertificateOrder.lean": "5c6c03844384467cc273850a4b8e4d37e0e2333e01d49744fd199ae1ff9bd11f",
+    "lean/Lorentz/CertificatePerturbation.lean": "fb71e11e9bfd3b8e7b41e7b5c4b29b309ac0f870103c1d928737cc7b8eed2942",
+    "lean/Lorentz/CertificatePolynomials.lean": "936eee5929a0675e74bf03e300226ab1a9d0109c276ee32c110dd587039ad770",
+    "lean/Lorentz/CertificateRoot.lean": "86dfd3d8794ab79fdb57b17fd1071b7ea4f349c5f00c0b33667babf7ad33f994",
+    "lean/Lorentz/CertificateSigns.lean": "124576c5448339586dfbd4dee9cba0f914a33404faf33458f9c39e3e8c731cfd",
+    "lean/Lorentz/CompactStability.lean": "d42a415674b5301c0c40c3138d9f9cf290ddb4d089185bae9b5e91eeb1bafc95",
+    "lean/Lorentz/Composition.lean": "552fef013847e14688cd464ec5b49a4b6f540aadf82460f4ff757b8d13825ccc",
+    "lean/Lorentz/ContactGeometry.lean": "2b1e1014e8e78c0a66f048219da72e659663c543ddada42fc5ad2a6a095b2043",
+    "lean/Lorentz/Counterexample.lean": "12cc5cc424edef1edbd5eed127f69787f7afcccd049c91409dd0176d1eccc329",
+    "lean/Lorentz/ForcingPolynomials.lean": "1782710bb91e955ce386fe736bf6141aad69e0ad6df8c0cca7f541b65632586e",
+    "lean/Lorentz/LocalComposition.lean": "4db34d94ddd2a6e9593ad625b52b8ee950582305ea0cdfb1562df5b46e758317",
+    "lean/Lorentz/Minimax.lean": "a67e56b18d4822f969edf2a9f513ca931deba967877fa28f14fcfbba10819d74",
+    "lean/Lorentz/Perturbation.lean": "17a33d6ad74bbb4391306350ffc03cbdc50a2b5fa548f0cc292ca104c78a3da5",
+    "lean/Lorentz/PerturbationContacts.lean": "2910e27fc2bdb8d26d8442563e000d746da671e7d15a820a24d94527a1ce0370",
+    "lean/Lorentz/Plateau/Baseline.lean": "a9709551132fa68397bbac7e87cf868a7282200e6f76412eedb66cc24db0bd1e",
+    "lean/Lorentz/Plateau/Reduction.lean": "b3649bafab5710fbe83658f77f7d5e083396db8d97770fd4acc431c1ef31e568",
+    "lean/Lorentz/Plateau/SeriesTools.lean": "9af6ceb3a37cd613742a77cec15581f47a39fb9002e32ed1f534255fed41760c",
+    "lean/Lorentz/PolynomialBounds.lean": "7ab30dc766c1ca6e565f3b9c041606740ff29cb644d6356e85f2a701ad7abc67",
+    "lean/Lorentz/PolynomialCertificate.lean": "54cfcaaaef8333cad060e792d456a0997b91c6d545d577f3b3ac74c95441292d",
+    "lean/Lorentz/QuarterSeries.lean": "c534717c058c351a27709fc4eac4b0b3b74f0b644475f725350686f7e4d2491a",
+    "lean/Lorentz/Series.lean": "43431428678efc6ce7215eb104003347511d737d89bcc006cf0c04bd7298fcfe",
+    "lean/Lorentz/SeriesEstimates.lean": "8f043d52168faf4e3df30c9aa7a02fc471890e1353d3773ba1831b740a75953f",
+    "lean/Lorentz/Stability.lean": "13300c2a9888d52c9099a506d9da635e6119a2677fab0d08efd6d1c08fbd9f92",
+    "lean/Lorentz/Trigonometry.lean": "ce9d1448914de7219a35b4bfbe22fb6777497c80841c27c97bb57dabd45f3c1a",
+    "lean/lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
+    "lean/lakefile.toml": "173d270acfa09b732c3647546849a746ae0edc2d05630ef102165295495edc67",
+    "lean/lake-manifest.json": "c6468f4c96d1880fd0d3c8158afd9a19b630319b812883c2649855f99d3fc6e4",
+    "lean/comparator.json": "b656f8e068bb5881c369053ea216d7afdc74bc2a888c5a8e1742536ceb880753"
+  }
+}

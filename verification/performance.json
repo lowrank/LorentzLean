@@ -1,0 +1,24 @@
+{
+  "description": "Observed Lake per-module wall times on this machine; not a controlled benchmark.",
+  "date": "2026-10-28",
+  "original_seconds": {
+    "CertificateIdentities": 788,
+    "CertificatePerturbation": 211,
+    "Series": 210
+  },
+  "optimized_seconds": {
+    "CertificateIdentities": 112,
+    "CertificatePerturbation": 40,
+    "Series": 2.3
+  },
+  "new_helper_seconds": {
+    "PolynomialCertificate": 4.4
+  },
+  "changed_modules_and_dependents_rebuild_seconds": 148.96,
+  "notes": [
+    "Pinned Lean 4.24.0 and Mathlib dependencies were cached.",
+    "The 148.96-second rebuild reused unchanged local modules.",
+    "Parallel scheduling and machine load affect comparisons.",
+    "The narrower Series target and new helper were checked before the final rebuild."
+  ]
+}
