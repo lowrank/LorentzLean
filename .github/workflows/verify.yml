@@ -31,7 +31,9 @@ jobs:
       - uses: leanprover/lean-action@38fbc41a8c28c4cbaec22d7f7de508ec2e7c0dd9
         with:
           lake-package-directory: lean
-          build: true
+          build: false
+      - name: Build proofs in memory-bounded groups
+        run: ./scripts/build_lean.sh
       - name: Audit logical axioms
         run: python3 scripts/check_axioms.py
       - name: Enable Comparator sandbox on the disposable runner

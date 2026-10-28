@@ -26,3 +26,9 @@ axioms: `propext`, `Classical.choice`, and `Quot.sound`. -/
 #print axioms Lorentz.Plateau.FiniteTools.finite_orbit_values
 #print axioms Lorentz.Plateau.Certificates.Odd.exists_root
 #print axioms Lorentz.Plateau.Certificates.Even.exists_root
+#print axioms Lorentz.Plateau.finite_roots_simple
+#print axioms Lorentz.Plateau.finite_seed_certificate
+#print axioms Lorentz.Plateau.odd_plateau_counterexample
+#print axioms Lorentz.Plateau.even_plateau_counterexample
+#print axioms LorentzSubmission.odd_plateau_counterexample
+#print axioms LorentzSubmission.even_plateau_counterexample

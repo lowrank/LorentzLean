@@ -6,22 +6,25 @@ Lake project is the nested directory `lean`.
 
 ## Exact scope
 
-The compared theorem is
-`LorentzSubmission.common_origin_counterexample`. It asserts the existence of
-a continuous function on `[-1,1]` that vanishes at zero, fails oddness at a point
-in that interval, and has best uniform approximants of every degree, all of
-which vanish at zero. The definition compares with every polynomial of degree
-at most `n`, without a pre-assumed best-approximation operator.
+The compared theorems in `LorentzSubmission` are:
 
-`Challenge.lean` imports only Mathlib and states the result independently.
-`Solution.lean` proves the same statement from the full development. The
-Challenge contains one deliberate `sorry`, as the protocol permits. The
-Solution and its proof dependencies contain no proof holes or custom axioms.
+- `common_origin_counterexample`: a normalized nonodd continuous function
+  whose best approximants of every degree all vanish at zero.
+- `odd_plateau_counterexample`: a normalized nonodd continuous function with
+  equal best approximants at every pair `(2k+1, 2k+2)`.
+- `even_plateau_counterexample`: a noneven continuous function with equal
+  best approximants at every pair `(2k, 2k+1)`.
 
-The manuscript's two plateau counterexamples are additional mathematics;
-their complete Lean endpoints are still in development and are excluded from
-this Comparator claim. The original Lean result is existential in the
-perturbation size, whereas the manuscript also proves an explicit range.
+All symmetry witnesses lie inside `[-1,1]`. The minimax definition compares
+against every polynomial of the relevant degree; existence and the required
+uniqueness are proved without assuming a best-approximation operator.
+
+`Challenge.lean` imports only Mathlib and states these results independently.
+Its three deliberate holes belong to the advertised statements, as permitted
+by the protocol. `Solution.lean` proves all three matching statements with
+no proof holes or custom axioms. The Lean constructions prove existence of
+sufficiently small positive perturbations. The manuscript also establishes
+explicit numerical choices, which are not claimed by these endpoints.
 
 ## Verification
 

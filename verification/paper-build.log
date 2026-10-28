@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.18)  28 OCT 2026 17:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.12.18)  28 OCT 2026 17:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -370,7 +370,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count299
 \l__pdf_internal_box=\box57
 )
-(/tmp/lorentz-paper.r9FLZ2/lorentz_counterexamples.aux)
+(/tmp/lorentz-paper.9Yhnfw/lorentz_counterexamples.aux)
 \openout1 = `lorentz_counterexamples.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -491,8 +491,8 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 Package hyperref Info: Link coloring OFF on input line 18.
 
-(/tmp/lorentz-paper.r9FLZ2/lorentz_counterexamples.out)
-(/tmp/lorentz-paper.r9FLZ2/lorentz_counterexamples.out)
+(/tmp/lorentz-paper.9Yhnfw/lorentz_counterexamples.out)
+(/tmp/lorentz-paper.9Yhnfw/lorentz_counterexamples.out)
 \@outlinefile=\write3
 \openout3 = `lorentz_counterexamples.out'.
 
@@ -514,7 +514,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-(/tmp/lorentz-paper.r9FLZ2/lorentz_counterexamples.toc [1
+(/tmp/lorentz-paper.9Yhnfw/lorentz_counterexamples.toc [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write4
@@ -526,7 +526,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  [4] [5] [6] [7] [8] [9] [10] [11]
-[12] [13] [14] [15] [16] (/tmp/lorentz-paper.r9FLZ2/lorentz_counterexamples.aux
+[12] [13] [14] [15] [16] (/tmp/lorentz-paper.9Yhnfw/lorentz_counterexamples.aux
 )
  ***********
 LaTeX2e <2023-11-01> patch level 1
@@ -537,11 +537,11 @@ Package rerunfilecheck Info: File `lorentz_counterexamples.out' has not changed
 (rerunfilecheck)             Checksum: D945D9DFA891BD71E02E542A34794A0F;4938.
  ) 
 Here is how much of TeX's memory you used:
- 13140 strings out of 474222
- 204606 string characters out of 5748732
+ 13142 strings out of 474222
+ 204620 string characters out of 5748732
  1942975 words of memory out of 5000000
  35015 multiletter control sequences out of 15000+600000
- 572510 words of font info for 146 fonts, out of 8000000 for 9000
+ 572561 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,1026b,598s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -559,8 +559,8 @@ s/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /tmp/lorentz-paper.r9FLZ2/lorentz_counterexamples.pdf (16 pag
-es, 289253 bytes).
+Output written on /tmp/lorentz-paper.9Yhnfw/lorentz_counterexamples.pdf (16 pag
+es, 289595 bytes).
 PDF statistics:
  379 PDF objects out of 1000 (max. 8388607)
  325 compressed objects within 4 object streams

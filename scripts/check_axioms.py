@@ -15,7 +15,11 @@ if result.returncode:
     raise SystemExit(result.returncode)
 audits = re.findall(r"'([^']+)' depends on axioms:\s*\[([^]]*)\]", result.stdout)
 required = {"Lorentz.Construction.lorentz_counterexample",
-            "LorentzSubmission.common_origin_counterexample"}
+            "LorentzSubmission.common_origin_counterexample",
+            "Lorentz.Plateau.odd_plateau_counterexample",
+            "Lorentz.Plateau.even_plateau_counterexample",
+            "LorentzSubmission.odd_plateau_counterexample",
+            "LorentzSubmission.even_plateau_counterexample"}
 if not required.issubset({name for name, _ in audits}):
     raise SystemExit("Missing required endpoint audit output")
 allowed = {"propext", "Quot.sound", "Classical.choice"}

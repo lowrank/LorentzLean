@@ -1,4 +1,4 @@
-⚠ [8934/8980] Replayed Lorentz.Minimax
+⚠ [8934/9012] Replayed Lorentz.Minimax
 warning: Lorentz/Minimax.lean:57:35: `if_true` has been deprecated: Use `ite_true` instead
 
 Hint: Replace the deprecated name:
@@ -19,7 +19,7 @@ warning: Lorentz/Minimax.lean:151:60: `if_false` has been deprecated: Use `ite_f
 
 Hint: Replace the deprecated name:
   i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
-⚠ [8935/8980] Replayed Lorentz.Composition
+⚠ [8935/9012] Replayed Lorentz.Composition
 warning: Lorentz/Composition.lean:147:43: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -40,12 +40,12 @@ warning: Lorentz/Composition.lean:162:57: `dif_pos` has been deprecated: Use `di
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [8939/8980] Replayed Lorentz.CompactStability
+⚠ [8939/9012] Replayed Lorentz.CompactStability
 warning: Lorentz/CompactStability.lean:38:15: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
 
 Hint: Replace the deprecated name:
   s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
-⚠ [8946/8980] Replayed Lorentz.AngularSeries
+⚠ [8946/9012] Replayed Lorentz.AngularSeries
 warning: Lorentz/AngularSeries.lean:113:25: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -55,7 +55,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Lorentz/AngularSeries.lean:210:22: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [8955/8980] Replayed Lorentz.CertificateGeometry
+⚠ [8955/9012] Replayed Lorentz.CertificateGeometry
 warning: Lorentz/CertificateGeometry.lean:245:20: This simp argument is unused:
   node_four_neg_a
 
@@ -140,7 +140,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp [coarseSign, fineSign, a]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [8963/8980] Replayed Lorentz.ContactGeometry
+⚠ [8963/9012] Replayed Lorentz.ContactGeometry
 warning: Lorentz/ContactGeometry.lean:45:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -217,7 +217,7 @@ warning: Lorentz/ContactGeometry.lean:248:40: `if_neg` has been deprecated: Use 
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [8966/8980] Replayed Lorentz.PerturbationContacts
+⚠ [8966/9012] Replayed Lorentz.PerturbationContacts
 warning: Lorentz/PerturbationContacts.lean:51:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -226,5 +226,3038 @@ warning: Lorentz/PerturbationContacts.lean:58:8: `if_neg` has been deprecated: U
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-✔ [8979/8980] Built Lorentz (3.6s)
-Build completed successfully (8980 jobs).
+⚠ [8981/9012] Replayed Lorentz.Plateau.Families
+warning: Lorentz/Plateau/Families.lean:76:58: This simp argument is unused:
+  Bool.true_eq
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [familyFunction, basePolynomial, amplitude, ↓reduceIte, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, pullback_eval]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8982/9012] Replayed Lorentz.Plateau.Certificates.OddContacts
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:45:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:45:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:45:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:46:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:47:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:59:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:59:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:59:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:60:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:60:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:61:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:73:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:73:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:73:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:74:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:74:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:75:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:87:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:87:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:87:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:88:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:89:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:101:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:101:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:101:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:102:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:103:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:115:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:115:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:115:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:116:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:116:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:117:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:141:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:141:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:141:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:142:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:143:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:143:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:156:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:156:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:156:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:157:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:158:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:158:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:171:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:171:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:171:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:172:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:173:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:173:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:186:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:186:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:186:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:187:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:188:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:188:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:201:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:201:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:201:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:202:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:203:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:203:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:216:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:216:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:216:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:217:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:218:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:218:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:231:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:231:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:231:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:232:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:233:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:233:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:246:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:246:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:246:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:247:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:248:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:248:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:261:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:261:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:261:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:262:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:263:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:263:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:276:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:276:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:276:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:277:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:278:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:278:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:291:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:291:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:291:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:292:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:293:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:293:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:306:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:306:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:306:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:307:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:308:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:308:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:321:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:321:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:321:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:322:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:323:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:323:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:336:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:336:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:336:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:337:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:338:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:338:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:351:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:351:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:351:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:352:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:353:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:353:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:366:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:366:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:366:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:367:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:368:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:368:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:381:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:381:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:381:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:382:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:383:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:383:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:396:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:396:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:396:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:397:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:398:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:398:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:435:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:435:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:435:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:436:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:437:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:437:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:450:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:450:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:450:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:451:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:452:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:452:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:465:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:465:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:465:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:466:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:467:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:467:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:480:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:480:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:480:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:481:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:482:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:482:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:495:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:495:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:495:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:496:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:497:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:497:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:510:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:510:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:510:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:511:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:512:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:512:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:525:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:525:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:525:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:526:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:527:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:527:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:540:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:540:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:540:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:541:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:542:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:542:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:555:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:555:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:555:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:556:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:557:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:557:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:570:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:570:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:570:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:571:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:572:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:572:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:585:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:585:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:585:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:586:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:587:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:587:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:600:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:600:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:600:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:601:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:602:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:602:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:615:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:615:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:615:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:616:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:617:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:617:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:630:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:630:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:630:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:631:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:632:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:632:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:645:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:645:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:645:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:646:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:647:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:647:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:660:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:660:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:660:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:661:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:662:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:662:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:675:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:675:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:675:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:676:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:677:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:677:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:690:25: This simp argument is unused:
+  eval_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:690:35: This simp argument is unused:
+  eval_power
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:690:47: This simp argument is unused:
+  hone
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one,
+    Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:691:32: This simp argument is unused:
+  Rat.cast_ofNat
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_neg, Rat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:692:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddContacts.lean:692:80: This simp argument is unused:
+  seedMap_eval_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_false]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8987/9012] Replayed Lorentz.Plateau.Certificates.OddSeed0
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:46:47: This simp argument is unused:
+  Polynomial.sub_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.mul_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:46:68: This simp argument is unused:
+  Polynomial.mul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:47:6: This simp argument is unused:
+  Polynomial.pow_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:47:27: This simp argument is unused:
+  Polynomial.natCast_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:47:52: This simp argument is unused:
+  Polynomial.X_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.natCast_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:48:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:68:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/Plateau/Certificates/OddSeed0.lean:48:23: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8989/9012] Replayed Lorentz.Plateau.Certificates.OddSeed1
+warning: Lorentz/Plateau/Certificates/OddSeed1.lean:47:27: This simp argument is unused:
+  Polynomial.natCast_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddSeed1.lean:48:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Lorentz/Plateau/Certificates/OddSeed1.lean:68:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/Plateau/Certificates/OddSeed1.lean:48:23: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8991/9012] Replayed Lorentz.Plateau.Certificates.OddSeed2
+warning: Lorentz/Plateau/Certificates/OddSeed2.lean:47:27: This simp argument is unused:
+  Polynomial.natCast_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/OddSeed2.lean:48:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Lorentz/Plateau/Certificates/OddSeed2.lean:68:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/Plateau/Certificates/OddSeed2.lean:48:23: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [8993/9012] Replayed Lorentz.Plateau.OddCounterexample
+warning: Lorentz/Plateau/OddCounterexample.lean:45:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+⚠ [8996/9012] Replayed Lorentz.Plateau.Certificates.EvenContacts
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:47:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:48:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:63:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:78:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:91:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:92:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:105:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:106:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:121:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:136:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:149:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:150:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:163:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:164:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:179:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:194:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:207:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:208:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:239:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:240:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:255:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:270:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:283:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:284:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:297:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:298:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:313:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:328:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:341:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:342:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:355:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:356:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:371:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:386:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:399:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:400:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:431:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:432:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:447:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:462:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:475:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:476:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:489:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:490:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:505:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:520:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:533:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:534:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:547:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:548:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:563:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:578:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:591:4: This simp argument is unused:
+  Rat.cast_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [eval_scale, eval_sub, eval_power, hone, algebraic_a z hm hl hu, Rat.cast_one, Rat.cast_ofNat] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:592:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:624:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:624:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:640:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:640:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:656:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:656:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:671:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:671:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:686:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:686:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:702:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:702:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:718:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:718:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:733:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:733:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:748:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:748:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:764:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:764:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:780:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:780:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:795:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:795:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:810:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:810:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:826:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:826:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:842:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:842:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:857:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:857:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:872:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:872:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:888:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:888:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:904:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:904:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:919:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:919:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:934:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:934:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:950:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:950:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:966:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:966:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:981:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:981:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:996:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:996:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1012:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1012:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1028:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1028:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1043:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1043:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1058:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1058:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1074:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1074:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1090:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1090:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1105:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1105:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1120:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1120:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1136:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1136:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1152:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1152:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1167:28: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, ↓reduceIte, seedMap_eval_false, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenContacts.lean:1167:60: This simp argument is unused:
+  seedMap_eval_false
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [pullback_eval, Bool.false_eq_true, ↓reduceIte, seedMap_eval_true]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [9000/9012] Replayed Lorentz.Plateau.Certificates.EvenSeed0
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:46:47: This simp argument is unused:
+  Polynomial.sub_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.mul_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:46:68: This simp argument is unused:
+  Polynomial.mul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:47:6: This simp argument is unused:
+  Polynomial.pow_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:47:27: This simp argument is unused:
+  Polynomial.natCast_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:47:52: This simp argument is unused:
+  Polynomial.X_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.natCast_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:48:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:68:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/Plateau/Certificates/EvenSeed0.lean:48:23: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9002/9012] Replayed Lorentz.Plateau.Certificates.EvenSeed1
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:46:47: This simp argument is unused:
+  Polynomial.sub_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.mul_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:46:68: This simp argument is unused:
+  Polynomial.mul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:47:6: This simp argument is unused:
+  Polynomial.pow_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:47:27: This simp argument is unused:
+  Polynomial.natCast_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:47:52: This simp argument is unused:
+  Polynomial.X_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.natCast_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:48:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:68:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/Plateau/Certificates/EvenSeed1.lean:48:23: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9004/9012] Replayed Lorentz.Plateau.Certificates.EvenSeed2
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:46:47: This simp argument is unused:
+  Polynomial.sub_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.mul_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:46:68: This simp argument is unused:
+  Polynomial.mul_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:47:6: This simp argument is unused:
+  Polynomial.pow_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:47:27: This simp argument is unused:
+  Polynomial.natCast_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:47:52: This simp argument is unused:
+  Polynomial.X_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.natCast_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:48:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:68:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/Plateau/Certificates/EvenSeed2.lean:48:23: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9006/9012] Replayed Lorentz.Plateau.Certificates.EvenSeed3
+warning: Lorentz/Plateau/Certificates/EvenSeed3.lean:46:15: This simp argument is unused:
+  Bool.false_eq_true
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp, Polynomial.natCast_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed3.lean:47:27: This simp argument is unused:
+  Polynomial.natCast_comp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Bool.false_eq_true, ↓reduceIte, Polynomial.sub_comp, Polynomial.mul_comp, Polynomial.pow_comp,
+    Polynomial.X_comp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: Lorentz/Plateau/Certificates/EvenSeed3.lean:48:23: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: Lorentz/Plateau/Certificates/EvenSeed3.lean:68:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Lorentz/Plateau/Certificates/EvenSeed3.lean:48:23: Unused tactic linter: `norm_num` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+⚠ [9008/9012] Built Lorentz.Plateau.EvenCounterexample (3.4s)
+warning: Lorentz/Plateau/EvenCounterexample.lean:51:21: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [9009/9012] Built Lorentz (3.1s)
+✔ [9011/9012] Built Solution (3.2s)
+Build completed successfully (9012 jobs).

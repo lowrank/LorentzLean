@@ -9,6 +9,8 @@ public import Lorentz.Plateau.ContactPersistence
 public import Lorentz.Plateau.FiniteTools
 public import Lorentz.Plateau.Certificates.OddData
 public import Lorentz.Plateau.Certificates.EvenData
+public import Lorentz.Plateau.OddCounterexample
+public import Lorentz.Plateau.EvenCounterexample
 
 @[expose] public section
 

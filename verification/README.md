@@ -24,5 +24,5 @@ workflow uses the default sandbox and the same pinned independent checkers.
 Local success and CI success are separate records.
 
 The exact Python certificate checks supplement the mathematics; they are not
-assumptions of a Lean theorem. In particular, a passing external audit of a
-plateau certificate does not complete the missing Lean endpoint proof.
+assumptions of a Lean theorem. The plateau endpoints additionally check all finite identities in Lean and
+connect them to the analytic proof; they do not rely on the external audits.

@@ -1023,13 +1023,14 @@ python3 scripts/check_certificate.py
 python3 certificates/plateau/audit_odd.py
 python3 certificates/plateau/audit_even.py
 \end{verbatim}
-The Lean project is in \texttt{lean/}. The original common-origin theorem
-has been checked with only Lean's standard axioms. The two plateau
-formalizations are under development; their finite-to-infinite reduction,
-contraction uniqueness, the new baseline's resolvent identity and exact
-extrema, and qualitative persistence from finite signed contact data are
-proved. The construction-specific algebraic tables are not yet connected to
-complete Lean endpoint theorems for these two results.
+The Lean project is in \texttt{lean/}. All three counterexample existence
+theorems are now proved with only Lean's standard logical axioms. The two
+plateau proofs include exact algebraic root brackets, invariant grid
+recurrences, all signed slacks, completeness and simplicity of the contact
+sets, analytic persistence, and the induction to every degree. The independent
+statements in \path{lean/Challenge.lean} match the proved declarations in
+\path{lean/Solution.lean}. None of the proved dependencies contains a proof
+hole or a custom mathematical axiom.
 The project builds with Lean and Mathlib \texttt{v4.35.0-rc2}, the
 Palomar-supported toolchain used for this preparation.
 These status distinctions do not replace any hypothesis in the mathematical
@@ -1038,9 +1039,10 @@ proofs above.
 The common-origin proof in Part~I corrects the strict Lipschitz inequality
 at coincident points in the earlier standalone PDF: the valid inequality is
 non-strict. Its explicit perturbation range is proved in the manuscript;
-the existing Lean endpoint is existential in the positive perturbation size.
+all three Lean endpoints are existential in the positive perturbation size.
 The plateau arguments in Part~II justify the fixed value $10^{-10}$ by their
-stated analytic estimates and exact coefficient checks.
+stated analytic estimates and exact coefficient checks; this numerical choice
+is not part of the Lean endpoint claims.
 
 The original supplied manuscripts and certificate package are retained
 under \texttt{archive/}. The current standalone certificate scripts live

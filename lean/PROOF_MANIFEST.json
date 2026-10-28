@@ -1,8 +1,6 @@
 {
-  "verified_at_utc": "2026-10-28T22:33:51.619894+00:00",
+  "verified_at_utc": "2026-10-28T22:57:08.633255+00:00",
   "path_base": "repository root",
-  "theorem": "Lorentz.Construction.lorentz_counterexample",
-  "submission_theorem": "LorentzSubmission.common_origin_counterexample",
   "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
   "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
   "logical_axioms": [
@@ -10,10 +8,10 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "local_lean_modules": 50,
-  "intentional_challenge_holes": 1,
+  "local_lean_modules": 82,
+  "intentional_challenge_holes": 3,
   "proof_development_holes": 0,
-  "scope": "Complete existential common-origin theorem. Explicit numerical perturbation range and the two plateau endpoints are not formalized.",
+  "scope": "All three unconditional counterexample existence theorems are proved. The manuscript-specific numerical perturbation sizes are not formalized.",
   "checks": {
     "lake_build": {
       "passed": true,
@@ -21,17 +19,21 @@
     },
     "axiom_audit": {
       "passed": true,
-      "log": "verification/axiom-audit.log"
+      "log": "verification/axiom-audit.log",
+      "audited_declarations": 23
     },
     "comparator_local": {
-      "passed": true,
-      "sandbox": false,
-      "kernels": [
-        "Lean default",
-        "nanoda",
-        "con-ron"
-      ],
-      "log": "verification/comparator-local.log"
+      "status": "running for the three-theorem submission; pending independent confirmation",
+      "prior_common_origin_check": {
+        "passed": true,
+        "sandbox": false,
+        "kernels": [
+          "Lean default",
+          "nanoda",
+          "con-ron"
+        ],
+        "log": "verification/comparator-origin.log"
+      }
     },
     "comparator_sandbox_local": {
       "passed": false,
@@ -43,8 +45,9 @@
       "visibility": "private",
       "workflow": ".github/workflows/verify.yml",
       "last_recorded_success": {
-        "commit": "af51012fa227239b37a5ea4d63e5f33dd9e2d8da",
-        "run_url": "https://github.com/lowrank/LorentzLean/actions/runs/40778650615"
+        "commit": "857de3846da058ac664deee24c4b4343b68d755e",
+        "run_url": "https://github.com/lowrank/LorentzLean/actions/runs/40780946977",
+        "scope": "Before the final plateau certificate integration; the current three-theorem submission needs a new run."
       },
       "note": "CI runs automatically for each subsequent push; consult the workflow for newer revisions."
     },
@@ -54,16 +57,18 @@
       "log": "verification/sequential-check.log",
       "note": "All core modules before addition of the two generated data modules; those passed their targeted build and the subsequent project build."
     },
-    "plateau_data": {
+    "plateau_endpoints": {
       "passed": true,
-      "log": "verification/plateau/data-build.log"
+      "log": "verification/palomar-build.log",
+      "finite_identities": "Lean kernel checked",
+      "external_audits": "verification/plateau/"
     }
   },
   "source_sha256": {
-    "lean/Audit.lean": "e9413f5a4b207e15cc348127a55371bc638d6dc45d9c15669035bc55b885aa72",
-    "lean/Challenge.lean": "9555e209220ba94e07ff8a144ff59bd1136a4c9589db83ff174cee270e1aaf6c",
-    "lean/Lorentz.lean": "66eabfe4226b9bf2ddb4dc149221ae85f7c5c9af4d73b2cefd478e8150a29b1e",
-    "lean/Solution.lean": "3ec59893f18c1e49afd2df2eb18ecf75714477c07cd589a2e4ae22b1b8dd0703",
+    "lean/Audit.lean": "7dbd17d2785a5a23e27fcf27f1494791e707bbc22fc8f4c6d8b5f9eda067a9e2",
+    "lean/Challenge.lean": "0b8965fb32f7bad0270c79fb0eb3726d88e3f8aca468d915b9f5d45f24618cf6",
+    "lean/Lorentz.lean": "ba82a5e391727035665d382dfe6ad61a5127c025d853d38fcdc772278ee7032b",
+    "lean/Solution.lean": "efc7c2c3775a03f5cd0241cff1976d10a6004ef057f97eaac7636172d12bc9a5",
     "lean/Lorentz/AllDegrees.lean": "85c464b42dff451092da72bf499fde102fbf6d6bf9fe75789b5758f06cb3d698",
     "lean/Lorentz/AngularSeries.lean": "2bddca6ed70340ad34f9703f9d55856c0bcde98ff54e595e5dfae90cdc3de157",
     "lean/Lorentz/BaseCertificates.lean": "f2b54741da09ed556027edab56bf0738af42e2ee033907a39f10a3696a567387",
@@ -93,14 +98,46 @@
     "lean/Lorentz/Perturbation.lean": "17a33d6ad74bbb4391306350ffc03cbdc50a2b5fa548f0cc292ca104c78a3da5",
     "lean/Lorentz/PerturbationContacts.lean": "2910e27fc2bdb8d26d8442563e000d746da671e7d15a820a24d94527a1ce0370",
     "lean/Lorentz/Plateau/Baseline.lean": "a9709551132fa68397bbac7e87cf868a7282200e6f76412eedb66cc24db0bd1e",
-    "lean/Lorentz/Plateau/Certificates/EvenData.lean": "ee2b59b587c9672dc445084b7e1d0ec1adf9b9f7be14bc8c15efffc8b57d0ae0",
-    "lean/Lorentz/Plateau/Certificates/OddData.lean": "715f3531adcb7706e497f0f675eb431866d5275ea57c1c10a6a955bc2ae280f0",
+    "lean/Lorentz/Plateau/Certificates/Checker.lean": "9af2f5546400084265697dd7ad20f8db3184e952a8ee8cc64bc8903639e6410f",
+    "lean/Lorentz/Plateau/Certificates/EvenAsymmetry.lean": "964c8fa5a0dda4b3cd58f22ab96bf76b1dda4f1ee04ebe9383222ea803e62621",
+    "lean/Lorentz/Plateau/Certificates/EvenBounds.lean": "f206a2034995bc4eb6ed556a0dd2bc96c75ca647750e31b6b7804afe03d0103b",
+    "lean/Lorentz/Plateau/Certificates/EvenContacts.lean": "63ac0517380055d1910aad2bb4645a9690f64eed0c13dd60aab33335c00ce01c",
+    "lean/Lorentz/Plateau/Certificates/EvenCubicGrid.lean": "ab6c3ef37239a908e0f99b8cee07dda0e672f89a0c3a898bdbe40cd6641068be",
+    "lean/Lorentz/Plateau/Certificates/EvenData.lean": "b4043d011d08d96c9f2963631617f493ccc0e7221806f586bdc837f888cf416c",
+    "lean/Lorentz/Plateau/Certificates/EvenRecurrences.lean": "c9864c2fe5300e0cbd6891fc2777863898b39eb5854314b4480e04f1c33c4cdb",
+    "lean/Lorentz/Plateau/Certificates/EvenSeed0.lean": "e4e56c29fb296e3d263634372677de0e2684d2fea3ef3462265c6617d8468721",
+    "lean/Lorentz/Plateau/Certificates/EvenSeed1.lean": "d703b2479510dd082ca225e94225435b890ea4344a05e5b336c9374356722c99",
+    "lean/Lorentz/Plateau/Certificates/EvenSeed2.lean": "fa7adad8dd6ae9eb682ee7434afa24d0db71a71296750cea191ed7fdaaafa918",
+    "lean/Lorentz/Plateau/Certificates/EvenSeed3.lean": "cff56d4b2121709ff6dbd3733c83730700a31711c52db100892866164a8921f6",
+    "lean/Lorentz/Plateau/Certificates/EvenSlacks0.lean": "968aa0871f45cba5e1c72bd36ad5824959792ebc5ca52b5e4225e306d22e33c6",
+    "lean/Lorentz/Plateau/Certificates/EvenSlacks1.lean": "df5961e8fbf9c016d6657da066cfe777d730d7525bd3fb0fbf89d1a2b830cda7",
+    "lean/Lorentz/Plateau/Certificates/EvenSlacks2.lean": "68f7c05a3a83c033d884da51a7f117a399ad0f119370db1a6002d1d640609120",
+    "lean/Lorentz/Plateau/Certificates/EvenSlacks3.lean": "8689966a48108c3f23a1c2504f8a299026d250986dfcb304067177deafa5ea0c",
+    "lean/Lorentz/Plateau/Certificates/EvenValues.lean": "6a8bb072d142f60cf26ffa2f6ed25c3ac8924eedc8431d887b07dbc0251ea848",
+    "lean/Lorentz/Plateau/Certificates/OddAsymmetry.lean": "86d2073f4b99331b29a2d428ecc1fc0aba8cec4248d8bae7c20bf8b7b9eddb81",
+    "lean/Lorentz/Plateau/Certificates/OddBounds.lean": "d6d8098b14be7a17569cf7d03626f06e991d48da0979cb1b2ab746f78334bec9",
+    "lean/Lorentz/Plateau/Certificates/OddContacts.lean": "04426a11c7add91cb5cf579172ea1520bfd093a2c6144e55b9cbc3227b5c2256",
+    "lean/Lorentz/Plateau/Certificates/OddCubicGrid.lean": "686a1b8a63c29f2c26a2b2170c5914da7b0eab8af035399b0bf78095e2b3ebbe",
+    "lean/Lorentz/Plateau/Certificates/OddData.lean": "28ebe7e8e36045041cf578c6fcf54c10f8afb93b2e29630336e61854b17c3b61",
+    "lean/Lorentz/Plateau/Certificates/OddRecurrences.lean": "62043d19ad586fa72a0e1777a6af18fb8a58e313da8e515869f3b888e3ab26b1",
+    "lean/Lorentz/Plateau/Certificates/OddSeed0.lean": "d7f672c712fcda3656107df5c1137f50197ef3a40e6ddff5e80a17bc9b081c69",
+    "lean/Lorentz/Plateau/Certificates/OddSeed1.lean": "29ec62f0302e07c6cbd14ce3072ad422ec19e4190ec914769c3425c4fe2f3705",
+    "lean/Lorentz/Plateau/Certificates/OddSeed2.lean": "9c77b47b4bcfc1d952a04275f833944a198e0a0ca3465052f1689286c85d7d0f",
+    "lean/Lorentz/Plateau/Certificates/OddSlacks0.lean": "1a07498b351c85db08890794401753d008a45399eee8eb492d7491c77bb76d7f",
+    "lean/Lorentz/Plateau/Certificates/OddSlacks1.lean": "eab66270a0b7415f4c66e8fbbc40c134e7e11a16c4f34f03d08d1bea6a638201",
+    "lean/Lorentz/Plateau/Certificates/OddSlacks2.lean": "6b42f9c8a4689f39cfb157430abaf2d3e0197db7e3316b94083e0c552213207c",
+    "lean/Lorentz/Plateau/Certificates/OddValues.lean": "0ae1539c9c32b1522f88d97f5a76e99178a3568d81973e4ef85824d02b8c60a7",
     "lean/Lorentz/Plateau/CompactDomination.lean": "7ffbcfb07d44e6a2a7b63a92fb51683750cc38c876b806ee064931150f966e47",
     "lean/Lorentz/Plateau/ContactPersistence.lean": "86826f15f3a649a670dbdaa9709f4b0faedb33dcaf21d2a1a0f2028af3f13557",
+    "lean/Lorentz/Plateau/EvenCounterexample.lean": "1868a5b2ea0873f3fcfd877b0c6a4e695a751bd2e3124a4a777512dec79a779d",
+    "lean/Lorentz/Plateau/Families.lean": "f9b06d531e76cb8ca7f02a440460b30a2f9fddf8e1cdafb8aa66d9d8a61ca8b4",
     "lean/Lorentz/Plateau/FiniteTools.lean": "fdcb0f4cab7224aa256e6270dba3303501326595bc6876b5d8bee48f78ed6fe4",
+    "lean/Lorentz/Plateau/Geometry.lean": "a82a020b98eaaf257c92b180c993c4a8dd9b7aa9da273cb1adcda62003fb39da",
     "lean/Lorentz/Plateau/LocalEstimates.lean": "3405a6b3f110ca232e5e75842720616686bf4425765a97c99ad99adcc92a9c20",
+    "lean/Lorentz/Plateau/OddCounterexample.lean": "b728f72311edf5fdadd2634eed70c7a0876597f6614a9c277eb3cf43c5ae2c14",
     "lean/Lorentz/Plateau/Reduction.lean": "b3649bafab5710fbe83658f77f7d5e083396db8d97770fd4acc431c1ef31e568",
     "lean/Lorentz/Plateau/RelativeGap.lean": "ac61ddc1c4e7752c3e76eb80fcd578439431c0bd4bc97e9d73943e420d223ede",
+    "lean/Lorentz/Plateau/SeedCertificate.lean": "edc1144540ed6255e4453f29e4e652d87fc3ca0a51bd3e030e5a388fec2ca403",
     "lean/Lorentz/Plateau/SeriesEstimates.lean": "674580f6de721b180d358e53592f7c82b87ce62ce5d17966d4609bc1edb3428e",
     "lean/Lorentz/Plateau/SeriesTools.lean": "9af6ceb3a37cd613742a77cec15581f47a39fb9002e32ed1f534255fed41760c",
     "lean/Lorentz/PolynomialBounds.lean": "7ab30dc766c1ca6e565f3b9c041606740ff29cb644d6356e85f2a701ad7abc67",
@@ -113,6 +150,16 @@
     "lean/lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
     "lean/lakefile.toml": "173d270acfa09b732c3647546849a746ae0edc2d05630ef102165295495edc67",
     "lean/lake-manifest.json": "c6468f4c96d1880fd0d3c8158afd9a19b630319b812883c2649855f99d3fc6e4",
-    "lean/comparator.json": "b656f8e068bb5881c369053ea216d7afdc74bc2a888c5a8e1742536ceb880753"
-  }
+    "lean/comparator.json": "a4fc38a39033819034e308c1422450bfe09a107c6d6857a164ae122df69e231f"
+  },
+  "theorems": [
+    "Lorentz.Construction.lorentz_counterexample",
+    "Lorentz.Plateau.odd_plateau_counterexample",
+    "Lorentz.Plateau.even_plateau_counterexample"
+  ],
+  "submission_theorems": [
+    "LorentzSubmission.common_origin_counterexample",
+    "LorentzSubmission.odd_plateau_counterexample",
+    "LorentzSubmission.even_plateau_counterexample"
+  ]
 }

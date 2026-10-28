@@ -1,12 +1,13 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json
 version: "v0.4"
 project:
-  name: "A self-similar counterexample to the common-origin conjecture of Lorentz"
+  name: "Self-similar counterexamples to three conjectures of Lorentz"
   description: >-
-    A continuous nonodd function on [-1,1], normalized at zero, whose best
-    uniform polynomial approximants exist at every degree and all vanish at
-    zero. The proof combines exact algebraic certificates, analytic contact
-    estimates, compactness, and cubic self-similarity.
+    Three continuous counterexamples in uniform polynomial approximation:
+    a nonodd function whose best approximants all vanish at zero, a nonodd
+    function with plateaus at degrees (2k+1,2k+2), and a noneven function
+    with plateaus at degrees (2k,2k+1). Exact algebraic certificates, analytic
+    contact persistence, and cubic self-similarity prove all three results.
   authors: ["TEMPLATE: author names to be supplied by the owner"]
   license: "TEMPLATE: license to be selected by the owner"
   responsible_maintainers: ["TEMPLATE: maintainer names to be supplied by the owner"]
@@ -16,7 +17,7 @@ classification:
 sources:
   - title: "Self-similar counterexamples to three conjectures of Lorentz"
     type: "manuscript"
-    location: "paper/lorentz_counterexamples.tex, Part I, in this repository snapshot"
+    location: "paper/lorentz_counterexamples.tex, Parts I and II, in this repository snapshot"
     relationship: "formalizes"
     note: >-
       Combined and revised from the supplied construction manuscripts, whose
@@ -26,12 +27,12 @@ sources:
 related_formalizations: []
 status:
   scope: >-
-    The common-origin existence theorem is fully proved for a sufficiently
-    small positive perturbation. The explicit numerical perturbation range
-    in the manuscript is not a Lean endpoint. The two additional plateau
-    constructions have exact external audits and proved Lean analytic
-    persistence and degree reduction tools. Their construction-specific
-    finite tables and endpoints are not yet integrated into a complete proof.
+    All three counterexample existence theorems are fully proved for
+    sufficiently small positive perturbations. Every finite table identity
+    and inequality is checked in Lean and connected to the analytic proof.
+    The manuscript's explicit numerical perturbation sizes are not Lean
+    endpoint claims. The three deliberate Challenge holes are not included
+    in the proof-development sorry count.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Classical.choice", "Quot.sound"]
@@ -59,17 +60,16 @@ automation:
     artifacts is retained; their earlier automation history was not supplied.
 fidelity:
   divergences: >-
-    The Lean endpoint proves existence of a sufficiently small positive
-    perturbation rather than the manuscript's explicit perturbation range.
+    The Lean endpoints prove existence of sufficiently small positive
+    perturbations rather than the manuscript's explicit numerical sizes.
     The original PDF's strict Lipschitz inequality at coincident points was
-    corrected to a non-strict inequality. The two plateau endpoint claims
-    in Part II are excluded from the advertised formal theorem.
+    corrected to a non-strict inequality.
 review:
   status: "agent-audited; human mathematical review not recorded"
   reviewers: []
   notes: >-
     The source and theorem statement were inspected, exact rational audits
-    were run, and the complete original Lean theorem was kernel checked.
+    were run, and all three complete Lean endpoints were kernel checked.
     The current verification records distinguish historical checks from the
     migrated toolchain and Comparator checks. No independent human review
     or endorsement is asserted.
@@ -81,4 +81,14 @@ alignment:
       module: "Solution"
       status: "proved"
       note: "Existential positive perturbation; genuine minimax condition at every degree."
+    - source: "Combined manuscript, Part II, oddness plateau counterexample"
+      lean: "LorentzSubmission.odd_plateau_counterexample"
+      module: "Solution"
+      status: "proved"
+      note: "Existential positive perturbation; all pairs (2k+1,2k+2), with uniqueness."
+    - source: "Combined manuscript, Part II, evenness plateau counterexample"
+      lean: "LorentzSubmission.even_plateau_counterexample"
+      module: "Solution"
+      status: "proved"
+      note: "Existential positive perturbation; all pairs (2k,2k+1), with uniqueness."
 acknowledgements: "Lean, Mathlib, and the Lean 4 skills tooling."

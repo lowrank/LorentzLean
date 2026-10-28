@@ -2,38 +2,31 @@
 
 ## Verification status
 
-The original common-origin theorem has a complete proof. The project is now
-pinned to Lean and Mathlib `v4.35.0-rc2` for Palomar compatibility. Current
-build and axiom records are under [`../verification/`](../verification/).
-Local Comparator accepted the statement with Lean, NanoDa, and con-ron;
-that local run disabled its sandbox because this host denies user namespaces.
-The private repository's CI runs the sandboxed configuration.
-The old Lean 4.24 records are retained separately as historical evidence.
+All three counterexample theorems have complete Lean proofs, using only the
+standard logical axioms. The project pins Lean and Mathlib `v4.35.0-rc2`.
+Current build, axiom, and Comparator records are in
+[`../verification/`](../verification/). The repository is private.
 
-The two plateau counterexamples in the combined manuscript are still being
-formalized. `Plateau/Reduction.lean` proves the parity-preserving induction
-from finitely many plateau certificates; `Plateau/SeriesTools.lean` proves
-contraction uniqueness and the polynomial subtraction identity.
-`Plateau/Baseline.lean` proves the new baseline's resolvent identity, exact
-extrema, strictness, and a lower bound from an even orbit term. These are
-infrastructure results, not complete plateau endpoint theorems.
-`Plateau/SeriesEstimates.lean`, `LocalEstimates.lean`, and `RelativeGap.lean`
-control perturbation oscillation by the baseline deficit at the same scale.
-`CompactDomination.lean` and `ContactPersistence.lean` then prove qualitative
-uniform persistence from finite signed contact data. `FiniteTools.lean`
-provides sound algebraic coefficient checks and exact identification of
-orbit-series values on a finite invariant grid. The supplied construction
-specific tables and the two final endpoints still need integration.
-`Plateau/Certificates/OddData.lean` and `EvenData.lean` contain the translated
-exact tables and proved root-existence statements. Their generator is
-`../scripts/generate_plateau_data.py`; data translation does not certify the
-remaining table identities or either endpoint theorem.
+The endpoints are:
 
-[`Challenge.lean`](Challenge.lean) independently states the completed origin
-result using only Mathlib imports. [`Solution.lean`](Solution.lean) proves the
-same statement. The one intentional Challenge hole is excluded from the
-proof development and its axiom audit. The Palomar claim currently covers
-only the origin result.
+- `Lorentz.Construction.lorentz_counterexample`: all best approximants vanish
+  at zero, although the function is nonodd and normalized at zero.
+- `Lorentz.Plateau.odd_plateau_counterexample`: a normalized nonodd function
+  with identical best approximants at degrees `(2k+1, 2k+2)` for every `k`.
+- `Lorentz.Plateau.even_plateau_counterexample`: a noneven function with
+  identical best approximants at degrees `(2k, 2k+1)` for every `k`.
+
+The plateau theorems include existence and uniqueness across each degree pair.
+Their polynomial tables, recurrence identities, signed slacks, root brackets,
+contact completeness, and asymmetry are checked in Lean. The finite-to-infinite
+argument uses shared analytic persistence and cubic self-similarity. Python
+only generates coefficient certificates; it supplies no trusted assumptions.
+
+[`Challenge.lean`](Challenge.lean) independently states all three results
+using only Mathlib imports. [`Solution.lean`](Solution.lean) proves the matching
+statements. The three intentional Challenge holes are excluded from the
+proof development and its axiom audit. All endpoints are existential in the
+positive perturbation size; the manuscript's numerical choices are separate.
 
 ## What the theorem says
 
@@ -212,7 +205,12 @@ modules were preserved, as were their existing docstrings.
 | `ContactGeometry`, `PerturbationContacts`, `BaseCertificates` | The seven perturbed minimax certificates with a common positive parameter |
 | `Counterexample` | The final unconditional existence theorem |
 | `CertificateNorms` | Additional exact coefficient bounds, also included in the checked project |
-| `Audit` | The final theorem statement and its logical-axiom dependency report |
+| `Plateau/Baseline`, `SeriesEstimates`, `LocalEstimates`, `RelativeGap` | The `-3/5` baseline, exact extrema, and a common-scale relative gap estimate |
+| `Plateau/CompactDomination`, `ContactPersistence` | Finite signed contact conditions imply uniform persistence |
+| `Plateau/Geometry`, `Families`, `SeedCertificate` | Root counting certifies simple complete contacts; shared conversion into plateau certificates |
+| `Plateau/Certificates/*` | Kernel-checked algebraic tables, recurrences, signs, active contacts, and seven initial plateau cases |
+| `Plateau/OddCounterexample`, `EvenCounterexample` | The two unconditional all-degree plateau endpoints |
+| `Audit` | All three endpoints and central logical-axiom dependency reports |
 
 The certificate data use exact rational arithmetic. Finite sign checks and the
 optimized coefficient identities use `decide +kernel`; the other algebraic
@@ -244,7 +242,8 @@ lake build
 lake env lean Audit.lean
 ```
 
-On a memory-constrained machine, prefer `verify.py` over a parallel build.
+On a memory-constrained machine, use `../scripts/build_lean.sh` for a
+Lake build in bounded groups, or `verify.py` for a sequential source recheck.
 The source archive
 excludes `.lake`, generated object files, and downloaded dependencies.
 
@@ -260,4 +259,4 @@ intermediate results. The recorded output for the final theorem is:
 
 These are Lean's standard logical axioms. No new mathematical axiom,
 `sorry`, `admit`, or `native_decide` is used by the proved source development.
-The only deliberate hole is in the independent `Challenge.lean` statement.
+The three deliberate holes are confined to the independent `Challenge.lean` statements.

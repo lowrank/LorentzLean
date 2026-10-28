@@ -661,4 +661,22 @@ def activeRows : List (List (ℕ)) :=
     activeRows_2
   ]
 
+noncomputable def forcing (z : ℝ) : Polynomial ℝ :=
+  FiniteTools.fieldPolynomial forcingCoeffs z
+
+noncomputable def correction (i : ℕ) (z : ℝ) : Polynomial ℝ :=
+  FiniteTools.fieldPolynomial (correctionRows.getD i []) z
+
+def node (z : ℝ) (j : ℕ) : ℝ := Certificate.eval (nodeRows.getD j []) z
+def value (z : ℝ) (j : ℕ) : ℝ := Certificate.eval (gridValues.getD j []) z
+def slope (z : ℝ) (i : ℕ) : ℝ := Certificate.eval (slopeRows.getD i []) z
+
+def gridIndex (i j : ℕ) : ℕ := if i = 0 then 3 * j + 1 else j
+def gridSign (i j : ℕ) : ℚ :=
+  let s : ℚ := if j % 4 = 0 ∨ j % 4 = 3 then 1 else -1
+  if i = 0 then -s else s
+
+theorem forcing_degree (z : ℝ) : (forcing z).natDegree ≤ 7 :=
+  (FiniteTools.fieldPolynomial_degree forcingCoeffs z).trans (by decide +kernel)
+
 end Lorentz.Plateau.Certificates.Odd

@@ -12,13 +12,14 @@ manuscript, exact arithmetic certificates, and a Lean development.
 | Result | Mathematical proof | Lean status |
 |---|---|---|
 | Nonodd function whose best approximants all vanish at zero | Part I; exact finite certificate checked | Full unconditional existence theorem; sufficiently small positive perturbation |
-| Nonodd function with equal approximants in degrees `(2k+1, 2k+2)` | Part II; supplied exact audit passes | In progress; degree propagation and analytic persistence proved; finite table integration remains |
-| Noneven function with equal approximants in degrees `(2k, 2k+1)` | Part II; supplied exact audit passes | In progress; degree propagation and analytic persistence proved; finite table integration remains |
+| Nonodd function with equal approximants in degrees `(2k+1, 2k+2)` | Part II; supplied exact audit passes | Full unconditional existence theorem; sufficiently small positive perturbation |
+| Noneven function with equal approximants in degrees `(2k, 2k+1)` | Part II; supplied exact audit passes | Full unconditional existence theorem; sufficiently small positive perturbation |
 
-The written proofs include explicit perturbation sizes. The current Lean
-endpoint for Part I proves existence of a sufficiently small positive size;
-it does not assert the numerical choice. The Palomar statement currently
-covers Part I only.
+All three Lean endpoints prove existence of a sufficiently small positive
+perturbation. The explicit numerical sizes are proved in the manuscript and
+are not claimed by the Lean endpoints. The independent Palomar statements
+and matching solutions cover all three results. The GitHub repository is
+private; no registry submission or publication has been made.
 
 ## Directory layout
 
@@ -49,7 +50,7 @@ With `elan` installed:
 ```sh
 cd lean
 lake exe cache get
-lake build
+../scripts/build_lean.sh
 lake env lean Audit.lean
 ```
 
