@@ -7,12 +7,18 @@ permissions:
   contents: read
 jobs:
   verify:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
           persist-credentials: false
+      - name: Make room for the Lean toolchain and Mathlib cache
+        run: |
+          # These are unused preinstalled SDKs on this disposable GitHub runner.
+          sudo rm -rf /usr/local/lib/android /usr/share/dotnet /opt/ghc \
+            /opt/hostedtoolcache/CodeQL /usr/local/share/boost
+          df -h /
       - name: Check source layout and exact certificates
         run: |
           python3 scripts/check_sources.py
