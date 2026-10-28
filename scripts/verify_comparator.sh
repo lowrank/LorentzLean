@@ -20,7 +20,10 @@ for name, executable in (("nanoda", "nanoda_bin"), ("con-ron", "con-ron")):
     path = Path(prefix) / "bin" / executable
     if not path.is_file():
         raise SystemExit(f"Missing bundled checker: {path}")
-    config["external_kernels"][name] = [str(path)]
+    # Con-ron otherwise starts up to 16 workers, multiplying the memory used
+    # by the large exact-rational certificate reductions. One worker checks
+    # the identical declaration stream in the same verified mode.
+    config["external_kernels"][name] = [str(path)] + (["--jobs=1"] if name == "con-ron" else [])
 Path(destination).write_text(json.dumps(config, indent=2) + "\n")
 PY
 lake comparator --config "$lorentz_config" "$@"

@@ -44,33 +44,45 @@ its bundled NanoDa and con-ron checkers in a temporary configuration. The
 committed `comparator.json` contains no forbidden `external_kernels` field.
 The default run requires working Bubblewrap user namespaces. The CI workflow
 uses this default and has [passed on the private repository](https://github.com/lowrank/LorentzLean/actions/runs/40778650615).
+The wrapper limits con-ron to one worker, preserving its verified mode while
+controlling the memory needed for exact certificate reductions.
 A local run with `--inadvisably-no-sandbox` is useful only
 for trusted source on a host that cannot create those namespaces; record that
 limitation and do not describe it as the registry's sandboxed verification.
 
-## Fields to finish before submission
+## Submission metadata and snapshot
 
-The metadata draft is [formalization.yaml](../lean/formalization.yaml).
-The author, responsible maintainer, and repository license require the
-owner's information. Their explicit `TEMPLATE:` values must be replaced,
-and the chosen license must be placed at repository root as `LICENSE`.
-No authorship or licensing decision has been inferred.
+The author and responsible maintainer are **Yimin Zhong**, as confirmed by
+the owner. The repository uses **Apache-2.0**, with the full license at
+[`LICENSE`](../LICENSE) and the attribution at [`NOTICE`](../NOTICE).
+[`formalization.yaml`](../lean/formalization.yaml) records all three results,
+AI assistance, review status, the original source artifacts, and the remaining
+difference between existential and explicit perturbation sizes.
 
-The working repository is [lowrank/LorentzLean](https://github.com/lowrank/LorentzLean),
-and is private at the owner's request. CI can verify this private repository.
-Palomar intake requires a public snapshot, so registry submission remains
-pending a later explicit decision about publication as well as the metadata.
-After those fields and all checks are complete, an authorized public snapshot
-would need a full pushed 40-character commit.
-The submission form values are:
+The source repository is [lowrank/LorentzLean](https://github.com/lowrank/LorentzLean).
+The owner authorized making it public after verification. No Palomar submission
+or registration has been sent. Use the full 40-character SHA of the final
+pushed, checked snapshot; `git rev-parse HEAD` prints it.
 
-| Field | Value |
+| Form field | Value |
 |---|---|
-| Repository | `lowrank/LorentzLean`, currently private and ineligible for intake |
-| Commit | Full SHA of the eventual authorized public snapshot |
+| Repository | `https://github.com/lowrank/LorentzLean` |
+| Commit | Full SHA of the final checked snapshot |
 | Project path | `lean` |
-| Comparator configuration | Leave blank: default inside `lean` |
-| Formalization metadata | Leave blank: default inside `lean` |
+| Comparator configuration | Leave blank; uses `lean/comparator.json` |
+| Formalization metadata | Leave blank; uses `lean/formalization.yaml` |
+| Relationship | Responsible author/maintainer of the substantive formalization |
 
-The owner can submit at <https://submit.palomar-registry.org/>. Preparing these
-files has not submitted, published, or registered the result.
+Suggested review note:
+
+> Three existential counterexamples in uniform polynomial approximation.
+> Exact algebraic tables, analytic contact persistence, alternation, and
+> cubic self-similarity are formalized. The manuscript also gives explicit
+> perturbation sizes, which are not claimed by the Lean endpoints. The
+> development was audited and extended with AI assistance; independent
+> human mathematical review is not recorded.
+
+The [submission form](https://submit.palomar-registry.org/) requires GitHub
+sign-in to confirm write access. Agents should instead follow Palomar's
+[documented protocol](https://palomar-registry.org/llms.txt), if instructed
+to submit. Registration is a subsequent explicit action after review.

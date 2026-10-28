@@ -3,6 +3,10 @@
 Three constructions in uniform polynomial approximation, with a combined
 manuscript, exact arithmetic certificates, and a Lean development.
 
+Author and responsible maintainer: **Yimin Zhong**. Licensed under
+[Apache-2.0](LICENSE); automation and review history are recorded in
+[formalization.yaml](lean/formalization.yaml).
+
 - **Read the mathematics:** [combined PDF](paper/lorentz_counterexamples.pdf)
   and [standalone LaTeX source](paper/lorentz_counterexamples.tex).
 - **Read the formal theorem:** [independent statement](lean/Challenge.lean),
@@ -18,8 +22,8 @@ manuscript, exact arithmetic certificates, and a Lean development.
 All three Lean endpoints prove existence of a sufficiently small positive
 perturbation. The explicit numerical sizes are proved in the manuscript and
 are not claimed by the Lean endpoints. The independent Palomar statements
-and matching solutions cover all three results. The GitHub repository is
-private; no registry submission or publication has been made.
+and matching solutions cover all three results. No Palomar submission or
+registration has been made.
 
 ## Directory layout
 

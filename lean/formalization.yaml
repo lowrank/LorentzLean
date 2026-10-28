@@ -8,22 +8,25 @@ project:
     function with plateaus at degrees (2k+1,2k+2), and a noneven function
     with plateaus at degrees (2k,2k+1). Exact algebraic certificates, analytic
     contact persistence, and cubic self-similarity prove all three results.
-  authors: ["TEMPLATE: author names to be supplied by the owner"]
-  license: "TEMPLATE: license to be selected by the owner"
-  responsible_maintainers: ["TEMPLATE: maintainer names to be supplied by the owner"]
+    This repository contains the substantive formalization and formalizes
+    the owner-supplied mathematical manuscripts.
+  authors: ["Yimin Zhong"]
+  license: "Apache-2.0"
+  responsible_maintainers: ["Yimin Zhong"]
 classification:
   arxiv: ["math.CA"]
   msc2020: ["41A10", "41A50", "68V15"]
 sources:
   - title: "Self-similar counterexamples to three conjectures of Lorentz"
+    authors: ["Yimin Zhong"]
     type: "manuscript"
     location: "paper/lorentz_counterexamples.tex, Parts I and II, in this repository snapshot"
     relationship: "formalizes"
     note: >-
       Combined and revised from the supplied construction manuscripts, whose
-      original files are preserved under archive/. Bibliographic authorship
-      of the supplied manuscripts remains to be confirmed by the owner.
-    license: "unknown"
+      original files are preserved under archive/. The owner confirmed
+      project authorship, manuscript authorship, and maintainer attribution.
+    license: "Apache-2.0"
 related_formalizations: []
 status:
   scope: >-

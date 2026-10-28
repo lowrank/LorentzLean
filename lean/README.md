@@ -5,7 +5,7 @@
 All three counterexample theorems have complete Lean proofs, using only the
 standard logical axioms. The project pins Lean and Mathlib `v4.35.0-rc2`.
 Current build, axiom, and Comparator records are in
-[`../verification/`](../verification/). The repository is private.
+[`../verification/`](../verification/).
 
 The endpoints are:
 

@@ -1,0 +1,10 @@
+Lorentz counterexamples
+Copyright 2026 Yimin Zhong
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+The project uses Lean and Mathlib as separately distributed dependencies.
+The supplied source artifacts are preserved under archive/; subsequent
+auditing, optimization, formalization, and reorganization are documented in
+the manuscript, README files, and verification records. AI assistance is
+described in lean/formalization.yaml.

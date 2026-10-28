@@ -1,0 +1,42 @@
+con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
+con-ron: parse done: 33854 fold records — 33846 declarations after the 8 built-in prelude records (8 stream copies of prelude records dropped) t=1.946s (parse 1.946s)
+con-ron: install 0/33854 basis t=1.946s
+con-ron: install 5000/33854 thm Lean.Grind.CommRing.Mon.mult.inj t=6.399s
+con-ron: install 10000/33854 inductive PseudoEMetricSpace t=7.759s
+con-ron: install 15000/33854 thm Finset.coe_injective t=10.334s
+con-ron: install 20000/33854 thm AddGroupSeminormClass.toZeroHomClass t=12.087s
+con-ron: install 25000/33854 thm FormalMultilinearSeries.nnnorm_mul_pow_le_of_lt_radius t=15.478s
+con-ron: install 30000/33854 thm Mathlib.Meta.NormNum.natPow_one t=18.852s
+con-ron: install done: 33854/33854 declarations installed, 33084 checks pending t=34.674s (install 32.728s)
+con-ron: check 5000/33084 theorem EquivBEq.toReflBEq t=41.856s
+con-ron: check 10000/33084 theorem Nonneg.conditionallyCompleteLinearOrder._proof_2 t=48.764s
+con-ron: check 15000/33084 theorem PseudoEMetricSpace.toPseudoMetricSpaceOfDist._proof_7 t=53.986s
+con-ron: check 20000/33084 definition TwoSidedIdeal.instCompleteSemilatticeInf t=69.990s
+con-ron: check 25000/33084 theorem ContinuousMultilinearMap.currySumEquiv._proof_11 t=83.037s
+con-ron: check 30000/33084 theorem contDiffWithinAt_inter t=259.809s
+con-ron: check done: 33084/33084 t=996.039s (check 961.365s)
+con-ron: done: parse 1.946s, install 32.728s, check 961.365s, 1 worker t=996.039s
+con-ron: accepted 33824 declarations (--verified)
+	Command being timed: "/home/lowrank/.elan/toolchains/leanprover--lean4---v4.35.0-rc2/bin/con-ron --jobs=1 --progress=5000 /tmp/lorentz-full-export.ndjson"
+	User time (seconds): 973.96
+	System time (seconds): 21.06
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:36.49
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 3275176
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 30
+	Minor (reclaiming a frame) page faults: 2256901
+	Voluntary context switches: 212
+	Involuntary context switches: 27987
+	Swaps: 0
+	File system inputs: 3232
+	File system outputs: 48
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

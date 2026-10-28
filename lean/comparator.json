@@ -6,7 +6,7 @@
     "LorentzSubmission.odd_plateau_counterexample",
     "LorentzSubmission.even_plateau_counterexample"
   ],
-  "definition_names": ["LorentzSubmission.HasErrorBound", "LorentzSubmission.IsBest"],
+  "definition_names": [],
   "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
   "enable_nanoda": true
 }

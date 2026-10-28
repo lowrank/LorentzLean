@@ -7,7 +7,11 @@ Current source hashes, exact toolchain pin, and proof scope are recorded in
 |---|---|
 | `palomar-build.log` | Successful build on Lean/Mathlib 4.35.0-rc2 |
 | `axiom-audit.log` | Endpoint and central lemma axioms; generated and checked by `scripts/check_axioms.py` |
-| `comparator-local.log` | Matching independent statement and proved solution, accepted by Lean, NanoDa, and con-ron; local sandbox disabled |
+| `comparator-local.log` | All three statements match; Lean and NanoDa accept. The initial parallel con-ron process was killed for memory exhaustion |
+| `comparator-conron-serial.log` | The same solution export accepted by con-ron in verified mode with one worker |
+| `comparator-definition-bodies.log` | Stronger comparison: the two concrete approximation definitions match in full, with no definition holes |
+| `comparator-origin.log` | Historical successful three-kernel run for the original common-origin statement |
+| `comparator-memory-failure.log` | Summary of the local resource failure and successful bounded retry |
 | `comparator-sandbox.log` | Local host limitation: Bubblewrap cannot establish its user namespace |
 | `paper-build.log` | Final LaTeX build log |
 | `plateau/*-certificate-audit.log` | Exact Python audits of the supplied odd/even plateau certificates |

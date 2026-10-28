@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-10-28T22:57:08.633255+00:00",
+  "verified_at_utc": "2026-10-28T23:33:42.563058+00:00",
   "path_base": "repository root",
   "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
   "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
@@ -23,17 +23,29 @@
       "audited_declarations": 23
     },
     "comparator_local": {
-      "status": "running for the three-theorem submission; pending independent confirmation",
-      "prior_common_origin_check": {
+      "passed": false,
+      "scope": "All three statements; no local sandbox because the host denies user namespaces",
+      "failure": "The initial parallel con-ron invocation was killed by the OS for memory exhaustion (exit 137).",
+      "accepted_kernels": [
+        "Lean default",
+        "nanoda"
+      ],
+      "log": "verification/comparator-local.log",
+      "serial_conron_retry": {
         "passed": true,
-        "sandbox": false,
-        "kernels": [
-          "Lean default",
-          "nanoda",
-          "con-ron"
-        ],
-        "log": "verification/comparator-origin.log"
-      }
+        "jobs": 1,
+        "verified_mode": true,
+        "same_solution_export": true,
+        "elapsed_seconds": 996.49,
+        "peak_rss_kib": 3275176,
+        "log": "verification/comparator-conron-serial.log"
+      },
+      "definition_body_comparison": {
+        "passed": true,
+        "definition_holes": 0,
+        "log": "verification/comparator-definition-bodies.log"
+      },
+      "note": "All three kernels accepted the same solution export across the original run and the bounded retry. The wrapper now uses one con-ron worker."
     },
     "comparator_sandbox_local": {
       "passed": false,
@@ -150,7 +162,7 @@
     "lean/lean-toolchain": "8dc8d6f560141069d9073e370611716ef77ada0da8ffa37e2149f44b2e63ac7a",
     "lean/lakefile.toml": "173d270acfa09b732c3647546849a746ae0edc2d05630ef102165295495edc67",
     "lean/lake-manifest.json": "c6468f4c96d1880fd0d3c8158afd9a19b630319b812883c2649855f99d3fc6e4",
-    "lean/comparator.json": "a4fc38a39033819034e308c1422450bfe09a107c6d6857a164ae122df69e231f"
+    "lean/comparator.json": "799857985fb473628885bde6e90d92eac28c268b3995e6211c1e05319d29e8b2"
   },
   "theorems": [
     "Lorentz.Construction.lorentz_counterexample",
@@ -161,5 +173,12 @@
     "LorentzSubmission.common_origin_counterexample",
     "LorentzSubmission.odd_plateau_counterexample",
     "LorentzSubmission.even_plateau_counterexample"
-  ]
+  ],
+  "publication_artifacts_sha256": {
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "NOTICE": "509ddf403b51131c9b5333d0ac3356655b7ab39e44187aae7693029685891052",
+    "lean/formalization.yaml": "263e1cc85b5b0d6c8a43dd58e27bc5c87903f81a8763da380564dbadaaa10c8e",
+    "paper/lorentz_counterexamples.tex": "b52b0b31e529885b6af742a7e6903971555374107ea0f0c82b811ccee594a1eb",
+    "paper/lorentz_counterexamples.pdf": "8081e1d818ab9ad9141c57e839410de0c501c71c31b5d97997d4f8c63fbc4f49"
+  }
 }

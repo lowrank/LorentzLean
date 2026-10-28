@@ -1,0 +1,6 @@
+Summary of the local kernel out-of-memory record, 2026-10-28:
+The initial parallel con-ron check was killed with exit 137.
+The reported anonymous resident set was 11550456 KiB.
+The same proof export passed in verified mode with --jobs=1.
+The serial retry peaked at 3275176 KiB and exited 0.
+See comparator-conron-serial.log for its complete output and resource report.
