@@ -43,7 +43,7 @@ The script uses the pinned toolchain's Comparator and explicitly registers
 its bundled NanoDa and con-ron checkers in a temporary configuration. The
 committed `comparator.json` contains no forbidden `external_kernels` field.
 The default run requires working Bubblewrap user namespaces. The CI workflow
-uses this default and has [passed on the private repository](https://github.com/lowrank/LorentzLean/actions/runs/40778650615).
+uses this default and has [passed for all three theorems](https://github.com/lowrank/LorentzLean/actions/runs/40783879105).
 The wrapper limits con-ron to one worker, preserving its verified mode while
 controlling the memory needed for exact certificate reductions.
 A local run with `--inadvisably-no-sandbox` is useful only
@@ -60,8 +60,8 @@ AI assistance, review status, the original source artifacts, and the remaining
 difference between existential and explicit perturbation sizes.
 
 The source repository is [lowrank/LorentzLean](https://github.com/lowrank/LorentzLean).
-The owner authorized making it public after verification. No Palomar submission
-or registration has been sent. Use the full 40-character SHA of the final
+It is public following successful verification and the owner's authorization.
+No Palomar submission or registration has been sent. Use the full 40-character SHA of the final
 pushed, checked snapshot; `git rev-parse HEAD` prints it.
 
 | Form field | Value |

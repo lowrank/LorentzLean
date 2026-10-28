@@ -5,6 +5,7 @@ Current source hashes, exact toolchain pin, and proof scope are recorded in
 
 | Record | Meaning |
 |---|---|
+| `ci-40783879105.log` | Successful public-release proof verification: full build, axiom audit, and sandboxed Comparator with all three kernels |
 | `palomar-build.log` | Successful build on Lean/Mathlib 4.35.0-rc2 |
 | `axiom-audit.log` | Endpoint and central lemma axioms; generated and checked by `scripts/check_axioms.py` |
 | `comparator-local.log` | All three statements match; Lean and NanoDa accept. The initial parallel con-ron process was killed for memory exhaustion |

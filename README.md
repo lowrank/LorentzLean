@@ -3,6 +3,9 @@
 Three constructions in uniform polynomial approximation, with a combined
 manuscript, exact arithmetic certificates, and a Lean development.
 
+Public repository: [lowrank/LorentzLean](https://github.com/lowrank/LorentzLean).
+All three results passed [CI verification](https://github.com/lowrank/LorentzLean/actions/runs/40783879105).
+
 Author and responsible maintainer: **Yimin Zhong**. Licensed under
 [Apache-2.0](LICENSE); automation and review history are recorded in
 [formalization.yaml](lean/formalization.yaml).

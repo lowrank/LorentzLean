@@ -1,0 +1,38 @@
+verify	Check source layout and exact certificates	2026-10-28T22:58:48.3422590Z PASS: 82 Lean files; module headers, size limits, and proof-hole preflight.
+verify	Check source layout and exact certificates	2026-10-28T22:58:49.0418291Z PASS: 400 exact finite-certificate checks.
+verify	Check source layout and exact certificates	2026-10-28T22:58:49.3523323Z PASS: independent exact identities, ordering, signs, alternations,
+verify	Check source layout and exact certificates	2026-10-28T22:58:51.3251536Z PASS: independent exact invariant-orbit sums, root isolation, node order,
+verify	Build proofs in memory-bounded groups	2026-10-28T23:02:13.5120038Z Build completed successfully (8976 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:02:24.3598989Z Build completed successfully (8943 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:03:35.3550821Z Build completed successfully (8945 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:04:25.5474016Z Build completed successfully (8947 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:04:38.0828738Z Build completed successfully (8946 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:04:52.4200473Z Build completed successfully (8965 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:05:00.3926463Z Build completed successfully (8948 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:05:08.9417489Z Build completed successfully (8970 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:05:17.3700108Z Build completed successfully (8970 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:05:26.0201458Z Build completed successfully (8970 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:05:39.0526733Z Build completed successfully (8943 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:10:32.9943585Z Build completed successfully (8945 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:11:08.6827845Z Build completed successfully (8947 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:14:09.3051534Z Build completed successfully (8945 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:14:38.1783782Z Build completed successfully (8946 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:15:07.1978944Z Build completed successfully (8965 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:15:15.1977588Z Build completed successfully (8948 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:15:23.7280328Z Build completed successfully (8970 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:15:32.2930604Z Build completed successfully (8970 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:15:40.8211605Z Build completed successfully (8970 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:15:49.6755054Z Build completed successfully (8970 jobs).
+verify	Build proofs in memory-bounded groups	2026-10-28T23:16:00.0802560Z ⚠ [9007/9012] Built Lorentz.Plateau.OddCounterexample (5.4s)
+verify	Build proofs in memory-bounded groups	2026-10-28T23:16:00.1796359Z ⚠ [9008/9012] Built Lorentz.Plateau.EvenCounterexample (5.5s)
+verify	Build proofs in memory-bounded groups	2026-10-28T23:16:04.7002171Z Build completed successfully (9012 jobs).
+verify	Audit logical axioms	2026-10-28T23:16:15.5676872Z PASS: 23 audited declarations use only permitted axioms.
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:16:27.9288069Z Build completed successfully (1860 jobs).
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:16:34.3591956Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, LorentzSubmission.common_origin_counterexample, LorentzSubmission.odd_plateau_counterexample, LorentzSubmission.even_plateau_counterexample, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, LorentzSubmission.HasErrorBound, LorentzSubmission.IsBest] from Challenge
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:16:39.5609164Z Build completed successfully (9010 jobs).
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:17:28.9660722Z Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, LorentzSubmission.common_origin_counterexample, LorentzSubmission.odd_plateau_counterexample, LorentzSubmission.even_plateau_counterexample, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam, LorentzSubmission.HasErrorBound, LorentzSubmission.IsBest] from Solution
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:27:07.8111229Z con-ron: accepted 33824 declarations (--verified)
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:27:12.2488155Z con-ron kernel accepts the solution
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:33:37.1798149Z nanoda kernel accepts the solution
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:42:22.9681587Z Lean default kernel accepts the solution
+verify	Compare statement and proof with the bundled kernels	2026-10-28T23:42:22.9684308Z Your solution is okay!

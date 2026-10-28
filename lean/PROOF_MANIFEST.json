@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-10-28T23:33:42.563058+00:00",
+  "verified_at_utc": "2026-10-28T23:44:02.002958+00:00",
   "path_base": "repository root",
   "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
   "mathlib_commit": "065356127b1dc0016f66b7283ce0ce2c4055aa55",
@@ -54,14 +54,15 @@
     },
     "ci": {
       "repository": "https://github.com/lowrank/LorentzLean",
-      "visibility": "private",
+      "visibility": "public",
       "workflow": ".github/workflows/verify.yml",
       "last_recorded_success": {
-        "commit": "857de3846da058ac664deee24c4b4343b68d755e",
-        "run_url": "https://github.com/lowrank/LorentzLean/actions/runs/40780946977",
-        "scope": "Before the final plateau certificate integration; the current three-theorem submission needs a new run."
+        "commit": "8f514de5a24e1ccce35d69c41436753321a9fbb1",
+        "run_url": "https://github.com/lowrank/LorentzLean/actions/runs/40783879105",
+        "scope": "All three complete counterexample theorems.",
+        "log": "verification/ci-40783879105.log"
       },
-      "note": "CI runs automatically for each subsequent push; consult the workflow for newer revisions."
+      "note": "The final publication commits add metadata, licensing, records, stricter comparison of the concrete definitions, and a one-worker con-ron invocation. The Lean proof sources are byte-identical to the successful CI snapshot; the stronger definition comparison and serial kernel replay passed locally."
     },
     "sequential_core": {
       "passed": true,
@@ -74,6 +75,11 @@
       "log": "verification/palomar-build.log",
       "finite_identities": "Lean kernel checked",
       "external_audits": "verification/plateau/"
+    },
+    "metadata_schema": {
+      "passed": true,
+      "schema": "https://raw.githubusercontent.com/mathlib-initiative/formalization.yaml/main/schema/formalization.schema.json",
+      "version": "v0.4"
     }
   },
   "source_sha256": {

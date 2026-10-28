@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/lowrank/LorentzLean",
-  "visibility": "private",
+  "visibility": "public",
   "runs": [
     {
       "id": 40777602468,
@@ -36,6 +36,21 @@
         "sandboxed Comparator: Lean, NanoDa, con-ron"
       ],
       "scope": "Common-origin submission with completed generic plateau analysis and translated data."
+    },
+    {
+      "id": 40783879105,
+      "commit": "8f514de5a24e1ccce35d69c41436753321a9fbb1",
+      "conclusion": "success",
+      "url": "https://github.com/lowrank/LorentzLean/actions/runs/40783879105",
+      "scope": "All three complete counterexample theorems.",
+      "checks": [
+        "source preflight",
+        "400 original exact certificate checks",
+        "two plateau exact audits",
+        "full Lean build",
+        "23-declaration axiom audit",
+        "sandboxed Comparator: Lean, NanoDa, con-ron"
+      ]
     }
   ]
 }
