@@ -17,6 +17,17 @@ contraction uniqueness and the polynomial subtraction identity.
 `Plateau/Baseline.lean` proves the new baseline's resolvent identity, exact
 extrema, strictness, and a lower bound from an even orbit term. These are
 infrastructure results, not complete plateau endpoint theorems.
+`Plateau/SeriesEstimates.lean`, `LocalEstimates.lean`, and `RelativeGap.lean`
+control perturbation oscillation by the baseline deficit at the same scale.
+`CompactDomination.lean` and `ContactPersistence.lean` then prove qualitative
+uniform persistence from finite signed contact data. `FiniteTools.lean`
+provides sound algebraic coefficient checks and exact identification of
+orbit-series values on a finite invariant grid. The supplied construction
+specific tables and the two final endpoints still need integration.
+`Plateau/Certificates/OddData.lean` and `EvenData.lean` contain the translated
+exact tables and proved root-existence statements. Their generator is
+`../scripts/generate_plateau_data.py`; data translation does not certify the
+remaining table identities or either endpoint theorem.
 
 [`Challenge.lean`](Challenge.lean) independently states the completed origin
 result using only Mathlib imports. [`Solution.lean`](Solution.lean) proves the

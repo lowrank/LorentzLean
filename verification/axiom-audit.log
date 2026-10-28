@@ -16,3 +16,8 @@ Lorentz.Construction.lorentz_counterexample :
 'Lorentz.Plateau.series_sub_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Lorentz.Plateau.Baseline.resolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
 'Lorentz.Plateau.Baseline.even_orbit_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.exists_relative_gap_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.finite_contact_persistence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.FiniteTools.finite_orbit_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.Certificates.Odd.exists_root' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.Certificates.Even.exists_root' depends on axioms: [propext, Classical.choice, Quot.sound]

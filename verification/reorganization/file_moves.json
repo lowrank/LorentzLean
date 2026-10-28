@@ -17,14 +17,14 @@
     "old_path": "README.md",
     "new_path": "lean/README.md",
     "old_sha256": "24f30388c949e128cbd7e31a215e8b2551591b2c85e713ab2c8d4ae588d059a3",
-    "current_sha256": "6ca2250fc36d4f63715a2d9e3c8490a1771503fbb8099456d0963bb68a0a3e6f",
+    "current_sha256": "48b43ad70d405f9bd91c7fa2a7fc04bb153a780ac5ef79cf428792d48f199d3f",
     "unchanged": false
   },
   {
     "old_path": "PROOF_MANIFEST.json",
     "new_path": "lean/PROOF_MANIFEST.json",
     "old_sha256": "2d871d8954df989cc4b152fe33d8e968c6f175353995bc818f59ee67276ec109",
-    "current_sha256": "39c8853f2b70d101501cb010d0df0363a1fd74f3122d36430f517c3e4d1101ab",
+    "current_sha256": "c2b0ee8ee0e96199dc2f58f039500807f6b70b51538321b459f5123202b72024",
     "unchanged": false
   },
   {
@@ -52,7 +52,7 @@
     "old_path": "Audit.lean",
     "new_path": "lean/Audit.lean",
     "old_sha256": "46342a909924906cdade2269cbd8292d3c87b62d25ddeea48c0b3c0a0c247b0d",
-    "current_sha256": "7cdc8b3216a83e322d2ade6879ada7315a5ad7cb451ae0b015695767072f3915",
+    "current_sha256": "e9413f5a4b207e15cc348127a55371bc638d6dc45d9c15669035bc55b885aa72",
     "unchanged": false
   },
   {
@@ -80,7 +80,7 @@
     "old_path": "Lorentz.lean",
     "new_path": "lean/Lorentz.lean",
     "old_sha256": "8a19b17f2bf076c98ad378ec79089f91247fc06a9557ceb9dd22eaf993b6203f",
-    "current_sha256": "787f312dc2d70ffbd52e7ab67a28fb9bca2361dabeb72914dd57f26639729b7f",
+    "current_sha256": "66eabfe4226b9bf2ddb4dc149221ae85f7c5c9af4d73b2cefd478e8150a29b1e",
     "unchanged": false
   },
   {

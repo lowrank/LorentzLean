@@ -12,8 +12,8 @@ manuscript, exact arithmetic certificates, and a Lean development.
 | Result | Mathematical proof | Lean status |
 |---|---|---|
 | Nonodd function whose best approximants all vanish at zero | Part I; exact finite certificate checked | Full unconditional existence theorem; sufficiently small positive perturbation |
-| Nonodd function with equal approximants in degrees `(2k+1, 2k+2)` | Part II; supplied exact audit passes | In progress; degree propagation, series tools, and baseline estimates proved |
-| Noneven function with equal approximants in degrees `(2k, 2k+1)` | Part II; supplied exact audit passes | In progress; degree propagation, series tools, and baseline estimates proved |
+| Nonodd function with equal approximants in degrees `(2k+1, 2k+2)` | Part II; supplied exact audit passes | In progress; degree propagation and analytic persistence proved; finite table integration remains |
+| Noneven function with equal approximants in degrees `(2k, 2k+1)` | Part II; supplied exact audit passes | In progress; degree propagation and analytic persistence proved; finite table integration remains |
 
 The written proofs include explicit perturbation sizes. The current Lean
 endpoint for Part I proves existence of a sufficiently small positive size;

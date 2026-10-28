@@ -29,8 +29,9 @@ status:
     The common-origin existence theorem is fully proved for a sufficiently
     small positive perturbation. The explicit numerical perturbation range
     in the manuscript is not a Lean endpoint. The two additional plateau
-    constructions have exact external audits and proved general Lean
-    reduction tools, but their endpoint theorems are not part of this claim.
+    constructions have exact external audits and proved Lean analytic
+    persistence and degree reduction tools. Their construction-specific
+    finite tables and endpoints are not yet integrated into a complete proof.
   sorry_count: 0
   sorry_in_definitions: 0
   axioms: ["propext", "Classical.choice", "Quot.sound"]

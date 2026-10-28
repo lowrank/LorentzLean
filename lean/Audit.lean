@@ -21,3 +21,8 @@ axioms: `propext`, `Classical.choice`, and `Quot.sound`. -/
 #print axioms Lorentz.Plateau.series_sub_polynomial
 #print axioms Lorentz.Plateau.Baseline.resolvent
 #print axioms Lorentz.Plateau.Baseline.even_orbit_gap
+#print axioms Lorentz.Plateau.exists_relative_gap_bound
+#print axioms Lorentz.Plateau.finite_contact_persistence
+#print axioms Lorentz.Plateau.FiniteTools.finite_orbit_values
+#print axioms Lorentz.Plateau.Certificates.Odd.exists_root
+#print axioms Lorentz.Plateau.Certificates.Even.exists_root

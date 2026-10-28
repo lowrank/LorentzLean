@@ -1,5 +1,5 @@
 {
-  "verified_at_utc": "2026-10-28T22:08:11.591025+00:00",
+  "verified_at_utc": "2026-10-28T22:33:51.619894+00:00",
   "path_base": "repository root",
   "theorem": "Lorentz.Construction.lorentz_counterexample",
   "submission_theorem": "LorentzSubmission.common_origin_counterexample",
@@ -10,7 +10,7 @@
     "Classical.choice",
     "Quot.sound"
   ],
-  "local_lean_modules": 42,
+  "local_lean_modules": 50,
   "intentional_challenge_holes": 1,
   "proof_development_holes": 0,
   "scope": "Complete existential common-origin theorem. Explicit numerical perturbation range and the two plateau endpoints are not formalized.",
@@ -39,15 +39,30 @@
       "log": "verification/comparator-sandbox.log"
     },
     "ci": {
-      "status": "pending",
       "repository": "https://github.com/lowrank/LorentzLean",
-      "visibility": "private"
+      "visibility": "private",
+      "workflow": ".github/workflows/verify.yml",
+      "last_recorded_success": {
+        "commit": "af51012fa227239b37a5ea4d63e5f33dd9e2d8da",
+        "run_url": "https://github.com/lowrank/LorentzLean/actions/runs/40778650615"
+      },
+      "note": "CI runs automatically for each subsequent push; consult the workflow for newer revisions."
+    },
+    "sequential_core": {
+      "passed": true,
+      "modules": 47,
+      "log": "verification/sequential-check.log",
+      "note": "All core modules before addition of the two generated data modules; those passed their targeted build and the subsequent project build."
+    },
+    "plateau_data": {
+      "passed": true,
+      "log": "verification/plateau/data-build.log"
     }
   },
   "source_sha256": {
-    "lean/Audit.lean": "7cdc8b3216a83e322d2ade6879ada7315a5ad7cb451ae0b015695767072f3915",
+    "lean/Audit.lean": "e9413f5a4b207e15cc348127a55371bc638d6dc45d9c15669035bc55b885aa72",
     "lean/Challenge.lean": "9555e209220ba94e07ff8a144ff59bd1136a4c9589db83ff174cee270e1aaf6c",
-    "lean/Lorentz.lean": "787f312dc2d70ffbd52e7ab67a28fb9bca2361dabeb72914dd57f26639729b7f",
+    "lean/Lorentz.lean": "66eabfe4226b9bf2ddb4dc149221ae85f7c5c9af4d73b2cefd478e8150a29b1e",
     "lean/Solution.lean": "3ec59893f18c1e49afd2df2eb18ecf75714477c07cd589a2e4ae22b1b8dd0703",
     "lean/Lorentz/AllDegrees.lean": "85c464b42dff451092da72bf499fde102fbf6d6bf9fe75789b5758f06cb3d698",
     "lean/Lorentz/AngularSeries.lean": "2bddca6ed70340ad34f9703f9d55856c0bcde98ff54e595e5dfae90cdc3de157",
@@ -78,7 +93,15 @@
     "lean/Lorentz/Perturbation.lean": "17a33d6ad74bbb4391306350ffc03cbdc50a2b5fa548f0cc292ca104c78a3da5",
     "lean/Lorentz/PerturbationContacts.lean": "2910e27fc2bdb8d26d8442563e000d746da671e7d15a820a24d94527a1ce0370",
     "lean/Lorentz/Plateau/Baseline.lean": "a9709551132fa68397bbac7e87cf868a7282200e6f76412eedb66cc24db0bd1e",
+    "lean/Lorentz/Plateau/Certificates/EvenData.lean": "ee2b59b587c9672dc445084b7e1d0ec1adf9b9f7be14bc8c15efffc8b57d0ae0",
+    "lean/Lorentz/Plateau/Certificates/OddData.lean": "715f3531adcb7706e497f0f675eb431866d5275ea57c1c10a6a955bc2ae280f0",
+    "lean/Lorentz/Plateau/CompactDomination.lean": "7ffbcfb07d44e6a2a7b63a92fb51683750cc38c876b806ee064931150f966e47",
+    "lean/Lorentz/Plateau/ContactPersistence.lean": "86826f15f3a649a670dbdaa9709f4b0faedb33dcaf21d2a1a0f2028af3f13557",
+    "lean/Lorentz/Plateau/FiniteTools.lean": "fdcb0f4cab7224aa256e6270dba3303501326595bc6876b5d8bee48f78ed6fe4",
+    "lean/Lorentz/Plateau/LocalEstimates.lean": "3405a6b3f110ca232e5e75842720616686bf4425765a97c99ad99adcc92a9c20",
     "lean/Lorentz/Plateau/Reduction.lean": "b3649bafab5710fbe83658f77f7d5e083396db8d97770fd4acc431c1ef31e568",
+    "lean/Lorentz/Plateau/RelativeGap.lean": "ac61ddc1c4e7752c3e76eb80fcd578439431c0bd4bc97e9d73943e420d223ede",
+    "lean/Lorentz/Plateau/SeriesEstimates.lean": "674580f6de721b180d358e53592f7c82b87ce62ce5d17966d4609bc1edb3428e",
     "lean/Lorentz/Plateau/SeriesTools.lean": "9af6ceb3a37cd613742a77cec15581f47a39fb9002e32ed1f534255fed41760c",
     "lean/Lorentz/PolynomialBounds.lean": "7ab30dc766c1ca6e565f3b9c041606740ff29cb644d6356e85f2a701ad7abc67",
     "lean/Lorentz/PolynomialCertificate.lean": "54cfcaaaef8333cad060e792d456a0997b91c6d545d577f3b3ac74c95441292d",

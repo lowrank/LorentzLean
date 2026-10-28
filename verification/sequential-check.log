@@ -1,0 +1,292 @@
+Lean (version 4.35.0-rc2, x86_64-unknown-linux-gnu, commit 11acb17ec6b07a8f9e9173e6845197929540936b, Release)
+Rechecking 47 local modules sequentially.
+[1/47] Lorentz.Series
+[2/47] Lorentz.Trigonometry
+[3/47] Lorentz.PolynomialBounds
+[4/47] Lorentz.Baseline
+[5/47] Lorentz.SeriesEstimates
+[6/47] Lorentz.AngularSeries
+Lorentz/AngularSeries.lean:113:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Lorentz/AngularSeries.lean:146:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Lorentz/AngularSeries.lean:210:22: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+[7/47] Lorentz.LocalComposition
+[8/47] Lorentz.BaselineLocal
+[9/47] Lorentz.Minimax
+Lorentz/Minimax.lean:57:35: warning: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+Lorentz/Minimax.lean:57:44: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+Lorentz/Minimax.lean:64:36: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+Lorentz/Minimax.lean:142:56: warning: `if_true` has been deprecated: Use `ite_true` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
+Lorentz/Minimax.lean:151:60: warning: `if_false` has been deprecated: Use `ite_false` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
+[10/47] Lorentz.Composition
+Lorentz/Composition.lean:147:43: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/Composition.lean:150:50: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/Composition.lean:152:50: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/Composition.lean:158:57: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/Composition.lean:162:57: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+[11/47] Lorentz.CertificateBounds
+[12/47] Lorentz.CertificateRoot
+[13/47] Lorentz.CertificateData
+[14/47] Lorentz.CertificateSigns
+[15/47] Lorentz.CertificateGrid
+[16/47] Lorentz.CertificateOrder
+[17/47] Lorentz.CertificateGeometry
+Lorentz/CertificateGeometry.lean:245:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:247:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:253:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:255:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:261:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:263:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:269:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:271:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:277:20: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:287:32: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coarseSign, fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:290:32: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coarseSign, fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Lorentz/CertificateGeometry.lean:299:32: warning: This simp argument is unused:
+  node_four_neg_a
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [coarseSign, fineSign, a]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+[18/47] Lorentz.CertificateCompleteness
+[19/47] Lorentz.PolynomialCertificate
+[20/47] Lorentz.CertificateIdentities
+[21/47] Lorentz.CertificateNorms
+[22/47] Lorentz.CertificatePolynomials
+[23/47] Lorentz.CertificateFinite
+[24/47] Lorentz.CertificateAlternation
+[25/47] Lorentz.ContactGeometry
+Lorentz/ContactGeometry.lean:45:15: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/ContactGeometry.lean:47:15: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:59:32: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:70:48: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:78:25: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/ContactGeometry.lean:85:25: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:125:85: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/ContactGeometry.lean:139:85: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:184:15: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/ContactGeometry.lean:189:15: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:206:23: warning: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Certificate.gridSize, hn]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Lorentz/ContactGeometry.lean:212:41: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/ContactGeometry.lean:223:23: warning: `simp` already closes the goal
+
+Hint: Use `simp` instead of `simpa`:
+  [apply] simp [Certificate.gridSize, hn]
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+Lorentz/ContactGeometry.lean:230:41: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:240:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/ContactGeometry.lean:241:41: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/ContactGeometry.lean:243:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+Lorentz/ContactGeometry.lean:248:40: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+[26/47] Lorentz.QuarterSeries
+[27/47] Lorentz.ForcingPolynomials
+[28/47] Lorentz.Perturbation
+[29/47] Lorentz.CertificatePerturbation
+[30/47] Lorentz.PerturbationContacts
+Lorentz/PerturbationContacts.lean:51:8: warning: `if_pos` has been deprecated: Use `ite_eq_left` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
+Lorentz/PerturbationContacts.lean:58:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+
+Hint: Replace the deprecated name:
+  i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
+[31/47] Lorentz.Stability
+[32/47] Lorentz.CompactStability
+Lorentz/CompactStability.lean:38:15: warning: `Set.setOf_forall` has been deprecated: Use `Set.ofPred_forall` instead
+
+Hint: Replace the deprecated name:
+  s̵e̵t̵O̵f̵_̵f̵o̵r̵a̵l̵l̵o̲f̲P̲r̲e̲d̲_̲f̲o̲r̲a̲l̲l̲
+[33/47] Lorentz.AllDegrees
+[34/47] Lorentz.BaseCertificates
+[35/47] Lorentz.Counterexample
+[36/47] Lorentz.Plateau.Reduction
+[37/47] Lorentz.Plateau.SeriesTools
+[38/47] Lorentz.Plateau.Baseline
+[39/47] Lorentz.Plateau.SeriesEstimates
+[40/47] Lorentz.Plateau.LocalEstimates
+[41/47] Lorentz.Plateau.RelativeGap
+[42/47] Lorentz.Plateau.CompactDomination
+[43/47] Lorentz.Plateau.ContactPersistence
+[44/47] Lorentz.Plateau.FiniteTools
+[45/47] Lorentz
+[46/47] Solution
+[47/47] Audit
+Lorentz.Construction.lorentz_counterexample :
+  ∃ f,
+    ContinuousOn f Lorentz.interval ∧
+      f 0 = 0 ∧
+        (∃ x ∈ Lorentz.interval, f (-x) ≠ -f x) ∧
+          ∀ (n : ℕ), (∃ p, Lorentz.IsBest f n p) ∧ ∀ (p : Polynomial ℝ), Lorentz.IsBest f n p → Polynomial.eval 0 p = 0
+'Lorentz.Construction.lorentz_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.all_degrees_of_selfsimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Alternates.isBest' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Certificate.gridPerturbation_eq_actualH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Certificate.PolynomialCertificate.checked_slack' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Stability.signed_contact_persistence_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LorentzSubmission.common_origin_counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.all_plateaus_of_selfsimilar' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.selfsimilar_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.series_sub_polynomial' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.Baseline.resolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.Baseline.even_orbit_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.exists_relative_gap_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.finite_contact_persistence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Lorentz.Plateau.FiniteTools.finite_orbit_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+SUCCESS: every local dependency and the final theorem passed Lean checking.

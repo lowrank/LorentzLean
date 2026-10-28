@@ -40,7 +40,8 @@ The script uses the pinned toolchain's Comparator and explicitly registers
 its bundled NanoDa and con-ron checkers in a temporary configuration. The
 committed `comparator.json` contains no forbidden `external_kernels` field.
 The default run requires working Bubblewrap user namespaces. The CI workflow
-uses this default. A local run with `--inadvisably-no-sandbox` is useful only
+uses this default and has [passed on the private repository](https://github.com/lowrank/LorentzLean/actions/runs/40778650615).
+A local run with `--inadvisably-no-sandbox` is useful only
 for trusted source on a host that cannot create those namespaces; record that
 limitation and do not describe it as the registry's sandboxed verification.
 

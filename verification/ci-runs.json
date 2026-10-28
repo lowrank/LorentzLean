@@ -1,0 +1,26 @@
+{
+  "repository": "https://github.com/lowrank/LorentzLean",
+  "visibility": "private",
+  "runs": [
+    {
+      "id": 40777602468,
+      "commit": "aec859da53e1b4ee1862c78602427242f9331b93",
+      "conclusion": "failure",
+      "reason": "GitHub runner ran out of disk before finishing Lean setup/build"
+    },
+    {
+      "id": 40778650615,
+      "commit": "af51012fa227239b37a5ea4d63e5f33dd9e2d8da",
+      "conclusion": "success",
+      "url": "https://github.com/lowrank/LorentzLean/actions/runs/40778650615",
+      "checks": [
+        "source preflight",
+        "400 original exact certificate checks",
+        "two plateau exact audits",
+        "Lean build",
+        "axiom audit",
+        "sandboxed Comparator: Lean, NanoDa, con-ron"
+      ]
+    }
+  ]
+}
